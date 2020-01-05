@@ -27,7 +27,7 @@
         FROM user
         where 1=1
         <if test="id!=null and id!=''">
-            AND id=#{id,jdbcType=VARCHAR}
+            AND id=#{id,jdbcType=INTEGER}
         </if>
     </select>
 
@@ -55,13 +55,13 @@
             status      = #{status,jdbcType=INTEGER},
             update_time = #{updateTime,jdbcType=VARCHAR},
             create_time = #{createTime,jdbcType=VARCHAR}
-        WHERE id = #{id,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=INTEGER}
     </update>
 
-    <delete id="delete" parameterType="java.lang.String">
+    <delete id="delete" parameterType="java.lang.Integer">
         DELETE
         FROM user
-        WHERE id = #{id,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=INTEGER}
     </delete>
 
     <select id="login" resultMap="User">

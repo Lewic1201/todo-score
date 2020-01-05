@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lewic.todoscore.dao.OptionMapper">
+
+    <resultMap id="Option" type="com.lewic.todoscore.entity.Option">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="score" jdbcType="INTEGER" property="score"/>
+        <result column="subject_id" jdbcType="INTEGER" property="subjectId"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+
+    </resultMap>
+
+    <select id="list" resultMap="Option">
+        SELECT
+        id,
+        content,
+        score,
+        subject_id,
+        status,
+        description,
+        create_time,
+        update_time
+        FROM
+        `option`
+        ORDER BY
+        id
+        <if test="page!=null and page!=''">
+            limit #{page.startRow,jdbcType=INTEGER},#{page.pageSize,jdbcType=INTEGER}
+        </if>
+    </select>
+
+    <select id="get" resultMap="Option">
+        SELECT id,
+               content,
+               score,
+               subject_id,
+               status,
+               description,
+               create_time,
+               update_time
+        FROM `option`
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        SELECT count(id)
+        FROM `option`
+    </select>
+
+    <insert id="insert" parameterType="com.lewic.todoscore.entity.Option" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO `option` (content,
+                              score,
+                              subject_id,
+                              status,
+                              description)
+        VALUES (#{content,jdbcType=VARCHAR},
+                #{score,jdbcType=INTEGER},
+                #{subjectId,jdbcType=INTEGER},
+                #{status,jdbcType=INTEGER},
+                #{description,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="update" parameterType="com.lewic.todoscore.entity.Option">
+        UPDATE `option`
+        SET content     = #{content,jdbcType=VARCHAR},
+            score       = #{score,jdbcType=INTEGER},
+            subject_id  = #{subjectId,jdbcType=INTEGER},
+            status      = #{status,jdbcType=INTEGER},
+            description = #{description,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE
+        FROM `option`
+        WHERE subject_id = #{subjectId,jdbcType=INTEGER}
+    </delete>
+</mapper>

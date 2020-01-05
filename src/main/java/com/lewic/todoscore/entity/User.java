@@ -6,14 +6,18 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author lewic
  * @apiNote 账号
  * @since 2019/6/14 15:38
  **/
 @Data
-@ApiModel(value = "账户", description = "账户信息")
-public class User {
+//@ApiModel(description = "账户")
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 4359709211352400087L;
 
     @JsonView(View.Detail.class)
 //    @ApiModelProperty(value = "编号", name = "id", example = "1")

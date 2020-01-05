@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lewic.todoscore.dao.SubjectMapper">
+
+    <resultMap id="Subject" type="com.lewic.todoscore.entity.Subject">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="cycle_type" jdbcType="INTEGER" property="cycleType"/>
+        <result column="super_id" jdbcType="INTEGER" property="superId"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="expiration_time" jdbcType="VARCHAR" property="expirationTime"/>
+        <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="delete_time" jdbcType="VARCHAR" property="deleteTime"/>
+        <collection property="options" ofType="com.lewic.todoscore.entity.Option">
+            <id column="id" property="id"/>
+            <result column="option_content" property="content"/>
+            <result column="score" property="score"/>
+            <result column="status" property="status"/>
+            <result column="description" property="description"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+        </collection>
+    </resultMap>
+
+    <select id="list" resultMap="Subject">
+        SELECT
+        t1.id,
+        t1.content,
+        t1.status,
+        t1.cycle_type,
+        t1.super_id,
+        t1.description,
+        t1.expiration_time,
+        t1.create_time,
+        t1.update_time,
+        t1.delete_time,
+        t2.content AS option_content,
+        t2.score as option_score,
+        t2.status as option_status,
+        t2.description AS option_description,
+        t2.create_time AS option_create_time,
+        t2.update_time AS option_update_time
+        FROM
+        (
+        SELECT *
+        from SUBJECT t0
+        where 1=1
+        <if test="page!=null">
+            limit #{page.startRow,jdbcType=INTEGER},#{page.pageSize,jdbcType=INTEGER}
+        </if>
+        ) t1
+        LEFT JOIN `option` t2 ON t1.id = t2.subject_id
+        ORDER BY
+        t1.id,t2.id
+    </select>
+
+    <select id="get" resultMap="Subject">
+        SELECT
+        t1.id,
+        t1.content,
+        t1.status,
+        t1.cycle_type,
+        t1.super_id,
+        t1.description,
+        t1.expiration_time,
+        t1.create_time,
+        t1.update_time,
+        t1.delete_time,
+        t2.content AS option_content,
+        t2.score as option_score,
+        t2.status as option_status,
+        t2.description AS option_description,
+        t2.create_time AS option_create_time,
+        t2.update_time AS option_update_time
+        FROM
+        SUBJECT t1
+        LEFT JOIN `option` t2 ON t1.id = t2.subject_id
+        where t1.id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        SELECT count(id)
+        FROM subject
+    </select>
+
+    <insert id="insert" parameterType="com.lewic.todoscore.entity.Subject" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO subject (content,
+                             status,
+                             cycle_type,
+                             super_id,
+                             description,
+                             expiration_time)
+        VALUES (#{content,jdbcType=VARCHAR},
+                #{status,jdbcType=INTEGER},
+                #{cycleType,jdbcType=INTEGER},
+                #{superId,jdbcType=INTEGER},
+                #{description,jdbcType=VARCHAR},
+                #{expirationTime,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="update" parameterType="com.lewic.todoscore.entity.Subject">
+        UPDATE subject
+        SET content         = #{content,jdbcType=VARCHAR},
+            status          = #{status,jdbcType=INTEGER},
+            cycle_type      = #{cycleType,jdbcType=INTEGER},
+            super_id        = #{superId,jdbcType=INTEGER},
+            description     = #{description,jdbcType=VARCHAR},
+            expiration_time = #{expirationTime,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE
+        FROM subject
+        WHERE id = #{id,jdbcType=INTEGER}
+    </delete>
+</mapper>

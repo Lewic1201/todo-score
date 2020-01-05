@@ -4,6 +4,7 @@ import com.lewic.todoscore.entity.User;
 import com.lewic.todoscore.service.impl.AuthServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
     private final AuthServiceImpl authServiceImpl;
 
+    @Autowired
     public AuthController(AuthServiceImpl authServiceImpl) {
         this.authServiceImpl = authServiceImpl;
     }
