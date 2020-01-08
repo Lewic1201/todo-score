@@ -1,7 +1,7 @@
 package com.lewic.todoscore.service.impl;
 
-import com.lewic.todoscore.constant.Enums.RoleType;
-import com.lewic.todoscore.constant.Enums.AccountStatus;
+import com.lewic.todoscore.common.Enums.RoleType;
+import com.lewic.todoscore.common.Enums.AccountStatus;
 import com.lewic.todoscore.dao.UserMapper;
 import com.lewic.todoscore.entity.User;
 import com.lewic.todoscore.service.AuthService;

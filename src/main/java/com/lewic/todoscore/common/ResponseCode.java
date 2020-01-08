@@ -1,4 +1,4 @@
-package com.lewic.todoscore.constant;
+package com.lewic.todoscore.common;
 
 /**
  * @author lewic

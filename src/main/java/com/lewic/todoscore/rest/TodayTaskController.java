@@ -16,15 +16,14 @@ import org.springframework.web.bind.annotation.*;
  * @since 2019/6/13 15:22
  **/
 @RestController
-@RequestMapping("/v1/subject")
-public class SubjectController {
+@RequestMapping("/v1/todayTask")
+public class TodayTaskController {
     private final SubjectService subjectService;
 
     @Autowired
-    public SubjectController(SubjectService subjectService) {
+    public TodayTaskController(SubjectService subjectService) {
         this.subjectService = subjectService;
     }
-
 
     @ApiOperation("获取主题任务列表")
     @RequestMapping(value = "", method = RequestMethod.GET)
@@ -35,39 +34,14 @@ public class SubjectController {
         return JSON.toJSON(subjectService.list(pageNum, pageSize)).toString();
     }
 
-    @ApiOperation("根据id查询主题任务")
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String getSubject(
-            @PathVariable(value = "id") Integer id
-    ) {
-        return JSON.toJSON(subjectService.get(id)).toString();
-    }
-
-    @ApiOperation("新建主题任务")
-    @RequestMapping(value = "", method = RequestMethod.POST)
-    public String insertSubject(
-            @ApiParam(value = "主题任务") @RequestBody Subject subject
-    ) {
-        subjectService.create(subject);
-        return ResponseCode.SUCCESS.getValue();
-    }
-
-
     @ApiOperation("更新主题任务")
-    @RequestMapping(value = "", method = RequestMethod.PUT)
+    @RequestMapping(value = "", method = RequestMethod.PATCH)
     public String updateSubject(@ApiParam(value = "主题任务") @RequestBody Subject subject) {
         if (subject != null && subject.getId() != null) {
             subjectService.update(subject);
         } else {
             return ResponseCode.ILLEGAL_ARGUMENT.getValue();
         }
-        return ResponseCode.SUCCESS.getValue();
-    }
-
-    @ApiOperation("删除主题任务")
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String deleteSubject(@PathVariable(value = "id") Integer id) {
-        subjectService.delete(id);
         return ResponseCode.SUCCESS.getValue();
     }
 
