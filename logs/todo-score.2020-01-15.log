@@ -1,0 +1,32 @@
+2020-01-15 21:18:54.464 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on lewic-computer with PID 13456 (E:\Project\IntelliJIDEAProjects\todo-score\target\classes started by Administrator in E:\Project\IntelliJIDEAProjects\todo-score)
+2020-01-15 21:18:54.468 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-15 21:18:54.468 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-01-15 21:18:54.509 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-01-15 21:18:54.511 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-01-15 21:18:55.519 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-15 21:18:55.737 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-01-15 21:18:55.743 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-01-15 21:18:55.743 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-01-15 21:18:55.743 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-15 21:18:55.825 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-01-15 21:18:55.825 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1314 ms
+2020-01-15 21:18:56.362 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-15 21:18:56.379 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-15 21:18:56.468 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-01-15 21:18:56.478 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-01-15 21:18:56.486 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-01-15 21:18:56.600 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: listSubjectUsingGET_1
+2020-01-15 21:18:56.616 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-01-15 21:18:56.630 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-01-15 21:18:56.632 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 2.439 seconds (JVM running for 3.235)
+2020-01-15 21:19:00.599 [http-nio-8989-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-15 21:19:00.599 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-01-15 21:19:00.603 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-01-15 21:19:00.636 [http-nio-8989-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-01-15 21:19:00.748 [http-nio-8989-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-01-15 21:19:00.752 [http-nio-8989-exec-2] DEBUG c.l.t.dao.SubjectMapper.getCount - ==>  Preparing: SELECT count(id) FROM subject 
+2020-01-15 21:19:00.766 [http-nio-8989-exec-2] DEBUG c.l.t.dao.SubjectMapper.getCount - ==> Parameters: 
+2020-01-15 21:19:00.799 [http-nio-8989-exec-2] DEBUG c.l.t.dao.SubjectMapper.getCount - <==      Total: 1
+2020-01-15 21:19:00.816 [http-nio-8989-exec-2] DEBUG c.l.todoscore.dao.SubjectMapper.list - ==>  Preparing: SELECT t1.id, t1.content, t1.status, t1.cycle_type, t1.super_id, t1.description, t1.expiration_time, t1.create_time, t1.update_time, t1.delete_time, t2.content AS option_content, t2.score as option_score, t2.status as option_status, t2.description AS option_description, t2.create_time AS option_create_time, t2.update_time AS option_update_time FROM ( SELECT * from SUBJECT t0 where 1=1 limit ?,? ) t1 LEFT JOIN `option` t2 ON t1.id = t2.subject_id ORDER BY t1.id,t2.id 
+2020-01-15 21:19:00.817 [http-nio-8989-exec-2] DEBUG c.l.todoscore.dao.SubjectMapper.list - ==> Parameters: 0(Integer), 10(Integer)
+2020-01-15 21:19:00.839 [http-nio-8989-exec-2] DEBUG c.l.todoscore.dao.SubjectMapper.list - <==      Total: 7
