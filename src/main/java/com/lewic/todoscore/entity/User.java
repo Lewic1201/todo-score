@@ -14,13 +14,13 @@ import java.io.Serializable;
  * @since 2019/6/14 15:38
  **/
 @Data
-//@ApiModel(description = "账户")
+@ApiModel(description = "账户")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 4359709211352400087L;
 
     @JsonView(View.Detail.class)
-//    @ApiModelProperty(value = "编号", name = "id", example = "1")
+    @ApiModelProperty(value = "编号", name = "id", example = "1")
     private Integer id;
 
     @JsonView(View.Summary.class)
@@ -32,7 +32,7 @@ public class User implements Serializable {
     private String password;
 
     @JsonView(View.Detail.class)
-//    @ApiModelProperty(value = "角色", name = "role", example = "test")
+    @ApiModelProperty(value = "角色", name = "role", example = "test")
     private Integer role;
 
     @JsonView(View.Detail.class)
@@ -40,15 +40,15 @@ public class User implements Serializable {
     private String mobile;
 
     @JsonView(View.Detail.class)
-//    @ApiModelProperty(value = "账号状态", name = "status", example = "test")
+    @ApiModelProperty(value = "账号状态", name = "status", example = "test")
     private Integer status;
 
     @JsonView(View.Detail.class)
-//    @ApiModelProperty(value = "创建时间", name = "createTime", example = "test")
+    @ApiModelProperty(value = "创建时间", name = "createTime", example = "test")
     private String createTime;
 
     @JsonView(View.Detail.class)
-//    @ApiModelProperty(value = "更新时间", name = "updateTime", example = "test")
+    @ApiModelProperty(value = "更新时间", name = "updateTime", example = "test")
     private String updateTime;
 
 }

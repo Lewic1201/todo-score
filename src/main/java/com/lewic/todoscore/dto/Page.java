@@ -26,6 +26,11 @@ public class Page implements Serializable{
     public Page() {
     }
 
+    public Page(Integer pageSize, Integer pageNo) {
+        this.pageNo = pageNo;
+        this.pageSize = pageSize;
+    }
+
     public Page(Integer pageSize, Integer pageNo, Integer total) {
         this.pageNo = pageNo;
         this.pageSize = pageSize;
