@@ -29,6 +29,10 @@ public class TaskRecord implements Serializable {
     @Column(name = "task_id")
     private Integer taskId;
 
+    @Column(name = "finish")
+    private Boolean finish;
+
+    // todo 可以关联task去掉此参数
     @Column(name = "score")
     private Integer score;
 

@@ -29,3 +29,6 @@ build/
 
 ### VS Code ###
 .vscode/
+logs/todo-score.2020-01-23.log
+logs/todo-score.2020-01-27.log
+pre_init/

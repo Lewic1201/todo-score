@@ -6,8 +6,12 @@ import java.util.List;
 
 public interface CycleTypeService {
 
-    List<CycleType> listByToday();
+    Integer[] listCycleTypeIdByToday() throws Exception;
+
+    List<CycleType> listCycleType();
 
     void insertOne(CycleType cycleType);
+
+    void deleteOne(Integer id);
 
 }

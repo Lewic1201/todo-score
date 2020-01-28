@@ -27,9 +27,13 @@ public class CycleType implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "description")
+    private String description;
+
     @Column(name = "start_time")
     private Date startTime;
 
+    //todo 次数应该加在任务上面
     @Column(name = "times")
     private Integer times;
 

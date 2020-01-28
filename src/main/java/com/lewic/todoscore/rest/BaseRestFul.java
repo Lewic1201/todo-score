@@ -9,13 +9,13 @@ import java.util.List;
 
 public interface BaseRestFul<T> {
 
-    public T get(Integer id);
+    public String list();
 
-    public List<T> list(Integer id);
+    public String show(Integer id);
 
-    public void create(T obj);
+    public String create(T obj);
 
-    public void update(T obj);
+    public String edit(T obj);
 
-    public void delete(Integer id);
+    public String delete(Integer id);
 }

@@ -18,7 +18,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "task")
+@Table(name = "workday")
 public class Workday implements Serializable {
 
     private static final long serialVersionUID = -4180650072333484258L;

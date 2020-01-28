@@ -1,10 +1,13 @@
 package com.lewic.todoscore.service.impl;
 
+import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
+import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
 import com.lewic.todoscore.service.TaskRecordService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.annotation.ReadOnlyProperty;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,6 +15,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author lewic
@@ -23,9 +27,15 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     private final TaskRecordDao taskRecordDao;
 
+    private final TaskDao taskDao;
+
+    private final CycleTypeServiceImpl cycleTypeService;
+
     @Autowired
-    public TaskRecordServiceImpl(TaskRecordDao taskRecordDao) {
+    public TaskRecordServiceImpl(TaskRecordDao taskRecordDao, TaskDao taskDao, CycleTypeServiceImpl cycleTypeService) {
         this.taskRecordDao = taskRecordDao;
+        this.taskDao = taskDao;
+        this.cycleTypeService = cycleTypeService;
     }
 
 
@@ -45,20 +55,54 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         calendarEnd.add(Calendar.HOUR, 1);
         Date dateEnd = calendarEnd.getTime();
 
-        List<TaskRecord> taskRecords = taskRecordDao.
-                findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(dateStart, dateEnd);
-        return taskRecords;
+        return taskRecordDao.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(dateStart, dateEnd);
     }
 
     @Override
     @Transactional
     public void insertOne(TaskRecord taskRecord) {
-
+        taskRecordDao.save(taskRecord);
     }
 
     @Override
     @Transactional
-    public void updateScore(TaskRecord taskRecord) {
+    public void insertToday() throws Exception {
+        Integer[] todayCycleTypeIds = cycleTypeService.listCycleTypeIdByToday();
+        // todo 可以更改为只查询出id
+        // todo 批量更新需要优化
+        List<Task> todayTasks = taskDao.findByCycleTypeIdIn(todayCycleTypeIds);
+        for (Task task : todayTasks) {
+            TaskRecord taskRecord = new TaskRecord();
+            taskRecord.setTaskId(task.getId());
+            taskRecord.setScore(0);
+            taskRecordDao.save(taskRecord);
+        }
+    }
 
+    @Override
+    @ReadOnlyProperty
+    public Integer getTodayTotalScore() {
+        List<TaskRecord> taskRecords = listByToday();
+        Integer totalScore = 0;
+        for (TaskRecord taskRecord : taskRecords) {
+            if (taskRecord.getScore() != null) {
+                totalScore += taskRecord.getScore();
+            }
+        }
+        return totalScore;
+    }
+
+    @Override
+    @Transactional
+    public void updateFinishStatus(Integer id, Boolean finish) {
+        Optional<TaskRecord> optionalTaskRecord = taskRecordDao.findById(id);
+        TaskRecord taskRecord;
+        if (optionalTaskRecord.isPresent()) {
+            taskRecord = optionalTaskRecord.get();
+            taskRecord.setFinish(finish);
+        } else {
+            throw new RuntimeException("get this taskRecord info failed!!");
+        }
+        taskRecordDao.save(taskRecord);
     }
 }

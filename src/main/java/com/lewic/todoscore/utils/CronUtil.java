@@ -7,6 +7,7 @@ import org.springframework.util.Assert;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -60,6 +61,31 @@ public class CronUtil {
         return checkCronWithTime(cron, new Date());
     }
 
+//    public static String isWeekend(String bDate) throws ParseException {
+//        DateFormat format1 = new SimpleDateFormat("yyyy/MM/dd");
+//        Date bdate = format1.parse(bDate);
+//        Calendar cal = Calendar.getInstance();
+//        cal.setTime(bdate);
+//        if(cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
+//            return "OK";
+//        } else{
+//            return "NO";
+//        }
+//
+//    }
+
+    public static Boolean todayIsWeekend() throws ParseException {
+        Date today = new Date();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(today);
+        return cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY;
+    }
+
+    public static Boolean isWeekend(Date date) throws ParseException {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY;
+    }
 
     public static void main(String[] args) throws ParseException {
 //        String cron = "0 0 10,11,15 * * ? ";
