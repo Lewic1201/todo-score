@@ -3,6 +3,10 @@ server:
 spring:
   profiles:
     active: dev
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
   datasource:
 #    url: jdbc:mysql://10.202.1.205:3306/wfw?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
 #    url: jdbc:mysql://localhost:3306/todo_score?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai

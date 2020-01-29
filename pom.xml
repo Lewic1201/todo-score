@@ -33,13 +33,14 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.1</version>
         </dependency>
-
+        <!-- 热加载 start-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!-- end -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -106,17 +107,32 @@
 
     </dependencies>
 
-<!--    <properties>-->
-<!--        <java.version>1.8</java.version>-->
-<!--    </properties>-->
+    <!--    <properties>-->
+    <!--        <java.version>1.8</java.version>-->
+    <!--    </properties>-->
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 如果没有该配置，热部署的devtools不生效 -->
+                    <fork>true</fork>
+                </configuration>
+
+                //springloaded 和 devtools同样的效果，有设置devtools，可不设置springloaded
+                <dependencies>
+                    <!-- spring热部署 -->
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>2.0.4.RELEASE</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
+
     </build>
 
 </project>

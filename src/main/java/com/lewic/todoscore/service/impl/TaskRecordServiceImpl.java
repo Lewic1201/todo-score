@@ -80,7 +80,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
     }
 
     @Override
-    @ReadOnlyProperty
+    @Transactional(readOnly = true)
     public Integer getTodayTotalScore() {
         List<TaskRecord> taskRecords = listByToday();
         Integer totalScore = 0;
