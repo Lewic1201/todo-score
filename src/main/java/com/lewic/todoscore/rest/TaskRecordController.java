@@ -1,8 +1,10 @@
 package com.lewic.todoscore.rest;
 
 
-import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lewic.todoscore.common.ResponseCode;
+import com.lewic.todoscore.common.View;
 import com.lewic.todoscore.service.TaskRecordService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,8 @@ public class TaskRecordController {
 
     private final TaskRecordService taskRecordService;
 
+    private ObjectMapper mapper = new ObjectMapper();
+
     @Autowired
     public TaskRecordController(TaskRecordService taskRecordService) {
         this.taskRecordService = taskRecordService;
@@ -30,8 +34,9 @@ public class TaskRecordController {
 
     @ApiOperation("获取今天所有的任务")
     @RequestMapping(value = "/today", method = RequestMethod.GET)
-    public String today() {
-        return JSON.toJSON(taskRecordService.listByToday()).toString();
+    @JsonView(View.Summary.class)
+    public String today() throws Exception {
+        return mapper.writerWithView(View.Summary.class).writeValueAsString(taskRecordService.listByToday());
     }
 
     @ApiOperation("获取今天的得分")

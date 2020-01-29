@@ -46,13 +46,13 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         // 获取当天起始时间和结束时间
         Calendar calendarStart = new GregorianCalendar();
         calendarStart.setTime(today);
-        calendarStart.set(Calendar.HOUR, 0);
+        calendarStart.set(Calendar.HOUR, -12);
         calendarStart.set(Calendar.MINUTE, 0);
         calendarStart.set(Calendar.SECOND, 0);
         Date dateStart = calendarStart.getTime();
         Calendar calendarEnd = new GregorianCalendar();
         calendarEnd.setTime(dateStart);
-        calendarEnd.add(Calendar.HOUR, 1);
+        calendarEnd.add(Calendar.HOUR, 24);
         Date dateEnd = calendarEnd.getTime();
 
         return taskRecordDao.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(dateStart, dateEnd);
@@ -73,7 +73,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         List<Task> todayTasks = taskDao.findByCycleTypeIdIn(todayCycleTypeIds);
         for (Task task : todayTasks) {
             TaskRecord taskRecord = new TaskRecord();
-            taskRecord.setTaskId(task.getId());
+            taskRecord.setTask(task);
             taskRecord.setScore(0);
             taskRecordDao.save(taskRecord);
         }
@@ -100,6 +100,11 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         if (optionalTaskRecord.isPresent()) {
             taskRecord = optionalTaskRecord.get();
             taskRecord.setFinish(finish);
+            if (finish) {
+                taskRecord.setScore(taskRecord.getTask().getScore());
+            } else {
+                taskRecord.setScore(0);
+            }
         } else {
             throw new RuntimeException("get this taskRecord info failed!!");
         }

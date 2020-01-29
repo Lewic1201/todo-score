@@ -20,7 +20,7 @@ public class Constants {
     public final static String CRON_EVERY_WEEK = "0 0 0 ? * 1 *";
 
     // 每天凌晨执行
-    public final static String CRON_EVERY_DAY = "0 0 0 * * ? *";
+    public final static String CRON_EVERY_DAY = "0 0 0 * * ?";
 
     /**
      * 时间格式

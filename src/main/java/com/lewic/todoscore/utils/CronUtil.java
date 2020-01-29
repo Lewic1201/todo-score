@@ -31,14 +31,16 @@ public class CronUtil {
             throw new RuntimeException();
         }
         CronExpression exp = new CronExpression(cron);
-        return exp.isSatisfiedBy(date);
+        Boolean result = exp.isSatisfiedBy(date);
+        log.debug("cron is satisfied {}: {}", date.toString(), result);
+        return result;
     }
 
 
     /**
      * 校验所给时间是否满足cron表达式
      *
-     * @param cron 表达式: 秒 分 小时 月份中的日期 月份 星期中的日期 年份(可选)
+     * @param cron       表达式: 秒 分 小时 月份中的日期 月份 星期中的日期 年份(可选)
      * @param simpleTime 时间
      */
     public static Boolean checkCronWithTime(String cron, String simpleTime) throws ParseException {

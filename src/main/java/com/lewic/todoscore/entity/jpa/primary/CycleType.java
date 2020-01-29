@@ -1,9 +1,15 @@
 package com.lewic.todoscore.entity.jpa.primary;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.lewic.todoscore.common.View;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,6 +25,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "cycle_type")
+@EntityListeners(AuditingEntityListener.class)
 public class CycleType implements Serializable {
 
     private static final long serialVersionUID = -6961502514950128221L;
@@ -46,4 +53,15 @@ public class CycleType implements Serializable {
     @Column(name = "cron_expression")
     private String cronExpression;
 
+    // todo 添加是否自定义参数
+
+    @CreatedDate
+    @Column(name = "create_time")
+    @JsonView(View.Detail.class)
+    private Date createTime;
+
+    @LastModifiedDate
+    @Column(name = "update_time")
+    @JsonView(View.Detail.class)
+    private Date updateTime;
 }

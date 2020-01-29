@@ -72,7 +72,13 @@ public class CycleTypeServiceImpl implements CycleTypeService {
 
     // 通过循环类型指定的规则过滤
     private Boolean filterByCronAndWorkday(CycleType cycleType, Date date) throws Exception {
-        return CronUtil.checkCronWithTime(cycleType.getCronExpression(), date) && filterByWorkday(cycleType, date);
+        if (CronUtil.checkCronWithTime(cycleType.getCronExpression(), date) && filterByWorkday(cycleType, date)) {
+            log.debug("{} is satisfied today,cycleTypeId is {}", cycleType.getCronExpression(), cycleType.getId());
+            return true;
+        } else {
+            log.debug("{} is not satisfied today,cycleTypeId is {}", cycleType.getCronExpression(), cycleType.getId());
+            return false;
+        }
     }
 
     // 通过工作日过滤
@@ -80,11 +86,13 @@ public class CycleTypeServiceImpl implements CycleTypeService {
         Boolean result = null;
         List<Workday> workdays = workdayDao.findAll();
         if (workdays.isEmpty()) {
-            throw new RuntimeException("get workday table database failed");
+            log.warn("get workday table database is null");
+            return true;
         }
         Integer workdayStatus = cycleType.getWorkdayStatus();
         if (Enums.WorkdayStatus.NOT_SET.getCode().equals(workdayStatus)) {
             log.debug(String.format("%d status is: %s", cycleType.getId(), Enums.WorkdayStatus.NOT_SET.getValue()));
+            return true;
         } else if (Enums.WorkdayStatus.SKIP_HOLIDAY.getCode().equals(workdayStatus)) {
             // 跳过节假日时，先判断特殊的workday里是否包含,包含则取workday的isWorkday值，不包含则判断是否为周六周日
             for (Workday workday : workdays) {
@@ -106,7 +114,7 @@ public class CycleTypeServiceImpl implements CycleTypeService {
                 result = !CronUtil.isWeekend(date);
             }
         }
-
+        log.debug("today is satisfied workday condition: {}", result);
         return result;
     }
 
