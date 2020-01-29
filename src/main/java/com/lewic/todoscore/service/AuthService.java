@@ -1,6 +1,6 @@
 package com.lewic.todoscore.service;
 
-import com.lewic.todoscore.entity.User;
+import com.lewic.todoscore.entity.mybatis.vo.User;
 
 public interface AuthService {
 

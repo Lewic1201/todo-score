@@ -1,4 +1,4 @@
-package com.lewic.todoscore.entity;
+package com.lewic.todoscore.entity.mybatis.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

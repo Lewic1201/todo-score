@@ -1,4 +1,4 @@
-package com.lewic.todoscore.rest;
+package com.lewic.todoscore.rest.base;
 
 import java.util.List;
 

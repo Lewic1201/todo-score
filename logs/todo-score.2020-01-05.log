@@ -1,8 +1,8 @@
 2020-01-05 00:00:27.987 [http-nio-8989-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-01-05 00:00:27.990 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-01-05 00:00:27.994 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2020-01-05 00:14:57.044 [http-nio-8989-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.UserMapper.insert] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.UserMapper.insert
+2020-01-05 00:14:57.044 [http-nio-8989-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.UserMapper.insert] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.UserMapper.insert
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -85,8 +85,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2020-01-05 00:21:14.622 [http-nio-8989-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-01-05 00:21:14.622 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-01-05 00:21:14.625 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2020-01-05 00:21:14.668 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.UserMapper.insert] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.UserMapper.insert
+2020-01-05 00:21:14.668 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.UserMapper.insert] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.UserMapper.insert
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -146,8 +146,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2020-01-05 00:23:54.452 [http-nio-8989-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.UserMapper.login] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.UserMapper.login
+2020-01-05 00:23:54.452 [http-nio-8989-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.UserMapper.login] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.UserMapper.login
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -511,8 +511,8 @@ Caused by: org.apache.ibatis.builder.BuilderException: Ambiguous collection type
 2020-01-05 16:16:48.792 [http-nio-8989-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-01-05 16:16:48.792 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-01-05 16:16:48.795 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2020-01-05 16:17:07.992 [http-nio-8989-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.SubjectMapper.getCount] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.SubjectMapper.getCount
+2020-01-05 16:17:07.992 [http-nio-8989-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper.getCount] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper.getCount
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -809,7 +809,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2020-01-05 16:59:34.255 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-01-05 16:59:34.259 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
 2020-01-05 17:00:25.039 [http-nio-8989-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "test": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "test": not a valid Integer value
- at [Source: (PushbackInputStream); line: 4, column: 17] (through reference chain: com.lewic.todoscore.entity.Subject["cycle_type"])]
+ at [Source: (PushbackInputStream); line: 4, column: 17] (through reference chain: com.lewic.todoscore.entity.mybatis.vo.Subject["cycle_type"])]
 2020-01-05 17:01:21.104 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on lewic-computer with PID 13716 (E:\Project\IntelliJIDEAProjects\todo-score\target\classes started by Administrator in E:\Project\IntelliJIDEAProjects\todo-score)
 2020-01-05 17:01:21.106 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
 2020-01-05 17:01:21.106 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
@@ -834,7 +834,7 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2020-01-05 17:02:01.046 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-01-05 17:02:01.050 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
 2020-01-05 17:02:58.033 [http-nio-8989-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.Integer` from String "test": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.lang.Integer` from String "test": not a valid Integer value
- at [Source: (PushbackInputStream); line: 4, column: 18] (through reference chain: com.lewic.todoscore.entity.Subject["description"])]
+ at [Source: (PushbackInputStream); line: 4, column: 18] (through reference chain: com.lewic.todoscore.entity.mybatis.vo.Subject["description"])]
 2020-01-05 17:04:08.026 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on lewic-computer with PID 23984 (E:\Project\IntelliJIDEAProjects\todo-score\target\classes started by Administrator in E:\Project\IntelliJIDEAProjects\todo-score)
 2020-01-05 17:04:08.028 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
 2020-01-05 17:04:08.028 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
@@ -860,8 +860,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2020-01-05 17:04:18.155 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
 2020-01-05 17:04:18.205 [http-nio-8989-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2020-01-05 17:04:18.271 [http-nio-8989-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2020-01-05 17:04:18.286 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.SubjectMapper.insert] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.SubjectMapper.insert
+2020-01-05 17:04:18.286 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper.insert] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper.insert
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedMapperMethod$0(MapperProxy.java:98)
@@ -958,8 +958,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2020-01-05 17:05:48.874 [http-nio-8989-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
 2020-01-05 17:05:48.939 [http-nio-8989-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
 2020-01-05 17:05:48.953 [http-nio-8989-exec-1] DEBUG c.l.t.dao.SubjectMapper.insert - ==>  Preparing: INSERT INTO subject (content, status, cycle_type, super_id, description, expiration_time) VALUES (?, ?, ?, ?, ?, ?) 
-2020-01-05 17:05:48.975 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'cycleType' in 'class com.lewic.todoscore.entity.Subject'] with root cause
-org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'cycleType' in 'class com.lewic.todoscore.entity.Subject'
+2020-01-05 17:05:48.975 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'cycleType' in 'class com.lewic.todoscore.entity.mybatis.vo.Subject'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'cycleType' in 'class com.lewic.todoscore.entity.mybatis.vo.Subject'
 	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:373)
 	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:163)
 	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
@@ -1077,7 +1077,7 @@ org.apache.ibatis.reflection.ReflectionException: There is no getter for propert
 2020-01-05 17:07:11.557 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
 ### The error may exist in file [E:\Project\IntelliJIDEAProjects\todo-score\target\classes\mybatis\mapper\SubjectMapper.xml]
-### The error may involve com.lewic.todoscore.dao.SubjectMapper.insert-Inline
+### The error may involve com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO subject (content,                              status,                              cycle_type,                              super_id,                              description,                              expiration_time)         VALUES (?,                 ?,                 ?,                 ?,                 ?,                 ?)
 ### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
@@ -1237,7 +1237,7 @@ java.sql.SQLException: Field 'id' doesn't have a default value
 2020-01-05 17:15:28.046 [http-nio-8989-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
 ### The error may exist in file [E:\Project\IntelliJIDEAProjects\todo-score\target\classes\mybatis\mapper\SubjectMapper.xml]
-### The error may involve com.lewic.todoscore.dao.SubjectMapper.insert-Inline
+### The error may involve com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO subject (content,                              status,                              cycle_type,                              super_id,                              description,                              expiration_time)         VALUES (?,                 ?,                 ?,                 ?,                 ?,                 ?)
 ### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
@@ -1344,7 +1344,7 @@ java.sql.SQLException: Field 'id' doesn't have a default value
 2020-01-05 17:28:52.396 [http-nio-8989-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
 ### The error may exist in file [E:\Project\IntelliJIDEAProjects\todo-score\target\classes\mybatis\mapper\OptionMapper.xml]
-### The error may involve com.lewic.todoscore.dao.OptionMapper.insert-Inline
+### The error may involve com.lewic.todoscore.dao.mybatis.master.OptionMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO `option` (content,                               score,                               subject_id,                               status,                               description)         VALUES (?,                 ?,                 ?,                 ?,                 ?)
 ### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
@@ -1451,7 +1451,7 @@ java.sql.SQLException: Field 'id' doesn't have a default value
 2020-01-05 17:29:03.049 [http-nio-8989-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
 ### The error may exist in file [E:\Project\IntelliJIDEAProjects\todo-score\target\classes\mybatis\mapper\OptionMapper.xml]
-### The error may involve com.lewic.todoscore.dao.OptionMapper.insert-Inline
+### The error may involve com.lewic.todoscore.dao.mybatis.master.OptionMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO `option` (content,                               score,                               subject_id,                               status,                               description)         VALUES (?,                 ?,                 ?,                 ?,                 ?)
 ### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
@@ -1586,7 +1586,7 @@ java.sql.SQLException: Field 'id' doesn't have a default value
 2020-01-05 17:32:11.742 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
 ### The error may exist in file [E:\Project\IntelliJIDEAProjects\todo-score\target\classes\mybatis\mapper\OptionMapper.xml]
-### The error may involve com.lewic.todoscore.dao.OptionMapper.insert-Inline
+### The error may involve com.lewic.todoscore.dao.mybatis.master.OptionMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO `option` (content,                               score,                               subject_id,                               status,                               description)         VALUES (?,                 ?,                 ?,                 ?,                 ?)
 ### Cause: java.sql.SQLException: Field 'id' doesn't have a default value
@@ -1693,7 +1693,7 @@ java.sql.SQLException: Field 'id' doesn't have a default value
 2020-01-05 17:33:40.594 [http-nio-8989-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
 ### Error updating database.  Cause: java.sql.SQLException: Field 'id' doesn't have a default value
 ### The error may exist in file [E:\Project\IntelliJIDEAProjects\todo-score\target\classes\mybatis\mapper\OptionMapper.xml]
-### The error may involve com.lewic.todoscore.dao.OptionMapper.insert-Inline
+### The error may involve com.lewic.todoscore.dao.mybatis.master.OptionMapper.insert-Inline
 ### The error occurred while setting parameters
 ### SQL: INSERT INTO `option` (content,                               score,                               subject_id,                               status,                               description)         VALUES (?,                 ?,                 ?,                 ?,                 ?)
 ### Cause: java.sql.SQLException: Field 'id' doesn't have a default value

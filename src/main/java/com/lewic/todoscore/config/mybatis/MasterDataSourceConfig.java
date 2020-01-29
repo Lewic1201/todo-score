@@ -51,12 +51,14 @@ public class MasterDataSourceConfig {
 
     @Bean(name = "masterTransactionManager")
 //    @Primary
+    @Qualifier
     public DataSourceTransactionManager masterTransactionManager() {
         return new DataSourceTransactionManager(masterDataSource());
     }
 
     @Bean(name = "masterSqlSessionFactory")
 //    @Primary
+    @Qualifier
     public SqlSessionFactory masterSqlSessionFactory(@Qualifier("masterDataSource") DataSource masterDataSource)
             throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();

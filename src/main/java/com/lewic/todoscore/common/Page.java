@@ -1,4 +1,4 @@
-package com.lewic.todoscore.dto;
+package com.lewic.todoscore.common;
 
 import java.io.Serializable;
 

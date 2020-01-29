@@ -1,9 +1,9 @@
 package com.lewic.todoscore.service;
 
-import com.lewic.todoscore.dao.UserMapper;
+import com.lewic.todoscore.dao.mybatis.master.UserMapper;
 import com.lewic.todoscore.dao.jpa.primary.TaskDao;
-import com.lewic.todoscore.dto.Page;
-import com.lewic.todoscore.entity.User;
+import com.lewic.todoscore.common.Page;
+import com.lewic.todoscore.entity.mybatis.vo.User;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterAll;

@@ -2,12 +2,15 @@ package com.lewic.todoscore.service.impl;
 
 import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
+import com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper;
+import com.lewic.todoscore.common.Page;
+import com.lewic.todoscore.dto.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
+import com.lewic.todoscore.entity.mybatis.vo.TaskRecordI;
 import com.lewic.todoscore.service.TaskRecordService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.ReadOnlyProperty;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,11 +34,14 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     private final CycleTypeServiceImpl cycleTypeService;
 
+    private final TaskRecordMapper taskRecordMapper;
+
     @Autowired
-    public TaskRecordServiceImpl(TaskRecordDao taskRecordDao, TaskDao taskDao, CycleTypeServiceImpl cycleTypeService) {
+    public TaskRecordServiceImpl(TaskRecordDao taskRecordDao, TaskDao taskDao, CycleTypeServiceImpl cycleTypeService, TaskRecordMapper taskRecordMapper) {
         this.taskRecordDao = taskRecordDao;
         this.taskDao = taskDao;
         this.cycleTypeService = cycleTypeService;
+        this.taskRecordMapper = taskRecordMapper;
     }
 
 
@@ -90,6 +96,14 @@ public class TaskRecordServiceImpl implements TaskRecordService {
             }
         }
         return totalScore;
+    }
+
+    @Override
+    public TaskRecordBean listByFinishNotNull(Integer pageNum, Integer pageSize) {
+        Integer total = taskRecordMapper.getCountByFinishNotNull();
+        Page page = new Page(pageSize, pageNum, total);
+        List<TaskRecordI> taskRecordIS = taskRecordMapper.listByFinishNotNull(page);
+        return new TaskRecordBean(page, taskRecordIS);
     }
 
     @Override

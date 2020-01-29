@@ -1,6 +1,8 @@
 package com.lewic.todoscore.dto;
 
-import com.lewic.todoscore.entity.User;
+import com.lewic.todoscore.common.Page;
+import com.lewic.todoscore.dto.base.BaseBeanList;
+import com.lewic.todoscore.entity.mybatis.vo.User;
 
 import java.util.List;
 

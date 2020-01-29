@@ -1,4 +1,4 @@
-package com.lewic.todoscore.entity;
+package com.lewic.todoscore.entity.mybatis.vo;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lewic.todoscore.common.View;

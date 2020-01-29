@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lewic.todoscore.dao.UserMapper">
+<mapper namespace="com.lewic.todoscore.dao.mybatis.master.UserMapper">
 
-    <resultMap id="User" type="com.lewic.todoscore.entity.User">
+    <resultMap id="User" type="com.lewic.todoscore.entity.mybatis.vo.User">
         <result column="id" jdbcType="INTEGER" property="id"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
         <result column="password" jdbcType="INTEGER" property="password"/>
@@ -36,7 +36,7 @@
         FROM user
     </select>
 
-    <insert id="insert" parameterType="com.lewic.todoscore.entity.User">
+    <insert id="insert" parameterType="com.lewic.todoscore.entity.mybatis.vo.User">
         INSERT INTO user (username,
                           password,
                           role,
@@ -47,7 +47,7 @@
                 #{status,jdbcType=VARCHAR})
     </insert>
 
-    <update id="update" parameterType="com.lewic.todoscore.entity.User">
+    <update id="update" parameterType="com.lewic.todoscore.entity.mybatis.vo.User">
         UPDATE user
         SET username    = #{username,jdbcType=VARCHAR},
             password    = #{password,jdbcType=VARCHAR},

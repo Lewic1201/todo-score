@@ -1,16 +1,19 @@
 package com.lewic.todoscore.rest;
 
 
+import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lewic.todoscore.common.ResponseCode;
 import com.lewic.todoscore.common.View;
 import com.lewic.todoscore.service.TaskRecordService;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -50,6 +53,18 @@ public class TaskRecordController {
     public String historyScore() {
         // todo 获取历史得分；排序
         return ResponseCode.SUCCESS.getValue();
+    }
+
+    @ApiOperation("获取历史记录")
+    @RequestMapping(value = "/history", method = RequestMethod.GET)
+    public String history(
+            @ApiParam(value = "第几页")
+            @RequestParam(required = false, value = "pageNum", defaultValue = "1")
+                    Integer pageNum,
+            @ApiParam(value = "每页条数")
+            @RequestParam(required = false, value = "pageSize", defaultValue = "10")
+                    Integer pageSize) {
+        return JSON.toJSON(taskRecordService.listByFinishNotNull(pageNum, pageSize)).toString();
     }
 
     @ApiOperation("完成后标记")
