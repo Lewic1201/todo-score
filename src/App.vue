@@ -7,17 +7,14 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+    }
+  },
+  methods: {
+  }
 }
-// // 导入组件
-// import Hello from './components/HelloWorld'
-//
-// export default {
-//   name: 'app',
-//   components: {
-//     Hello
-//   }
-// }
 </script>
 
 <style>

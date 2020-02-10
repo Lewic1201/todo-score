@@ -3,8 +3,21 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import elementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-chalk/display.css'
 
-Vue.config.productionTip = false
+Vue.use(elementUI);
+
+import axios from 'axios'
+Vue.prototype.axios = axios;
+
+import qs from 'qs';
+Vue.prototype.qs = qs;
+
+Vue.config.productionTip = false;
+
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
 
 /* eslint-disable no-new */
 new Vue({
@@ -12,4 +25,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});

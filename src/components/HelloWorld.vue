@@ -80,6 +80,14 @@
         </a>
       </li>
     </ul>
+    <h2>Custom</h2>
+    <ul>
+      <li>
+        <router-link to="/task" active-class="router-active">
+          my-task
+        </router-link>
+        </li>
+    </ul>
   </div>
 </template>
 
