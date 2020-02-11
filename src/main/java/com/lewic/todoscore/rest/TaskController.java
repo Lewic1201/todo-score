@@ -56,6 +56,7 @@ public class TaskController implements BaseRestFul<Task> {
     @ApiOperation("新增任务")
     @RequestMapping(value = "", method = RequestMethod.POST)
     public String create(@ApiParam(value = "任务") @RequestBody Task task) {
+        // todo 新增任务如果满足今天的条件，需要在taskRecord中新增记录
         taskService.insertOne(task);
         return ResponseCode.SUCCESS.getValue();
     }
@@ -73,6 +74,7 @@ public class TaskController implements BaseRestFul<Task> {
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String delete(@PathVariable(value = "id") Integer id) {
         //todo id预校验
+        //todo 任务关联不能删除
         taskService.deleteOne(id);
         return ResponseCode.SUCCESS.getValue();
     }
