@@ -1,5 +1,8 @@
 <template>
   <div>
+    <router-link to="/" active-class="router-active">
+      <el-link>导航栏</el-link>
+    </router-link>
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
         <el-input
@@ -164,7 +167,7 @@
         title="编辑"
         :append-to-body='true'
         :visible.sync="dialogUpdate"
-        width="80%"
+        width="60%"
         :before-close="handleClose">
         <el-input type="hidden" v-model="taskForm.id"/>
         <el-form-item label="内容" prop="content">
@@ -470,7 +473,7 @@
         console.log(error);
       });
 
-      // this.axios.post('/rows').then(response =>
+      // this.axios.get('/v1/task/'+row.id).then(response =>
       // {
       //   this.total = response.data;
       // }).catch(error =>
