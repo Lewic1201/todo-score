@@ -1,110 +1,828 @@
-2020-02-04 19:13:31.779 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lewic.todoscore.service.UserServiceTest], using SpringBootContextLoader
-2020-02-04 19:13:31.815 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.lewic.todoscore.service.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-02-04 19:13:31.817 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lewic.todoscore.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-02-04 19:13:32.100 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lewic.todoscore.TodoScoreApplication for test class com.lewic.todoscore.service.UserServiceTest
-2020-02-04 19:13:32.296 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-02-04 19:13:32.336 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@19c97cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@19caaeb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a15bdc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a59da3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e47833, org.springframework.test.context.transaction.TransactionalTestExecutionListener@16745d6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1508c5d, org.springframework.test.context.event.EventPublishingTestExecutionListener@1704591, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@15189ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d3ce5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1dc6915, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4deff2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19614be]
-2020-02-04 19:13:33.087 [main] INFO  c.l.t.service.UserServiceTest - Starting UserServiceTest on DESKTOP-OV0MBIP with PID 10852 (started by lewic in E:\lewic\code\git\todo-score)
-2020-02-04 19:13:33.087 [main] DEBUG c.l.t.service.UserServiceTest - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
-2020-02-04 19:13:33.087 [main] INFO  c.l.t.service.UserServiceTest - The following profiles are active: dev
-2020-02-04 19:13:34.509 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-02-04 19:13:34.677 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 155ms. Found 4 JPA repository interfaces.
-2020-02-04 19:13:35.217 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:13:35.217 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:13:35.217 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:13:35.217 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:13:35.217 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:13:35.217 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:13:35.218 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
-2020-02-04 19:13:35.769 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-04 19:13:36.140 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
-2020-02-04 19:13:36.270 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
-2020-02-04 19:13:36.536 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-02-04 19:13:37.050 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2020-02-04 19:13:37.678 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2020-02-04 19:13:37.718 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-02-04 19:13:39.258 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-02-04 19:13:39.270 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
-2020-02-04 19:13:40.629 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-02-04 19:13:41.399 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020-02-04 19:13:41.865 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
-2020-02-04 19:13:41.932 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2020-02-04 19:13:41.968 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2020-02-04 19:13:41.985 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2020-02-04 19:13:42.318 [main] INFO  c.l.t.service.UserServiceTest - Started UserServiceTest in 9.84 seconds (JVM running for 12.102)
-2020-02-04 19:13:42.466 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-2020-02-04 19:13:43.032 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - ==>  Preparing: INSERT INTO user (username, password, role, status) VALUES (?, ?, ?, ?) 
-2020-02-04 19:13:43.053 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - ==> Parameters: zhang3(String), 123456(String), null, null
-2020-02-04 19:13:43.159 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - <==    Updates: 1
-2020-02-04 19:13:43.210 [main] DEBUG c.l.t.d.m.master.UserMapper.list - ==>  Preparing: SELECT * FROM user ORDER BY id limit ?,? 
-2020-02-04 19:13:43.210 [main] DEBUG c.l.t.d.m.master.UserMapper.list - ==> Parameters: 0(Integer), 10(Integer)
-2020-02-04 19:13:43.274 [main] DEBUG c.l.t.d.m.master.UserMapper.list - <==      Total: 2
-2020-02-04 19:13:43.275 [main] INFO  c.l.t.service.UserServiceTest - [User(id=2, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-01-28 10:13:22, updateTime=2020-01-28 10:13:22), User(id=3, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-02-04 11:13:42, updateTime=2020-02-04 11:13:42)]
-2020-02-04 19:13:44.135 [main] INFO  c.l.t.service.UserServiceTest - [Task(id=2, content=�ú�ѧϰ, score=10, status=0, description=string, cycleTypeId=2, createTime=null, updateTime=null), Task(id=3, content=�ú�ѧϰ222, score=10, status=0, description=string, cycleTypeId=6, createTime=null, updateTime=null), Task(id=4, content=��˯, score=10, status=1, description=�ú���Ϣ, cycleTypeId=null, createTime=2020-02-04 19:13:43.0, updateTime=2020-02-04 19:13:43.0)]
-2020-02-04 19:13:44.152 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lewic.todoscore.TodoScoreApplicationTests], using SpringBootContextLoader
-2020-02-04 19:13:44.155 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.lewic.todoscore.TodoScoreApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-02-04 19:13:44.155 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lewic.todoscore.TodoScoreApplicationTests]: TodoScoreApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-02-04 19:13:44.163 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lewic.todoscore.TodoScoreApplication for test class com.lewic.todoscore.TodoScoreApplicationTests
-2020-02-04 19:13:44.165 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-02-04 19:13:44.166 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1bfca3a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@690f5e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@19d2cee, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@390b8c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@17eeceb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@17d0625, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a5a4f8, org.springframework.test.context.event.EventPublishingTestExecutionListener@192aa2b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@14f0d06, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c87de4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6690e1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@63af34, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1aba3c3]
-2020-02-04 19:13:44.200 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
-2020-02-04 19:13:44.201 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-02-04 19:13:44.217 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
-2020-02-04 19:13:44.217 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
-2020-02-04 19:13:44.219 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2020-02-04 19:13:44.223 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2020-02-04 19:17:12.347 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lewic.todoscore.service.UserServiceTest], using SpringBootContextLoader
-2020-02-04 19:17:12.358 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.lewic.todoscore.service.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-02-04 19:17:12.359 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lewic.todoscore.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-02-04 19:17:12.502 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lewic.todoscore.TodoScoreApplication for test class com.lewic.todoscore.service.UserServiceTest
-2020-02-04 19:17:12.648 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-02-04 19:17:12.694 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@19c97cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@19caaeb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a15bdc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a59da3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e47833, org.springframework.test.context.transaction.TransactionalTestExecutionListener@16745d6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1508c5d, org.springframework.test.context.event.EventPublishingTestExecutionListener@1704591, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@15189ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d3ce5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1dc6915, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4deff2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19614be]
-2020-02-04 19:17:13.308 [main] INFO  c.l.t.service.UserServiceTest - Starting UserServiceTest on DESKTOP-OV0MBIP with PID 10872 (started by lewic in E:\lewic\code\git\todo-score)
-2020-02-04 19:17:13.308 [main] DEBUG c.l.t.service.UserServiceTest - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
-2020-02-04 19:17:13.308 [main] INFO  c.l.t.service.UserServiceTest - The following profiles are active: dev
-2020-02-04 19:17:14.216 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-02-04 19:17:14.292 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63ms. Found 4 JPA repository interfaces.
-2020-02-04 19:17:14.721 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:17:14.721 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:17:14.721 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:17:14.721 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:17:14.721 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:17:14.721 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
-2020-02-04 19:17:14.722 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
-2020-02-04 19:17:15.073 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-04 19:17:15.380 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
-2020-02-04 19:17:15.472 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
-2020-02-04 19:17:15.649 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-02-04 19:17:16.152 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2020-02-04 19:17:16.755 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2020-02-04 19:17:16.835 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-02-04 19:17:18.197 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-02-04 19:17:18.209 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
-2020-02-04 19:17:19.377 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-02-04 19:17:20.231 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020-02-04 19:17:20.518 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
-2020-02-04 19:17:20.567 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2020-02-04 19:17:20.595 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2020-02-04 19:17:20.609 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2020-02-04 19:17:20.842 [main] INFO  c.l.t.service.UserServiceTest - Started UserServiceTest in 8.079 seconds (JVM running for 9.585)
-2020-02-04 19:17:20.968 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
-2020-02-04 19:17:21.646 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - ==>  Preparing: INSERT INTO user (username, password, role, status) VALUES (?, ?, ?, ?) 
-2020-02-04 19:17:21.661 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - ==> Parameters: zhang3(String), 123456(String), null, null
-2020-02-04 19:17:21.811 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - <==    Updates: 1
-2020-02-04 19:17:21.853 [main] DEBUG c.l.t.d.m.master.UserMapper.list - ==>  Preparing: SELECT * FROM user ORDER BY id limit ?,? 
-2020-02-04 19:17:21.854 [main] DEBUG c.l.t.d.m.master.UserMapper.list - ==> Parameters: 0(Integer), 10(Integer)
-2020-02-04 19:17:21.929 [main] DEBUG c.l.t.d.m.master.UserMapper.list - <==      Total: 3
-2020-02-04 19:17:21.930 [main] INFO  c.l.t.service.UserServiceTest - [User(id=2, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-01-28 10:13:22, updateTime=2020-01-28 10:13:22), User(id=3, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-02-04 11:13:42, updateTime=2020-02-04 11:13:42), User(id=4, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-02-04 11:17:21, updateTime=2020-02-04 11:17:21)]
-2020-02-04 19:17:22.807 [main] INFO  c.l.t.service.UserServiceTest - [Task(id=2, content=�ú�ѧϰ, score=10, status=0, description=string, cycleTypeId=2, createTime=null, updateTime=null), Task(id=3, content=�ú�ѧϰ222, score=10, status=0, description=string, cycleTypeId=6, createTime=null, updateTime=null), Task(id=4, content=��˯, score=10, status=1, description=�ú���Ϣ, cycleTypeId=null, createTime=2020-02-04 19:13:43.0, updateTime=2020-02-04 19:13:43.0), Task(id=5, content=��˯, score=10, status=1, description=�ú���Ϣ, cycleTypeId=null, createTime=2020-02-04 19:17:22.0, updateTime=2020-02-04 19:17:22.0)]
-2020-02-04 19:17:22.825 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lewic.todoscore.TodoScoreApplicationTests], using SpringBootContextLoader
-2020-02-04 19:17:22.827 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.lewic.todoscore.TodoScoreApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-02-04 19:17:22.827 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lewic.todoscore.TodoScoreApplicationTests]: TodoScoreApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-02-04 19:17:22.836 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lewic.todoscore.TodoScoreApplication for test class com.lewic.todoscore.TodoScoreApplicationTests
-2020-02-04 19:17:22.839 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-02-04 19:17:22.839 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@dc702b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b2123e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@86bcaa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@9671e6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13a0f37, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c8db0c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@11a5b93, org.springframework.test.context.event.EventPublishingTestExecutionListener@ee1ad7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1d2ea0a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1fa4a07, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2143e8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4bd699, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3eb60]
-2020-02-04 19:17:22.916 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
-2020-02-04 19:17:22.917 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-02-04 19:17:22.929 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
-2020-02-04 19:17:22.930 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
-2020-02-04 19:17:22.930 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2020-02-04 19:17:22.933 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-11 13:33:29.168 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 14072 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-11 13:33:29.180 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-11 13:33:29.181 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-11 13:33:29.371 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-11 13:33:29.372 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-11 13:33:29.373 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-11 13:33:31.263 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-11 13:33:31.352 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77ms. Found 4 JPA repository interfaces.
+2020-02-11 13:33:31.790 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:33:31.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:33:31.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:33:31.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:33:31.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:33:31.792 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:33:31.792 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-11 13:33:32.104 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-11 13:33:32.618 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-11 13:33:32.628 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-11 13:33:32.629 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-11 13:33:32.629 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-11 13:33:32.869 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-11 13:33:32.869 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3496 ms
+2020-02-11 13:33:33.110 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-11 13:33:33.218 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-11 13:33:33.442 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-11 13:33:33.586 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-11 13:33:34.169 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-11 13:33:34.218 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-11 13:33:35.507 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-11 13:33:35.515 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-11 13:33:35.535 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-11 13:33:36.637 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-11 13:33:36.949 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-11 13:33:37.085 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-11 13:33:37.222 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-11 13:33:37.240 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-11 13:33:37.252 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-11 13:33:37.504 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-11 13:33:37.534 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-11 13:33:37.537 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 9.213 seconds (JVM running for 12.206)
+2020-02-11 13:35:17.581 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:36:57.503 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:38:37.510 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:40:17.503 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:40:36.330 [http-nio-8989-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-11 13:40:36.330 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-11 13:40:36.436 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 94 ms
+2020-02-11 13:40:57.551 [http-nio-8989-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a3e84 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:41:02.614 [http-nio-8989-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11d3105 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:41:07.643 [http-nio-8989-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@97d2fb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:41:14.091 [http-nio-8989-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c5a6ee (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:41:19.121 [http-nio-8989-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ce6c16 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:41:24.128 [http-nio-8989-exec-3] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@10c9e6f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:41:24.131 [http-nio-8989-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08003
+2020-02-11 13:41:24.131 [http-nio-8989-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 31622ms.
+2020-02-11 13:41:24.132 [http-nio-8989-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - No operations allowed after connection closed.
+2020-02-11 13:41:24.174 [http-nio-8989-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Unable to acquire JDBC Connection; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection] with root cause
+com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2486)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:552)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:168)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:185)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:161)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:104)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:134)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:50)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:149)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:176)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:151)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:2104)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2034)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2012)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:953)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:354)
+	at org.hibernate.loader.Loader.doList(Loader.java:2815)
+	at org.hibernate.loader.Loader.doList(Loader.java:2797)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2629)
+	at org.hibernate.loader.Loader.list(Loader.java:2624)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:396)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1396)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1558)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1526)
+	at org.hibernate.query.Query.getResultList(Query.java:165)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:126)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:154)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:142)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:618)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:605)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy138.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(Unknown Source)
+	at com.lewic.todoscore.service.impl.TaskRecordServiceImpl.listByToday(TaskRecordServiceImpl.java:64)
+	at com.lewic.todoscore.service.impl.TaskRecordServiceImpl$$FastClassBySpringCGLIB$$e8c64aef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
+	at com.lewic.todoscore.service.impl.TaskRecordServiceImpl$$EnhancerBySpringCGLIB$$95392b7a.listByToday(<generated>)
+	at com.lewic.todoscore.rest.TaskRecordController.today(TaskRecordController.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020-02-11 13:41:57.518 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:42:07.321 [http-nio-8989-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a09428 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:42:12.335 [http-nio-8989-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1a02d9e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:42:17.348 [http-nio-8989-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@113076a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:42:22.360 [http-nio-8989-exec-10] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a44090 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 13:43:37.504 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:45:17.505 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:45:35.736 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 12680 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-11 13:45:35.792 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-11 13:45:35.792 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-11 13:45:35.900 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-11 13:45:35.901 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-11 13:45:35.901 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-11 13:45:37.686 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-11 13:45:37.810 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 106ms. Found 4 JPA repository interfaces.
+2020-02-11 13:45:38.305 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:45:38.307 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:45:38.307 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:45:38.307 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:45:38.307 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:45:38.308 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:45:38.317 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-11 13:45:38.921 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-11 13:45:39.597 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-11 13:45:39.610 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-11 13:45:39.612 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-11 13:45:39.612 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-11 13:45:39.907 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-11 13:45:39.907 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4005 ms
+2020-02-11 13:45:40.210 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-11 13:45:40.347 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-11 13:45:40.616 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-11 13:45:40.815 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-11 13:45:42.764 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-11 13:45:42.797 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-11 13:47:39.486 [restartedMain] WARN  c.zaxxer.hikari.pool.ProxyConnection - HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@4eff14 marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 115,082 milliseconds ago. The last packet sent successfully to the server was 115,130 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema.executeMetadataQuery(DatabaseMetaDataUsingInfoSchema.java:70)
+	at com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema.getColumns(DatabaseMetaDataUsingInfoSchema.java:275)
+	at com.zaxxer.hikari.pool.ProxyDatabaseMetaData.getColumns(ProxyDatabaseMetaData.java:90)
+	at com.zaxxer.hikari.pool.HikariProxyDatabaseMetaData.getColumns(HikariProxyDatabaseMetaData.java)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.populateTablesWithColumns(InformationExtractorJdbcDatabaseMetaDataImpl.java:354)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:341)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:320)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1237)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.lewic.todoscore.TodoScoreApplication.main(TodoScoreApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 115,082 milliseconds ago. The last packet sent successfully to the server was 115,130 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 44 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
+	... 49 common frames omitted
+2020-02-11 13:47:39.489 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2020-02-11 13:47:39.489 [restartedMain] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet successfully received from the server was 115,082 milliseconds ago. The last packet sent successfully to the server was 115,130 milliseconds ago.
+2020-02-11 13:47:39.521 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'primaryEntityManagerFactory' defined in class path resource [com/lewic/todoscore/config/jpa/PrimaryDataSourceConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: primaryPersistenceUnit] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing tables metadata
+2020-02-11 13:47:39.521 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-11 13:47:39.869 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-11 13:47:39.876 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-11 13:47:39.898 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-11 13:47:39.914 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'primaryEntityManagerFactory' defined in class path resource [com/lewic/todoscore/config/jpa/PrimaryDataSourceConfig.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: primaryPersistenceUnit] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing tables metadata
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.lewic.todoscore.TodoScoreApplication.main(TodoScoreApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: primaryPersistenceUnit] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Error accessing tables metadata
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:403)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Error accessing tables metadata
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.convertSQLException(InformationExtractorJdbcDatabaseMetaDataImpl.java:102)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.populateTablesWithColumns(InformationExtractorJdbcDatabaseMetaDataImpl.java:387)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:341)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:320)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1237)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	... 25 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 115,082 milliseconds ago. The last packet sent successfully to the server was 115,130 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema.executeMetadataQuery(DatabaseMetaDataUsingInfoSchema.java:70)
+	at com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema.getColumns(DatabaseMetaDataUsingInfoSchema.java:275)
+	at com.zaxxer.hikari.pool.ProxyDatabaseMetaData.getColumns(ProxyDatabaseMetaData.java:90)
+	at com.zaxxer.hikari.pool.HikariProxyDatabaseMetaData.getColumns(HikariProxyDatabaseMetaData.java)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.populateTablesWithColumns(InformationExtractorJdbcDatabaseMetaDataImpl.java:354)
+	... 38 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 115,082 milliseconds ago. The last packet sent successfully to the server was 115,130 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 44 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
+	... 49 common frames omitted
+2020-02-11 13:47:53.406 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 6936 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-11 13:47:53.412 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-11 13:47:53.413 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-11 13:47:53.522 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-11 13:47:53.523 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-11 13:47:53.523 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-11 13:47:55.296 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-11 13:47:55.427 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116ms. Found 4 JPA repository interfaces.
+2020-02-11 13:47:55.943 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:47:55.943 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:47:55.943 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:47:55.943 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:47:55.943 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:47:55.943 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 13:47:55.944 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-11 13:47:56.406 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-11 13:47:57.082 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-11 13:47:57.095 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-11 13:47:57.096 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-11 13:47:57.096 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-11 13:47:57.372 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-11 13:47:57.372 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3848 ms
+2020-02-11 13:47:57.672 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-11 13:47:57.808 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-11 13:47:58.100 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-11 13:47:58.304 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-11 13:47:59.187 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-11 13:47:59.220 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-11 13:48:01.048 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-11 13:48:01.060 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-11 13:48:01.103 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-11 13:48:02.523 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-11 13:48:02.958 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-11 13:48:03.144 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-11 13:48:03.259 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-11 13:48:03.285 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-11 13:48:03.302 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-11 13:48:03.657 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-11 13:48:03.698 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-11 13:48:03.720 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 11.133 seconds (JVM running for 13.667)
+2020-02-11 13:48:14.412 [http-nio-8989-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-11 13:48:14.413 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-11 13:48:14.429 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2020-02-11 13:49:43.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:51:23.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:53:03.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:54:43.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:56:23.671 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:58:03.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 13:59:43.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:01:23.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:03:03.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:04:43.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:06:23.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:06:31.161 [http-nio-8989-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@d7c8d8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 14:06:36.223 [http-nio-8989-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6b0afa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 14:06:41.238 [http-nio-8989-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@46c54f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 14:06:46.243 [http-nio-8989-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@c08121 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 14:06:51.246 [http-nio-8989-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@a1db55 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 14:06:56.259 [http-nio-8989-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@19bdcd2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2020-02-11 14:06:56.271 [http-nio-8989-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08003
+2020-02-11 14:06:56.271 [http-nio-8989-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 30451ms.
+2020-02-11 14:06:56.272 [http-nio-8989-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - No operations allowed after connection closed.
+2020-02-11 14:06:56.501 [http-nio-8989-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Unable to acquire JDBC Connection; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection] with root cause
+com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2486)
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:552)
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:168)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:185)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:161)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:104)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:134)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:50)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:149)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:176)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:151)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:2104)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2034)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2012)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:953)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:354)
+	at org.hibernate.loader.Loader.doList(Loader.java:2815)
+	at org.hibernate.loader.Loader.doList(Loader.java:2797)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2629)
+	at org.hibernate.loader.Loader.list(Loader.java:2624)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:506)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:396)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1396)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1558)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1526)
+	at org.hibernate.query.Query.getResultList(Query.java:165)
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getResultList(CriteriaQueryTypeQueryAdapter.java:76)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:126)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:154)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:142)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:618)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:605)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:99)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy138.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(Unknown Source)
+	at com.lewic.todoscore.service.impl.TaskRecordServiceImpl.listByToday(TaskRecordServiceImpl.java:64)
+	at com.lewic.todoscore.service.impl.TaskRecordServiceImpl$$FastClassBySpringCGLIB$$e8c64aef.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685)
+	at com.lewic.todoscore.service.impl.TaskRecordServiceImpl$$EnhancerBySpringCGLIB$$16b60ac7.listByToday(<generated>)
+	at com.lewic.todoscore.rest.TaskRecordController.today(TaskRecordController.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020-02-11 14:08:03.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:09:43.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:11:23.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:13:03.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:14:44.062 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:16:23.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:18:03.666 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:19:43.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:21:23.662 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:23:03.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:24:43.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:26:23.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:28:03.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:29:43.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:31:23.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:33:03.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:34:43.657 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:36:23.658 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:38:03.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:39:43.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:41:23.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:43:03.658 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:44:43.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:46:23.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:48:03.654 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:49:43.674 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:51:23.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:53:03.703 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:54:43.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:56:23.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:58:03.655 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 14:59:43.656 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.322 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.888 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.888 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.888 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.870 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m14s509ms179µs319ns).
+2020-02-11 15:14:27.889 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.889 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.889 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:27.889 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-11 15:14:28.354 [http-nio-8989-exec-11] ERROR o.a.c.c.C.[Tomcat].[localhost] - Exception Processing ErrorPage[errorCode=0, location=/error]
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1153)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:923)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:295)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:226)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1257)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:814)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:767)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:757)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1138)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:400)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 41 common frames omitted
+2020-02-11 15:14:28.355 [http-nio-8989-exec-2] ERROR o.a.c.c.C.[Tomcat].[localhost] - Exception Processing ErrorPage[errorCode=0, location=/error]
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1153)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:923)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:295)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:226)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1257)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:814)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:767)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:757)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1138)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:400)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+	... 41 common frames omitted
+2020-02-11 15:14:29.119 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-11 15:14:29.132 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-11 15:14:29.190 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-11 15:14:29.210 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-11 15:14:29.509 [http-nio-8989-exec-3] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-11 15:14:29.631 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-11 15:14:31.157 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-11 15:14:31.289 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-11 15:14:31.412 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-11 15:14:31.472 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id,t2.id 
+2020-02-11 15:14:31.473 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-11 15:14:31.556 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-11 19:26:36.581 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lewic.todoscore.service.UserServiceTest], using SpringBootContextLoader
+2020-02-11 19:26:36.630 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.lewic.todoscore.service.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-02-11 19:26:36.631 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lewic.todoscore.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-02-11 19:26:36.856 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lewic.todoscore.TodoScoreApplication for test class com.lewic.todoscore.service.UserServiceTest
+2020-02-11 19:26:37.096 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-02-11 19:26:37.146 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@19c97cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@19caaeb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a15bdc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a59da3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e47833, org.springframework.test.context.transaction.TransactionalTestExecutionListener@16745d6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1508c5d, org.springframework.test.context.event.EventPublishingTestExecutionListener@1704591, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@15189ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d3ce5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1dc6915, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4deff2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@19614be]
+2020-02-11 19:26:38.464 [main] INFO  c.l.t.service.UserServiceTest - Starting UserServiceTest on DESKTOP-OV0MBIP with PID 12116 (started by lewic in E:\lewic\code\git\todo-score)
+2020-02-11 19:26:38.466 [main] DEBUG c.l.t.service.UserServiceTest - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-11 19:26:38.466 [main] INFO  c.l.t.service.UserServiceTest - The following profiles are active: dev
+2020-02-11 19:26:40.463 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-11 19:26:40.566 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89ms. Found 4 JPA repository interfaces.
+2020-02-11 19:26:41.128 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 19:26:41.129 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 19:26:41.129 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 19:26:41.129 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-11 19:26:41.129 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 19:26:41.129 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-11 19:26:41.130 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-11 19:26:41.582 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-11 19:26:43.241 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-11 19:26:43.463 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-11 19:26:43.761 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-11 19:26:44.415 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-11 19:26:45.390 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-11 19:26:45.441 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-11 19:26:47.360 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-11 19:26:47.373 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-11 19:26:49.039 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-11 19:26:50.221 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-11 19:26:50.433 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-11 19:26:50.786 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-11 19:26:50.843 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-11 19:26:50.872 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-11 19:26:50.896 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-11 19:26:51.251 [main] INFO  c.l.t.service.UserServiceTest - Started UserServiceTest in 13.478 seconds (JVM running for 16.602)
+2020-02-11 19:26:51.408 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-11 19:26:52.742 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - ==>  Preparing: INSERT INTO user (username, password, role, status) VALUES (?, ?, ?, ?) 
+2020-02-11 19:26:52.761 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - ==> Parameters: zhang3(String), 123456(String), null, null
+2020-02-11 19:26:52.949 [main] DEBUG c.l.t.d.m.master.UserMapper.insert - <==    Updates: 1
+2020-02-11 19:26:52.996 [main] DEBUG c.l.t.d.m.master.UserMapper.list - ==>  Preparing: SELECT * FROM user ORDER BY id limit ?,? 
+2020-02-11 19:26:52.996 [main] DEBUG c.l.t.d.m.master.UserMapper.list - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-11 19:26:53.083 [main] DEBUG c.l.t.d.m.master.UserMapper.list - <==      Total: 4
+2020-02-11 19:26:53.084 [main] INFO  c.l.t.service.UserServiceTest - [User(id=2, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-01-28 10:13:22, updateTime=2020-01-28 10:13:22), User(id=3, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-02-04 11:13:42, updateTime=2020-02-04 11:13:42), User(id=4, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-02-04 11:17:21, updateTime=2020-02-04 11:17:21), User(id=5, username=zhang3, password=123456, role=null, mobile=null, status=null, createTime=2020-02-11 11:26:52, updateTime=2020-02-11 11:26:52)]
+2020-02-11 19:26:54.208 [main] INFO  c.l.t.service.UserServiceTest - [Task(id=2, content=�ú�ѧϰ, score=10, status=0, description=string, cycleTypeId=2, createTime=null, updateTime=null), Task(id=3, content=�ú�ѧϰ222, score=10, status=0, description=string, cycleTypeId=6, createTime=null, updateTime=null), Task(id=4, content=��˯, score=10, status=1, description=�ú���Ϣ, cycleTypeId=null, createTime=2020-02-04 19:13:43.0, updateTime=2020-02-04 19:13:43.0), Task(id=5, content=��˯, score=10, status=1, description=�ú���Ϣ, cycleTypeId=null, createTime=2020-02-04 19:17:22.0, updateTime=2020-02-04 19:17:22.0), Task(id=6, content=��ʱ�Է�, score=10, status=1, description=1231231, cycleTypeId=null, createTime=null, updateTime=2020-02-10 17:52:25.0), Task(id=7, content=testset, score=null, status=null, description=, cycleTypeId=null, createTime=2020-02-10 18:40:00.0, updateTime=2020-02-10 18:40:00.0), Task(id=12, content=test, score=1, status=null, description=, cycleTypeId=null, createTime=2020-02-10 20:07:00.0, updateTime=2020-02-10 20:07:00.0), Task(id=13, content=��˯, score=10, status=1, description=�ú���Ϣ, cycleTypeId=null, createTime=2020-02-11 19:26:53.0, updateTime=2020-02-11 19:26:53.0)]
+2020-02-11 19:26:54.217 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lewic.todoscore.TodoScoreApplicationTests], using SpringBootContextLoader
+2020-02-11 19:26:54.219 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.lewic.todoscore.TodoScoreApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-02-11 19:26:54.219 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lewic.todoscore.TodoScoreApplicationTests]: TodoScoreApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-02-11 19:26:54.250 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lewic.todoscore.TodoScoreApplication for test class com.lewic.todoscore.TodoScoreApplicationTests
+2020-02-11 19:26:54.252 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-02-11 19:26:54.253 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@34de5e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@da5106, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1cddb11, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10bd87a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1213a2b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1691ee8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a34c47, org.springframework.test.context.event.EventPublishingTestExecutionListener@1648321, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1201f84, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@51c756, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@f277ef, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1dc889b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@c3689b]
+2020-02-11 19:26:54.321 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-11 19:26:54.322 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-11 19:26:54.341 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-11 19:26:54.342 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-11 19:26:54.342 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-11 19:26:54.346 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
