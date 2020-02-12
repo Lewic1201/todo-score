@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1 style="float: left">{{ currentTime | formatDate2}}</h1>
-    <el-form :inline="true" class="demo-form-inline">
+    <h1 style="float: left">{{ currentTime | formatDate2}} 任务列表</h1>
+    <br>
+    <el-form :inline="true" class="demo-form-inline" style="float: right">
       <el-form-item>
         <el-button
           class="el-icon-refresh"
@@ -15,14 +16,19 @@
         </router-link>
       </el-form-item>
     </el-form>
-
+    <br><br><br><br>
+    <el-switch v-model="showIdSwitch" active-value="true" inactive-value="false"
+               active-text="显示ID" inactive-text="隐藏ID"
+               style="height:50px;float: left" @change="changeShowId">
+    </el-switch>
     <el-table
       :data="tableData"
       highlight-current-row
       border
       style="width: 100%">
       <el-table-column
-        label="编号">
+        label="编号"
+        v-if="showId">
         <template slot-scope="scope">
           <span>{{ scope.row.id }}</span>
         </template>
@@ -99,9 +105,14 @@
         disablePage: false,
         timer: "",//定义一个定时器的变量
         currentTime: new Date(), // 获取当前时间
+        showIdSwitch: false,
+        showId: false,
       }
     },
     methods: {
+      changeShowId(data) {
+        this.showId = data === "true";
+      },
       changeFinish(index, row) {
         console.log(index, row);
         this.axios({

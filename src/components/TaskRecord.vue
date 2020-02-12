@@ -22,13 +22,19 @@
         </router-link>
       </el-form-item>
     </el-form>
+    <br>
+    <el-switch v-model="showIdSwitch" active-value="true" inactive-value="false"
+               active-text="显示ID" inactive-text="隐藏ID"
+               style="height:50px;float: left" @change="changeShowId">
+    </el-switch>
     <el-table
       :data="tableData"
       highlight-current-row
       border
       style="width: 100%">
       <el-table-column
-        label="编号">
+        label="编号"
+        v-if="showId">
         <template slot-scope="scope">
           <span>{{ scope.row.id }}</span>
         </template>
@@ -115,10 +121,15 @@
         pageSize: 10,
         currentPage: 1,
         total: 0,
-        disablePage: false
+        disablePage: false,
+        showIdSwitch: false,
+        showId: false,
       }
     },
     methods: {
+      changeShowId(data) {
+        this.showId = data === "true";
+      },
       handleClose(done) {
         this.$confirm('确认关闭？')
           .then(_ => {

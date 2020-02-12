@@ -1,8 +1,15 @@
 <template>
   <div>
-    <router-link to="/" active-class="router-active">
-      <el-link>导航栏</el-link>
-    </router-link>
+    <el-form :inline="true" class="demo-form-inline">
+      <router-link to="/" active-class="router-active">
+        <el-link>导航栏</el-link>
+      </router-link>
+      <el-button
+        class="el-icon-refresh"
+        type="text"
+        @click="refreshData">刷新
+      </el-button>
+    </el-form>
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
         <el-input
@@ -28,26 +35,25 @@
       </el-form-item>
       <el-form-item>
         <el-button
-          class="el-icon-refresh"
-          type="text"
-          @click="refreshData">刷新
-        </el-button>
-      </el-form-item>
-      <el-form-item>
-        <el-button
           class="el-icon-circle-plus-outline"
           type="text"
           @click="dialogVisible = true">添加
         </el-button>
       </el-form-item>
     </el-form>
+    <br>
+    <el-switch v-model="showIdSwitch" active-value="true" inactive-value="false"
+               active-text="显示ID" inactive-text="隐藏ID"
+               style="height:50px;float: left" @change="changeShowId">
+    </el-switch>
     <el-table
       :data="tableData"
       highlight-current-row
       border
       style="width: 100%">
       <el-table-column
-        label="编号">
+        label="编号"
+        v-if="showId">
         <template slot-scope="scope">
           <span>{{ scope.row.id }}</span>
         </template>
@@ -143,9 +149,14 @@
           <el-input v-model="taskForm.score"/>
         </el-form-item>
         <el-form-item label="循环方式" prop="cycleTypeId">
-          <el-input v-model="taskForm.cycleTypeId"/>
+          <el-select v-model="taskForm.cycleTypeId">
+            <el-option
+              v-for="(cycleType, index) in cycleTypeList"
+              :key="index"
+              :value="cycleType.id"
+              :label="cycleType.description"/>
+          </el-select>
         </el-form-item>
-
         <el-form-item label="开始时间" prop="startTime">
           <el-date-picker type="datetime" placeholder="选择开始日期" v-model="taskForm.startTime"
                           style="width: 100%;"/>
@@ -183,7 +194,13 @@
           <el-input v-model="taskForm.score"/>
         </el-form-item>
         <el-form-item label="循环方式" prop="cycleTypeId">
-          <el-input v-model="taskForm.cycleTypeId"/>
+          <el-select v-model="taskForm.cycleTypeId">
+            <el-option
+              v-for="(cycleType, index) in cycleTypeList"
+              :key="index"
+              :value="cycleType.id"
+              :label="cycleType.description"/>
+          </el-select>
         </el-form-item>
         <el-form-item label="开始时间" prop="userDate">
           <el-date-picker type="datetime" placeholder="选择日期" v-model="taskForm.startTime"
@@ -241,6 +258,15 @@
             {min: 5, message: '长度大于 5 个字符', trigger: 'blur'}
           ],
         },
+        cycleTypeList: [
+          {
+            id: 2,
+            cronExpression: "0 0 0 * * ? *",
+            times: 0,
+            workdayStatus: 0,
+            description: "每天",
+          },
+        ],
         tableData: [],
         search: '',
         dialogVisible: false,
@@ -248,10 +274,15 @@
         pageSize: 10,
         currentPage: 1,
         total: 20,
-        disablePage: false
+        disablePage: false,
+        showIdSwitch: false,
+        showId: false,
       }
     },
     methods: {
+      changeShowId(data) {
+        this.showId = data === "true";
+      },
       handleEdit(index, row) {
         this.dialogUpdate = true;
         this.taskForm = Object.assign({}, row); //这句是关键！！！
@@ -303,8 +334,8 @@
           page: this.currentPage
         });
         this.axios({
-          method: 'post',
-          url: '/page',
+          method: 'get',
+          url: '/v1/task',
           data: postData
         }).then(response => {
           this.tableData = response.data;
@@ -381,7 +412,6 @@
             message: '更新成功!'
           });
           console.log(response);
-          location.reload();
         }).catch(error => {
           this.$message({
             type: 'success',
@@ -465,11 +495,15 @@
                this.total = response.data.tableData.length;
                // console.log(JSON.parse(JSON.stringify(response.data))['tableData'])
            });*/
-      this.axios.get('/v1/task').then(response =>
-      {
+      this.axios.get('/v1/task').then(response => {
         this.tableData = response.data;
-      }).catch(error =>
-      {
+      }).catch(error => {
+        console.log(error);
+      });
+
+      this.axios.get('/v1/cycleType').then(response => {
+        this.cycleTypeList = response.data;
+      }).catch(error => {
         console.log(error);
       });
 
