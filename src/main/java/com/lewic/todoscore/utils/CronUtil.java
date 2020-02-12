@@ -94,15 +94,37 @@ public class CronUtil {
 //        System.out.println(filterWithCronTime(cron, "HH"));//true，我当前时间为15:36，
 //        System.out.println(filterWithCronTime(cron, "HHmm"));//false，我当前时间为15:36，
 
-
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        CronExpression cronExpression = new CronExpression("* 0/1 7-23 * * ?");
+        // 每天
+        String cron1= "* * * * * ? *";
+        // 每周周日
+        String cron2= "* * * ? * 1 *";
+        // 每月1号
+        String cron3= "* * * 1 * ? *";
+        // 每年1月1号
+        String cron4= "* * * 1 1 ? *";
 
-        boolean resCron = cronExpression.isSatisfiedBy(simpleDateFormat.parse("2018-04-27 16:00:00"));
+        CronExpression cronExpression1 = new CronExpression(cron1);
+        boolean resCron1 = cronExpression1.isSatisfiedBy(simpleDateFormat.parse("2020-01-03 23:59:59"));
+        Assert.isTrue(resCron1,"每天校验失败");
 
-        Assert.isTrue(resCron);
-        System.out.println(resCron);
+        CronExpression cronExpression2 = new CronExpression(cron2);
+        boolean resCron2 = cronExpression2.isSatisfiedBy(simpleDateFormat.parse("2020-02-16 00:00:00"));
+        Assert.isTrue(resCron2,"每周校验失败");
+        boolean resCron21 = cronExpression2.isSatisfiedBy(simpleDateFormat.parse("2020-02-15 23:59:59"));
+        Assert.isTrue(!resCron21,"每周校验失败");
 
+        CronExpression cronExpression3 = new CronExpression(cron3);
+        boolean resCron3 = cronExpression3.isSatisfiedBy(simpleDateFormat.parse("2020-02-01 23:59:59"));
+        Assert.isTrue(resCron3,"每月校验失败");
+        boolean resCron31 = cronExpression3.isSatisfiedBy(simpleDateFormat.parse("2020-02-02 23:59:59"));
+        Assert.isTrue(!resCron31,"每月校验失败");
+
+        CronExpression cronExpression4 = new CronExpression(cron4);
+        boolean resCron4 = cronExpression4.isSatisfiedBy(simpleDateFormat.parse("2020-01-01 23:59:59"));
+        Assert.isTrue(resCron4,"每年校验失败");
+        boolean resCron41 = cronExpression4.isSatisfiedBy(simpleDateFormat.parse("2019-12-02 23:59:59"));
+        Assert.isTrue(!resCron41,"每年校验失败");
     }
 }
