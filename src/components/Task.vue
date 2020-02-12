@@ -249,13 +249,15 @@
           createTime: ''
         },
         rules: {
-          userName: [
-            {required: true, message: '请输入姓名', trigger: 'blur'},
-            {min: 2, max: 7, message: '长度在 2 到 7 个字符', trigger: 'blur'}
+          content: [
+            {required: true, message: '请输入任务内容', trigger: 'blur'},
+            {min: 1, max: 20, message: '长度在 1 到 20 个字符', trigger: 'blur'}
           ],
-          userAddress: [
-            {required: true, message: '请输入住址', trigger: 'blur'},
-            {min: 5, message: '长度大于 5 个字符', trigger: 'blur'}
+          cycleTypeId: [
+            {required: true, message: '请选择循环方式', trigger: 'blur'}
+          ],
+          score: [
+            {required: true, message: '请设置分数', trigger: 'blur'}
           ],
         },
         cycleTypeList: [
@@ -273,7 +275,7 @@
         dialogUpdate: false,
         pageSize: 10,
         currentPage: 1,
-        total: 20,
+        total: 0,
         disablePage: false,
         showIdSwitch: false,
         showId: false,
@@ -298,7 +300,7 @@
             method: 'delete',
             url: '/v1/task/' + row.id
           }).then(response => {
-            this.axios.delete('/v1/task/' + row.id).then(response => {
+            this.axios.get('/v1/task/').then(response => {
               this.tableData = response.data;
             }).catch(error => {
               console.log(error);
@@ -384,9 +386,8 @@
             console.log(error);
           });
           this.getPages();
-          this.dialogVisible = false
+          this.dialogVisible = false;
           console.log(response);
-          location.reload();
         }).catch(error => {
           console.log(error);
         });

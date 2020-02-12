@@ -5,6 +5,29 @@
   <div class="hello">
     <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
+    <h2>Custom</h2>
+    <ul>
+      <li>
+        <router-link to="/task" active-class="router-active">
+          my-task
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/taskRecord" active-class="router-active">
+          my-task-history
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/todayTask" active-class="router-active">
+          my-today-task
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/cycleType" active-class="router-active">
+          my-cycle-type-manage
+        </router-link>
+      </li>
+    </ul>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -82,29 +105,6 @@
         >
           awesome-vue
         </a>
-      </li>
-    </ul>
-    <h2>Custom</h2>
-    <ul>
-      <li>
-        <router-link to="/task" active-class="router-active">
-          my-task
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/taskRecord" active-class="router-active">
-          my-task-history
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/todayTask" active-class="router-active">
-          my-today-task
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/cycleType" active-class="router-active">
-          my-cycle-type-manage
-        </router-link>
       </li>
     </ul>
   </div>

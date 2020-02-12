@@ -85,16 +85,6 @@
           finish: '',
           score: ''
         },
-        rules: {
-          userName: [
-            {required: true, message: '请输入姓名', trigger: 'blur'},
-            {min: 2, max: 7, message: '长度在 2 到 7 个字符', trigger: 'blur'}
-          ],
-          userAddress: [
-            {required: true, message: '请输入住址', trigger: 'blur'},
-            {min: 5, message: '长度大于 5 个字符', trigger: 'blur'}
-          ],
-        },
         tableData: [],
         search: '',
         dialogVisible: false,
