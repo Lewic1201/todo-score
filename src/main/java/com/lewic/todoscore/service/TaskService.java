@@ -8,11 +8,11 @@ public interface TaskService {
 
     void insertOne(Task task);
 
-    List<Task> listAll();
+    List<Task> listAllNormal();
 
-    Task showOne(Integer id);
+    Task showOne(Integer id) throws Exception;
 
-    void updateOne(Task task);
+    void updateOne(Task task) throws Exception;
 
-    void deleteOne(Integer id);
+    void deleteOne(Integer id) throws Exception;
 }

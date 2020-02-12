@@ -20,5 +20,9 @@ public interface TaskDao extends JpaRepository<Task, Integer>, JpaSpecificationE
 
     List<Task> findByCycleTypeIdIn(Integer[] ids);
 
+    List<Task> findByDeletedFalseOrderByIdDesc();
+
+    Task findByIdAndDeletedFalse(Integer id);
+
 //    List<Integer> findIdByCycleTypeIdIn(Integer[] ids);
 }

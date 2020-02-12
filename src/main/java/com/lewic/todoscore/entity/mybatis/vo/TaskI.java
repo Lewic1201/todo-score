@@ -43,6 +43,10 @@ public class TaskI implements Serializable {
     @ApiModelProperty(value = "循环方式编号", name = "cycleTypeId", example = "1")
     private Integer cycleTypeId;
 
+    @JsonView(View.NoShow.class)
+    @ApiModelProperty(value = "是否删除", name = "deleted", example = "false")
+    private Boolean deleted;
+
     @JsonView(View.Detail.class)
     @ApiModelProperty(value = "创建时间", name = "createTime", example = "allowNull")
     private String createTime;

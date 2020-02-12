@@ -826,3 +826,718 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 2020-02-11 19:26:54.342 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
 2020-02-11 19:26:54.342 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2020-02-11 19:26:54.346 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-12 20:27:14.603 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lewic.todoscore.TodoScoreApplicationTests], using SpringBootContextLoader
+2020-02-12 20:27:14.627 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.lewic.todoscore.TodoScoreApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-02-12 20:27:14.628 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.lewic.todoscore.TodoScoreApplicationTests]: TodoScoreApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-02-12 20:27:14.806 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.lewic.todoscore.TodoScoreApplication for test class com.lewic.todoscore.TodoScoreApplicationTests
+2020-02-12 20:27:14.951 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-02-12 20:27:14.974 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8bc9b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e38ce1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a923bb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1df2a8c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@bea008, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d6b3ba, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@187f2a0, org.springframework.test.context.event.EventPublishingTestExecutionListener@1e62196, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3370c2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1bf5add, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@105a0b8, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1a3d49f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@9b0789]
+2020-02-12 20:27:15.594 [main] INFO  c.l.t.TodoScoreApplicationTests - Starting TodoScoreApplicationTests on DESKTOP-OV0MBIP with PID 1388 (started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:27:15.651 [main] DEBUG c.l.t.TodoScoreApplicationTests - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:27:15.651 [main] INFO  c.l.t.TodoScoreApplicationTests - The following profiles are active: dev
+2020-02-12 20:27:17.255 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:27:17.353 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84ms. Found 4 JPA repository interfaces.
+2020-02-12 20:27:17.754 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:17.754 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:17.754 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:17.754 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:17.754 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:17.755 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:17.756 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:27:18.213 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:27:18.594 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:27:18.763 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-12 20:27:19.017 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-12 20:27:19.825 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-12 20:27:20.839 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-12 20:27:21.036 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:27:23.367 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:27:23.377 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:27:24.746 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:27:25.624 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:27:25.754 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:27:26.027 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:27:26.186 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:27:26.217 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:27:26.231 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:27:26.509 [main] INFO  c.l.t.TodoScoreApplicationTests - Started TodoScoreApplicationTests in 11.467 seconds (JVM running for 13.691)
+2020-02-12 20:27:26.649 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:27:26.650 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:27:26.652 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:27:26.653 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-12 20:27:26.665 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-12 20:27:50.725 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:27:50.734 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:27:50.735 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:27:50.843 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-12 20:27:50.844 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-12 20:27:50.844 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-12 20:27:52.113 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:27:52.258 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 126ms. Found 4 JPA repository interfaces.
+2020-02-12 20:27:52.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:52.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:52.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:52.791 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:52.792 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:52.792 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:27:52.792 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:27:53.159 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:27:56.092 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:27:56.111 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:27:56.113 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:27:56.113 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:27:56.553 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:27:56.553 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5709 ms
+2020-02-12 20:27:56.877 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:27:57.018 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-12 20:27:57.276 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-12 20:27:57.471 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-12 20:27:58.419 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-12 20:27:58.469 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:28:00.376 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:28:00.399 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:28:00.451 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:28:01.801 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:28:02.199 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:28:02.277 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:28:02.375 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:28:02.675 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:28:02.706 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:28:02.728 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:28:03.123 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:28:03.171 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:28:03.176 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 13.124 seconds (JVM running for 16.944)
+2020-02-12 20:28:39.158 [http-nio-8989-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-12 20:28:39.158 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-12 20:28:39.177 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2020-02-12 20:29:43.108 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:31:23.107 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:33:03.107 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:34:43.107 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:35:03.008 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:35:03.010 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:35:03.017 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:35:03.022 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-12 20:35:03.047 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-12 20:35:03.879 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:35:03.879 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:35:03.879 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:35:05.087 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:35:05.126 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39ms. Found 4 JPA repository interfaces.
+2020-02-12 20:35:05.305 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:05.306 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:05.306 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:05.306 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:05.307 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:05.307 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:05.307 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:35:05.376 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:35:05.427 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:35:05.864 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:35:05.865 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:35:05.865 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:35:05.865 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:35:05.943 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:35:05.943 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2058 ms
+2020-02-12 20:35:06.049 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:35:06.055 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-12 20:35:06.859 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-12 20:35:06.861 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:35:07.398 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:35:07.399 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:35:07.405 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:35:07.799 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:35:07.956 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:35:07.965 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:35:08.033 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:35:08.103 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:35:08.104 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:35:08.108 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:35:08.208 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:35:08.214 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:35:08.215 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 4.439 seconds (JVM running for 441.983)
+2020-02-12 20:35:08.217 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:35:47.891 [Thread-9] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:35:47.892 [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:35:47.894 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:35:47.895 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-12 20:35:47.901 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-02-12 20:35:48.390 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:35:48.391 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:35:48.391 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:35:49.055 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:35:49.090 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 4 JPA repository interfaces.
+2020-02-12 20:35:49.231 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:49.231 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:49.231 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:49.231 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:49.231 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:49.231 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:49.231 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:35:49.298 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:35:49.365 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:35:49.592 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:35:49.593 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:35:49.593 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:35:49.593 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:35:49.660 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:35:49.660 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1264 ms
+2020-02-12 20:35:49.774 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:35:49.779 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2020-02-12 20:35:50.636 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2020-02-12 20:35:50.636 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:35:51.143 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:35:51.144 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:35:51.152 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:35:51.547 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:35:51.715 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:35:51.722 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:35:51.803 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:35:51.886 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:35:51.889 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:35:51.894 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:35:52.033 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:35:52.041 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:35:52.043 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.739 seconds (JVM running for 485.811)
+2020-02-12 20:35:52.047 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:35:54.438 [Thread-14] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:35:54.439 [Thread-14] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:35:54.442 [Thread-14] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:35:54.443 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2020-02-12 20:35:57.579 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2020-02-12 20:35:58.053 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:35:58.053 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:35:58.054 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:35:58.717 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:35:58.737 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 4 JPA repository interfaces.
+2020-02-12 20:35:58.873 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:58.874 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:58.874 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:58.874 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:58.874 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:58.874 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:35:58.874 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:35:58.905 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:35:58.946 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:35:59.237 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:35:59.238 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:35:59.238 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:35:59.238 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:35:59.315 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:35:59.315 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1257 ms
+2020-02-12 20:35:59.461 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:35:59.469 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2020-02-12 20:36:00.249 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2020-02-12 20:36:00.250 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:36:00.785 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:36:00.786 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:36:00.795 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:36:01.113 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:36:01.218 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:36:01.225 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:36:01.260 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:36:01.333 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:36:01.333 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:36:01.337 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:36:01.444 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:36:01.449 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:36:01.450 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.463 seconds (JVM running for 495.217)
+2020-02-12 20:36:01.451 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:37:33.915 [Thread-19] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:37:33.916 [Thread-19] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:37:33.920 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:37:33.921 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2020-02-12 20:37:33.925 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2020-02-12 20:37:34.648 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:37:34.648 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:37:34.648 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:37:35.881 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:37:36.089 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 206ms. Found 4 JPA repository interfaces.
+2020-02-12 20:37:36.648 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:36.648 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:36.648 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:36.648 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:36.648 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:36.648 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:36.648 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:37:36.692 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:37:36.735 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:37:37.173 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:37:37.174 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:37:37.174 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:37:37.174 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:37:37.245 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:37:37.245 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2590 ms
+2020-02-12 20:37:37.338 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:37:37.343 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2020-02-12 20:37:38.052 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2020-02-12 20:37:38.053 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:37:38.522 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:37:38.523 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:37:38.544 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:37:39.038 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:37:39.225 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:37:39.235 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:37:39.345 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:37:39.439 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:37:39.440 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:37:39.445 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:37:39.547 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:37:39.553 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:37:39.555 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 4.977 seconds (JVM running for 593.323)
+2020-02-12 20:37:39.558 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:37:42.018 [Thread-24] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:37:42.020 [Thread-24] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:37:42.022 [Thread-24] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:37:42.023 [Thread-24] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2020-02-12 20:37:42.138 [Thread-24] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2020-02-12 20:37:42.676 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:37:42.677 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:37:42.677 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:37:43.408 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:37:43.438 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29ms. Found 4 JPA repository interfaces.
+2020-02-12 20:37:43.663 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:43.663 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:43.664 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:43.664 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:43.664 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:43.664 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:37:43.665 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:37:43.713 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:37:43.751 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:37:44.015 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:37:44.016 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:37:44.016 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:37:44.017 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:37:44.113 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:37:44.113 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1429 ms
+2020-02-12 20:37:44.252 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:37:44.261 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2020-02-12 20:37:44.981 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2020-02-12 20:37:44.982 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:37:45.646 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:37:45.646 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:37:45.652 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:37:45.802 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'taskController' defined in file [E:\lewic\code\git\todo-score\target\classes\com\lewic\todoscore\rest\TaskController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.lewic.todoscore.service.TaskService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-02-12 20:37:45.803 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:37:45.804 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2020-02-12 20:37:46.282 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2020-02-12 20:37:46.284 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-12 20:37:46.302 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-12 20:37:46.543 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.lewic.todoscore.rest.TaskController required a bean of type 'com.lewic.todoscore.service.TaskService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.lewic.todoscore.service.TaskService' in your configuration.
+
+2020-02-12 20:39:00.892 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:39:00.892 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:39:00.892 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:39:01.461 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:39:01.501 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40ms. Found 4 JPA repository interfaces.
+2020-02-12 20:39:01.611 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:01.611 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:01.611 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:01.611 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:01.611 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:01.611 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:01.611 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:39:01.670 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:39:01.710 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:39:01.954 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:39:01.955 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:39:01.955 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:39:01.956 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:39:02.023 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:39:02.023 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1124 ms
+2020-02-12 20:39:02.111 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:39:02.116 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2020-02-12 20:39:02.894 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2020-02-12 20:39:02.894 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:39:03.476 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:39:03.476 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:39:03.485 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:39:03.974 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:39:04.128 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:39:04.136 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:39:04.209 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:39:04.297 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:39:04.298 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:39:04.304 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:39:04.405 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:39:04.412 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:39:04.419 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.585 seconds (JVM running for 678.187)
+2020-02-12 20:39:04.426 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:39:05.831 [Thread-29] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:39:05.832 [Thread-29] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:39:05.835 [Thread-29] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:39:05.836 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2020-02-12 20:39:06.050 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+2020-02-12 20:39:06.612 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:39:06.612 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:39:06.613 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:39:07.294 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:39:07.357 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62ms. Found 4 JPA repository interfaces.
+2020-02-12 20:39:07.563 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:07.563 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:07.563 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:07.563 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:07.563 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:07.563 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:07.563 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:39:07.594 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.NoClassDefFoundError: com/lewic/todoscore/service/impl/TaskRecordServiceImpl
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)
+	at java.lang.Class.getDeclaredConstructors(Class.java:2020)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindConstructorProvider.findConstructorBindingAnnotatedConstructor(ConfigurationPropertiesBindConstructorProvider.java:62)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindConstructorProvider.getBindConstructor(ConfigurationPropertiesBindConstructorProvider.java:48)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBean$BindMethod.forType(ConfigurationPropertiesBean.java:311)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBeanDefinitionValidator.validate(ConfigurationPropertiesBeanDefinitionValidator.java:63)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBeanDefinitionValidator.postProcessBeanFactory(ConfigurationPropertiesBeanDefinitionValidator.java:45)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.lewic.todoscore.TodoScoreApplication.main(TodoScoreApplication.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.ClassNotFoundException: com.lewic.todoscore.service.impl.TaskRecordServiceImpl
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 24 common frames omitted
+2020-02-12 20:39:09.220 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-12 20:39:09.221 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-12 20:39:09.237 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:39:09.237 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:39:09.237 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:39:09.934 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:39:09.981 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46ms. Found 4 JPA repository interfaces.
+2020-02-12 20:39:10.095 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:10.095 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:10.095 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:10.095 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:10.095 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:10.095 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:10.095 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:39:10.144 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:39:10.198 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:39:10.438 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:39:10.439 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:39:10.439 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:39:10.439 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:39:10.510 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:39:10.510 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1258 ms
+2020-02-12 20:39:10.591 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:39:10.596 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2020-02-12 20:39:11.344 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2020-02-12 20:39:11.345 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:39:11.912 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:39:11.913 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:39:11.944 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:39:12.239 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:39:12.359 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:39:12.367 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:39:12.405 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:39:12.485 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:39:12.486 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:39:12.491 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:39:12.579 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:39:12.588 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:39:12.589 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.407 seconds (JVM running for 686.356)
+2020-02-12 20:39:12.590 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:39:58.216 [Thread-37] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:39:58.216 [Thread-37] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:39:58.219 [Thread-37] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:39:58.222 [Thread-37] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2020-02-12 20:39:58.266 [Thread-37] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+2020-02-12 20:39:59.062 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:39:59.062 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:39:59.062 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:39:59.736 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:39:59.755 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 4 JPA repository interfaces.
+2020-02-12 20:39:59.911 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:59.911 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:59.911 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:59.911 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:59.911 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:59.911 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:39:59.911 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:39:59.953 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:40:00.011 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:40:00.276 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:40:00.277 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:40:00.277 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:40:00.277 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:40:00.369 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:40:00.370 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1302 ms
+2020-02-12 20:40:00.529 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:40:00.535 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+2020-02-12 20:40:01.458 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+2020-02-12 20:40:01.459 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:40:02.006 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:40:02.007 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:40:02.035 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:40:02.449 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:40:02.662 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:40:02.672 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:40:02.736 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:40:02.827 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:40:02.828 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:40:02.833 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:40:02.941 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:40:02.948 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:40:02.949 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.949 seconds (JVM running for 736.717)
+2020-02-12 20:40:02.951 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:40:06.441 [Thread-45] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:40:06.442 [Thread-45] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:40:06.443 [Thread-45] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:40:06.444 [Thread-45] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+2020-02-12 20:40:06.649 [Thread-45] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+2020-02-12 20:40:07.095 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:40:07.095 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:40:07.095 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:40:07.731 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:40:07.757 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24ms. Found 4 JPA repository interfaces.
+2020-02-12 20:40:07.904 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:40:07.904 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:40:07.904 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:40:07.904 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:40:07.904 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:40:07.904 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:40:07.904 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:40:07.933 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:40:07.969 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:40:08.221 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:40:08.222 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:40:08.223 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:40:08.223 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:40:08.291 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:40:08.291 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1191 ms
+2020-02-12 20:40:08.429 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:40:08.434 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+2020-02-12 20:40:09.196 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+2020-02-12 20:40:09.196 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:40:09.730 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:40:09.731 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:40:09.740 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:40:10.086 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:40:10.189 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:40:10.201 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:40:10.252 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:40:10.322 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:40:10.323 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:40:10.328 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:40:10.398 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:40:10.412 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:40:10.413 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.372 seconds (JVM running for 744.181)
+2020-02-12 20:40:10.414 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:41:50.400 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:42:17.516 [Thread-50] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:42:17.516 [Thread-50] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:42:17.519 [Thread-50] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:42:17.520 [Thread-50] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+2020-02-12 20:42:17.528 [Thread-50] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+2020-02-12 20:42:17.968 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:42:17.969 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:42:17.969 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:42:18.533 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:42:18.553 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 4 JPA repository interfaces.
+2020-02-12 20:42:18.696 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:18.696 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:18.696 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:18.696 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:18.696 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:18.696 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:18.696 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:42:18.741 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:42:18.788 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:42:19.037 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:42:19.038 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:42:19.039 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:42:19.039 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:42:19.127 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:42:19.127 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1151 ms
+2020-02-12 20:42:19.298 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:42:19.307 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+2020-02-12 20:42:19.894 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+2020-02-12 20:42:19.895 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:42:20.425 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:42:20.425 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:42:20.456 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:42:20.893 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:42:21.093 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:42:21.108 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:42:21.165 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:42:21.260 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:42:21.261 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:42:21.267 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:42:21.420 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:42:21.426 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:42:21.428 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.521 seconds (JVM running for 875.195)
+2020-02-12 20:42:21.431 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:42:24.906 [Thread-55] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:42:24.907 [Thread-55] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:42:24.909 [Thread-55] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:42:24.910 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+2020-02-12 20:42:25.052 [Thread-55] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+2020-02-12 20:42:25.534 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:42:25.534 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:42:25.535 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:42:26.119 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:42:26.137 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 4 JPA repository interfaces.
+2020-02-12 20:42:26.262 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:26.262 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:26.262 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:26.262 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:26.262 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:26.262 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:42:26.262 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:42:26.292 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:42:26.330 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:42:26.548 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:42:26.549 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:42:26.549 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:42:26.550 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:42:26.627 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:42:26.627 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1087 ms
+2020-02-12 20:42:26.711 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:42:26.715 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+2020-02-12 20:42:27.409 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+2020-02-12 20:42:27.410 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:42:27.933 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:42:27.933 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:42:27.941 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:42:28.208 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:42:28.324 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:42:28.331 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:42:28.377 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:42:28.449 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:42:28.450 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:42:28.454 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:42:28.516 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:42:28.520 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:42:28.521 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.041 seconds (JVM running for 882.288)
+2020-02-12 20:42:28.523 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:44:01.205 [Thread-60] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:44:01.206 [Thread-60] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:44:01.209 [Thread-60] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:44:01.210 [Thread-60] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+2020-02-12 20:44:01.218 [Thread-60] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+2020-02-12 20:44:01.825 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:44:01.826 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:44:01.826 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:44:02.404 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:44:02.424 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 4 JPA repository interfaces.
+2020-02-12 20:44:02.574 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:02.574 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:02.574 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:02.574 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:02.574 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:02.574 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:02.574 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:44:02.621 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:44:02.662 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:44:02.875 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:44:02.875 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:44:02.876 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:44:02.876 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:44:02.957 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:44:02.957 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1114 ms
+2020-02-12 20:44:03.045 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:44:03.050 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+2020-02-12 20:44:04.004 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+2020-02-12 20:44:04.005 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:44:04.583 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:44:04.583 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:44:04.591 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:44:05.093 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:44:05.275 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:44:05.290 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:44:05.390 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:44:05.549 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:44:05.551 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:44:05.559 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:44:05.680 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:44:05.685 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:44:05.686 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.941 seconds (JVM running for 979.454)
+2020-02-12 20:44:05.689 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:44:09.252 [Thread-65] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:44:09.254 [Thread-65] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:44:09.257 [Thread-65] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:44:09.258 [Thread-65] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+2020-02-12 20:44:09.267 [Thread-65] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+2020-02-12 20:44:09.918 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 11260 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-12 20:44:09.918 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-12 20:44:09.918 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-12 20:44:10.664 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-12 20:44:10.687 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23ms. Found 4 JPA repository interfaces.
+2020-02-12 20:44:10.916 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:10.917 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:10.917 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:10.917 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:10.917 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:10.917 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-12 20:44:10.917 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-12 20:44:10.946 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 20:44:10.978 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-12 20:44:11.215 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-12 20:44:11.216 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:44:11.216 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-12 20:44:11.216 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-12 20:44:11.290 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-12 20:44:11.290 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1366 ms
+2020-02-12 20:44:11.381 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-12 20:44:11.401 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+2020-02-12 20:44:12.078 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+2020-02-12 20:44:12.078 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-12 20:44:12.563 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-12 20:44:12.564 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:44:12.571 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-12 20:44:12.904 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-12 20:44:13.011 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:44:13.018 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-12 20:44:13.064 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-12 20:44:13.158 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-12 20:44:13.159 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-12 20:44:13.165 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-12 20:44:13.228 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-12 20:44:13.232 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-12 20:44:13.233 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 3.398 seconds (JVM running for 987.0)
+2020-02-12 20:44:13.234 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-12 20:45:53.228 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:47:33.227 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:49:13.229 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:50:53.228 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:52:33.229 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:54:13.228 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:55:53.229 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-12 20:56:34.190 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-12 20:56:34.192 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-12 20:56:34.225 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-12 20:56:34.246 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+2020-02-12 20:56:34.266 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.

@@ -23,27 +23,57 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public void insertOne(Task task) {
+        task.setDeleted(false);
+        if(task.getId()!=null){
+            task.setId(null);
+        }
         taskDao.save(task);
     }
 
     @Override
-    public List<Task> listAll() {
-        return taskDao.findAll();
+    public List<Task> listAllNormal() {
+        return taskDao.findByDeletedFalseOrderByIdDesc();
     }
 
     @Override
-    public Task showOne(Integer id) {
-        Optional<Task> optionalTask = taskDao.findById(id);
-        return optionalTask.orElse(null);
+    public Task showOne(Integer id) throws Exception {
+        Task task = taskDao.findByIdAndDeletedFalse(id);
+        if (task == null || task.getId() == null) {
+            log.error("task not found");
+            throw new Exception("task id is not found");
+        }
+        return task;
     }
 
     @Override
-    public void updateOne(Task task) {
+    public void updateOne(Task task) throws Exception {
+        if (task.getId() != null) {
+            Optional<Task> taskOptional = taskDao.findById(task.getId());
+            if (!taskOptional.isPresent()) {
+                log.error("task not found");
+                throw new Exception("task id is not found");
+            }
+        }else {
+            log.error("task id is null");
+            throw new Exception("task id is not found");
+        }
+        if (task.getDeleted()) {
+            log.warn("deleted don't set");
+            task.setDeleted(false);
+        }
         taskDao.save(task);
     }
 
     @Override
-    public void deleteOne(Integer id) {
-        taskDao.deleteById(id);
+    public void deleteOne(Integer id) throws Exception {
+        Optional<Task> taskOptional = taskDao.findById(id);
+        if (taskOptional.isPresent()) {
+            Task task = taskOptional.get();
+            task.setDeleted(true);
+            taskDao.save(task);
+        } else {
+            throw new Exception("task id is not found");
+        }
+        ;
     }
 }

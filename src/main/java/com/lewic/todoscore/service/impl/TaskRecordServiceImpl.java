@@ -36,6 +36,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     private final TaskRecordMapper taskRecordMapper;
 
+    // todo taskRecordMapper报错
     @Autowired
     public TaskRecordServiceImpl(TaskRecordDao taskRecordDao, TaskDao taskDao, CycleTypeServiceImpl cycleTypeService, TaskRecordMapper taskRecordMapper) {
         this.taskRecordDao = taskRecordDao;
@@ -78,6 +79,13 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         // todo 批量更新需要优化
         List<Task> todayTasks = taskDao.findByCycleTypeIdIn(todayCycleTypeIds);
         for (Task task : todayTasks) {
+            // todo 可以修改查找方法，不需要continue过滤
+//            if(task.getStatus().equals(0)){
+//                continue;
+//            }
+            if(task.getDeleted()){
+                continue;
+            }
             TaskRecord taskRecord = new TaskRecord();
             taskRecord.setTask(task);
             taskRecord.setScore(0);

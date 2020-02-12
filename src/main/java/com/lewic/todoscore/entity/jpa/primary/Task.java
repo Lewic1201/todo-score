@@ -54,6 +54,10 @@ public class Task implements Serializable {
     @JsonView(View.Summary.class)
     private Integer cycleTypeId;
 
+    @Column(name = "deleted")
+    @JsonView(View.NoShow.class)
+    private Boolean deleted;
+
     @CreatedDate
     @Column(name = "create_time")
     @JsonView(View.Detail.class)

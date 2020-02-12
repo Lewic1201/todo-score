@@ -36,13 +36,13 @@ public class TaskController implements BaseRestFul<Task> {
     @ApiOperation("获取所有的任务列表")
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String list() {
-        return JSON.toJSON(taskService.listAll()).toString();
+        return JSON.toJSON(taskService.listAllNormal()).toString();
     }
 
     @Override
     @ApiOperation("获取任务详情")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String show(@PathVariable(value = "id") Integer id) {
+    public String show(@PathVariable(value = "id") Integer id) throws Exception {
         Task task = taskService.showOne(id);
         if (task != null) {
 
@@ -64,16 +64,16 @@ public class TaskController implements BaseRestFul<Task> {
     @Override
     @ApiOperation("修改任务")
     @RequestMapping(value = "", method = RequestMethod.PUT)
-    public String edit(Task obj) {
-        taskService.insertOne(obj);
+    public String edit(Task obj) throws Exception {
+
+        taskService.updateOne(obj);
         return ResponseCode.SUCCESS.getValue();
     }
 
     @Override
     @ApiOperation("删除任务")
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String delete(@PathVariable(value = "id") Integer id) {
-        //todo id预校验
+    public String delete(@PathVariable(value = "id") Integer id) throws Exception {
         //todo 任务关联不能删除
         taskService.deleteOne(id);
         return ResponseCode.SUCCESS.getValue();

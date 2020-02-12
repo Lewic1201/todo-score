@@ -9,4 +9,5 @@ package com.lewic.todoscore.common;
 public class View {
     public interface Summary {}
     public interface Detail extends Summary{}
+    public interface NoShow {}
 }

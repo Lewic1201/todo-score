@@ -11,11 +11,11 @@ public interface BaseRestFul<T> {
 
     public String list();
 
-    public String show(Integer id);
+    public String show(Integer id) throws Exception;
 
     public String create(T obj);
 
-    public String edit(T obj);
+    public String edit(T obj) throws Exception;
 
-    public String delete(Integer id);
+    public String delete(Integer id) throws Exception;
 }
