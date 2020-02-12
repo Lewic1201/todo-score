@@ -101,6 +101,11 @@
           my-today-task
         </router-link>
       </li>
+      <li>
+        <router-link to="/cycleType" active-class="router-active">
+          my-cycle-type-manage
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>

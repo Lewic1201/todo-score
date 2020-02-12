@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Task from '@/components/Task'
 import TaskRecord from '@/components/TaskRecord'
 import TodayTask from '@/components/TodayTask'
+import CycleType from '@/components/CycleType'
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/todayTask',
       name: 'TodayTask',
       component: TodayTask
+    },
+    {
+      path: '/cycleType',
+      name: 'CycleType',
+      component: CycleType
     }
   ]
 })
