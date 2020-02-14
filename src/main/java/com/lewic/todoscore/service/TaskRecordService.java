@@ -1,6 +1,6 @@
 package com.lewic.todoscore.service;
 
-import com.lewic.todoscore.dto.TaskRecordBean;
+import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
 
 import java.util.List;

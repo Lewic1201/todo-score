@@ -4,7 +4,7 @@ import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
 import com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper;
 import com.lewic.todoscore.common.Page;
-import com.lewic.todoscore.dto.TaskRecordBean;
+import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
 import com.lewic.todoscore.entity.mybatis.vo.TaskRecordI;
@@ -89,6 +89,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
             TaskRecord taskRecord = new TaskRecord();
             taskRecord.setTask(task);
             taskRecord.setScore(0);
+            taskRecord.setFinish(false);
             taskRecordDao.save(taskRecord);
         }
     }

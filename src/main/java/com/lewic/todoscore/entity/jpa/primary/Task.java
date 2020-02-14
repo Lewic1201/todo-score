@@ -7,12 +7,15 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
@@ -50,9 +53,11 @@ public class Task implements Serializable {
     @JsonView(View.Summary.class)
     private String description;
 
-    @Column(name = "cycle_type_id")
+
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, optional = false)
+    @JoinColumn(name = "cycle_type_id")
     @JsonView(View.Summary.class)
-    private Integer cycleTypeId;
+    private CycleType cycleType;
 
     @Column(name = "deleted")
     @JsonView(View.NoShow.class)

@@ -2,6 +2,7 @@ package com.lewic.todoscore.service;
 
 import com.lewic.todoscore.entity.jpa.primary.CycleType;
 
+import java.util.Date;
 import java.util.List;
 
 public interface CycleTypeService {
@@ -14,4 +15,5 @@ public interface CycleTypeService {
 
     void deleteOne(Integer id);
 
+    Boolean filterByCronAndWorkday(CycleType cycleType, Date date) throws Exception;
 }

@@ -1,4 +1,4 @@
-package com.lewic.todoscore.dto.base;
+package com.lewic.todoscore.vo.base;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lewic.todoscore.common.View;
