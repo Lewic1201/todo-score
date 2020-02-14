@@ -106,7 +106,7 @@
         console.log(index, row);
         this.axios({
           method: 'patch',
-          url: '/v1/record/task/' + row.id + '/true'
+          url: '/v1/record/task/finish/' + row.id + '/true'
         }).then(response => {
           this.axios.get('/v1/record/task/today').then(response => {
             this.tableData = response.data;
@@ -124,7 +124,7 @@
         console.log(index, row);
         this.axios({
           method: 'patch',
-          url: '/v1/record/task/' + row.id + '/false'
+          url: '/v1/record/task/finish/' + row.id + '/false'
         }).then(response => {
           this.axios.get('/v1/record/task/today').then(response => {
             this.tableData = response.data;
