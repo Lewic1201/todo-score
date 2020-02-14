@@ -85,7 +85,15 @@
       <el-table-column
         label="循环方式">
         <template slot-scope="scope">
-          <span>{{ scope.row.cycleTypeId }}</span>
+          <el-popover trigger="hover" placement="right">
+            <p>循环方式ID: {{ scope.row.cycleType.id }}</p>
+            <p>表达式: {{ scope.row.cycleType.cronExpression }}</p>
+            <p>工作日：{{ scope.row.cycleType.workdayStatus | changeWorkdayStatus }}</p>
+            <p>次数：{{ scope.row.cycleType.times }}</p>
+            <div slot="reference" class="name-wrapper">
+              <el-button type="text">{{ scope.row.cycleType.description }}</el-button>
+            </div>
+          </el-popover>
         </template>
       </el-table-column>
       <el-table-column
@@ -244,6 +252,22 @@
           description: '',
           cycleTypeId: '',
           status: '',
+          score: ''
+        },
+        taskFormView: {
+          id: '',
+          content: '',
+          description: '',
+          cycleType: {
+            cronExpression: '',
+            times: 0,
+            createTime: '',
+            workdayStatus: 0,
+            description: '',
+            updateTime: '',
+            id: 1
+          },
+          status: '',
           score: '',
           updateTime: '',
           createTime: ''
@@ -357,9 +381,7 @@
           description: '',
           cycleTypeId: '',
           status: '',
-          score: '',
-          updateTime: '',
-          createTime: ''
+          score: ''
         }
       },
       addTask() {
@@ -486,7 +508,18 @@
           s = s < 10 ? ('0' + s) : s;
           return y + '-' + MM + '-' + d + ' ' + h + ':' + m + ':' + s;
         }
-      }
+      },
+      changeWorkdayStatus(value) {
+        if (value === '') {
+          return ''
+        } else if (value === 0) {
+          return '未设置'
+        } else if (value === 1) {
+          return '跳过节假日'
+        } else if (value === 2) {
+          return '跳过工作日'
+        }
+      },
     },
 
     created() {
