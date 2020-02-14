@@ -97,13 +97,13 @@ public class TaskRecordServiceImpl implements TaskRecordService {
     }
 
     @Override
-    public Map<String, Integer> getTodayTotalScore() throws Exception{
+    public Map<String, Object> getTodayTotalScore() throws Exception {
         return getDayTotalScore(new Date());
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Map<String, Integer> getDayTotalScore(Date date) throws Exception{
+    public Map<String, Object> getDayTotalScore(Date date) throws Exception {
         List<TaskRecord> taskRecords = listByDay(date);
         Integer score = 0;
         Integer totalScore = 0;
@@ -113,9 +113,10 @@ public class TaskRecordServiceImpl implements TaskRecordService {
                 totalScore += taskRecord.getTask().getScore();
             }
         }
-        Map<String, Integer> scoreMap = new HashMap<>();
-        scoreMap.put("score",score);
-        scoreMap.put("totalScore",totalScore);
+        Map<String, Object> scoreMap = new HashMap<>();
+        scoreMap.put("score", score);
+        scoreMap.put("totalScore", totalScore);
+        scoreMap.put("rate", totalScore == 0 ? 0 : score * 100 / totalScore);
         return scoreMap;
     }
 
@@ -151,7 +152,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
     private static Map<String, Date> getDayStartAndEnd(Date date) {
         Calendar calendarStart = new GregorianCalendar();
         calendarStart.setTime(date);
-        calendarStart.set(Calendar.HOUR, -12);
+        calendarStart.set(Calendar.HOUR, 0);
         calendarStart.set(Calendar.MINUTE, 0);
         calendarStart.set(Calendar.SECOND, 0);
         calendarStart.set(Calendar.MILLISECOND, 0);

@@ -19,9 +19,9 @@ public interface TaskRecordService {
 
     void updateFinishStatus(Integer id, Boolean finish);
 
-    Map<String, Integer> getTodayTotalScore() throws Exception;
+    Map<String, Object> getTodayTotalScore() throws Exception;
 
-    Map<String, Integer> getDayTotalScore(Date date) throws Exception;
+    Map<String, Object> getDayTotalScore(Date date) throws Exception;
 
     TaskRecordBean listByFinishNotNull(Integer pageNum, Integer pageSize);
 }
