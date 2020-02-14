@@ -10,6 +10,8 @@ public class Constants {
     /**
      * cron表达式
      */
+    // TODO 可以指定凌晨以后执行，防止插入太早引起查漏
+
     // 每年1月1号凌晨执行
     public final static String CRON_EVERY_YEAR = "0 0 0 1 1 ? *";
 

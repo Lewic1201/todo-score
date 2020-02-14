@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 
 /**
  * @author lewic
@@ -35,6 +37,19 @@ public class TaskRecordController {
         this.taskRecordService = taskRecordService;
     }
 
+    @ApiOperation("获取某天所有的任务")
+    @RequestMapping(value = "/day/{day}", method = RequestMethod.GET)
+    @JsonView(View.Summary.class)
+    public String day(@PathVariable(value = "day") Date day) throws Exception {
+        return mapper.writerWithView(View.Summary.class).writeValueAsString(taskRecordService.listByDay(day));
+    }
+
+    @ApiOperation("获取某天的得分")
+    @RequestMapping(value = "/day/{day}/score", method = RequestMethod.GET)
+    public String dayScore(@PathVariable(value = "day") Date day) throws Exception {
+        return taskRecordService.getDayTotalScore(day).toString();
+    }
+
     @ApiOperation("获取今天所有的任务")
     @RequestMapping(value = "/today", method = RequestMethod.GET)
     @JsonView(View.Summary.class)
@@ -44,7 +59,7 @@ public class TaskRecordController {
 
     @ApiOperation("获取今天的得分")
     @RequestMapping(value = "/today/score", method = RequestMethod.GET)
-    public String todayScore() {
+    public String todayScore() throws Exception {
         return taskRecordService.getTodayTotalScore().toString();
     }
 
@@ -69,7 +84,7 @@ public class TaskRecordController {
     }
 
     @ApiOperation("完成后标记")
-    @RequestMapping(value = "/{id}/{finish}", method = RequestMethod.PATCH)
+    @RequestMapping(value = "/finish/{id}/{finish}", method = RequestMethod.PATCH)
     public String edit(@PathVariable(value = "id") Integer id, @PathVariable(value = "finish") Boolean finish) {
         taskRecordService.updateFinishStatus(id, finish);
         return ResponseCode.SUCCESS.getValue();

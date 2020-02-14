@@ -3,11 +3,15 @@ package com.lewic.todoscore.service;
 import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public interface TaskRecordService {
 
     List<TaskRecord> listByToday();
+
+    List<TaskRecord> listByDay(Date day);
 
     void insertOne(TaskRecord taskRecord);
 
@@ -15,7 +19,9 @@ public interface TaskRecordService {
 
     void updateFinishStatus(Integer id, Boolean finish);
 
-    Integer getTodayTotalScore();
+    Map<String, Integer> getTodayTotalScore() throws Exception;
+
+    Map<String, Integer> getDayTotalScore(Date date) throws Exception;
 
     TaskRecordBean listByFinishNotNull(Integer pageNum, Integer pageSize);
 }

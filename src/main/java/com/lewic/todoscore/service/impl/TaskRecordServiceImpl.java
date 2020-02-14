@@ -17,7 +17,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -48,21 +50,21 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     @Override
     public List<TaskRecord> listByToday() {
-        Date today = new Date();
+        return listByDay(new Date());
+    }
 
-        // 获取当天起始时间和结束时间
-        Calendar calendarStart = new GregorianCalendar();
-        calendarStart.setTime(today);
-        calendarStart.set(Calendar.HOUR, -12);
-        calendarStart.set(Calendar.MINUTE, 0);
-        calendarStart.set(Calendar.SECOND, 0);
-        Date dateStart = calendarStart.getTime();
-        Calendar calendarEnd = new GregorianCalendar();
-        calendarEnd.setTime(dateStart);
-        calendarEnd.add(Calendar.HOUR, 24);
-        Date dateEnd = calendarEnd.getTime();
-
-        return taskRecordDao.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(dateStart, dateEnd);
+    @Override
+    public List<TaskRecord> listByDay(Date day) {
+        try {
+            Map<String, Date> map = getDayStartAndEnd(day);
+            log.debug("time stamp range:{} -> {}", map.get("dateStart").getTime(),
+                    map.get("dateEnd").getTime());
+            return taskRecordDao.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(
+                    map.get("dateStart"), map.get("dateEnd"));
+        } catch (Exception e) {
+            log.error("get task record failed!!");
+            return null;
+        }
     }
 
     @Override
@@ -83,7 +85,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 //            if(task.getStatus().equals(0)){
 //                continue;
 //            }
-            if(task.getDeleted()){
+            if (task.getDeleted()) {
                 continue;
             }
             TaskRecord taskRecord = new TaskRecord();
@@ -95,16 +97,26 @@ public class TaskRecordServiceImpl implements TaskRecordService {
     }
 
     @Override
+    public Map<String, Integer> getTodayTotalScore() throws Exception{
+        return getDayTotalScore(new Date());
+    }
+
+    @Override
     @Transactional(readOnly = true)
-    public Integer getTodayTotalScore() {
-        List<TaskRecord> taskRecords = listByToday();
+    public Map<String, Integer> getDayTotalScore(Date date) throws Exception{
+        List<TaskRecord> taskRecords = listByDay(date);
+        Integer score = 0;
         Integer totalScore = 0;
         for (TaskRecord taskRecord : taskRecords) {
             if (taskRecord.getScore() != null) {
-                totalScore += taskRecord.getScore();
+                score += taskRecord.getScore();
+                totalScore += taskRecord.getTask().getScore();
             }
         }
-        return totalScore;
+        Map<String, Integer> scoreMap = new HashMap<>();
+        scoreMap.put("score",score);
+        scoreMap.put("totalScore",totalScore);
+        return scoreMap;
     }
 
     @Override
@@ -133,4 +145,34 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         }
         taskRecordDao.save(taskRecord);
     }
+
+
+    // 获取当天起始时间和结束时间
+    private static Map<String, Date> getDayStartAndEnd(Date date) {
+        Calendar calendarStart = new GregorianCalendar();
+        calendarStart.setTime(date);
+        calendarStart.set(Calendar.HOUR, -12);
+        calendarStart.set(Calendar.MINUTE, 0);
+        calendarStart.set(Calendar.SECOND, 0);
+        calendarStart.set(Calendar.MILLISECOND, 0);
+        Date dateStart = calendarStart.getTime();
+        Calendar calendarEnd = new GregorianCalendar();
+        calendarEnd.setTime(dateStart);
+        calendarEnd.add(Calendar.HOUR, 24);
+        Date dateEnd = calendarEnd.getTime();
+        Map<String, Date> day = new HashMap<>();
+        day.put("dateStart", dateStart);
+        day.put("dateEnd", dateEnd);
+        return day;
+    }
+
+
+    public static void main(String[] args) {
+        Date today = new Date();
+
+        Map<String, Date> map = getDayStartAndEnd(today);
+        System.out.println(map.get("dateStart").getTime());
+        System.out.println(map.get("dateEnd").getTime());
+    }
+
 }
