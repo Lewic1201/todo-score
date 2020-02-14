@@ -54,12 +54,11 @@
       <el-table-column
         label="是否完成">
         <template slot-scope="scope">
-          <el-button size="medium" icon="el-icon-circle-check"
-                     v-if="scope.row.finish===false"
-                     @click="changeFinish(scope.$index, scope.row)">
-          </el-button>
-          <el-button v-else icon="el-icon-success" size="medium"
+          <el-button v-if="scope.row.finish===true" icon="el-icon-success" size="medium"
                      @click="changeUnFinish(scope.$index, scope.row)">
+          </el-button>
+          <el-button v-else size="medium" icon="el-icon-circle-check"
+                     @click="changeFinish(scope.$index, scope.row)">
           </el-button>
         </template>
       </el-table-column>
