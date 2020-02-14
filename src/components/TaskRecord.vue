@@ -2,15 +2,12 @@
   <div>
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
-        <el-date-picker type="datetime" placeholder="选择日期" v-model="searchDay"
-                        style="width: 100%;"/>
-      </el-form-item>
-      <el-form-item>
-        <el-button
-          type="text"
-          @click="getRecordByDay()"
-          class="el-icon-search">按日期查询
-        </el-button>
+        <el-date-picker
+          v-model="searchDay"
+          type="date"
+          placeholder="选择日期查询"
+          @change="getRecordByDay">
+        </el-date-picker>
       </el-form-item>
       <el-form-item>
         <el-button
@@ -86,13 +83,16 @@
       <el-pagination
         background
         :disabled="disablePage"
-        :current-page.sync="currentPage"
+        :current-page.sync="pageNum"
         small
         layout="prev, pager, next"
         :page-size="pageSize"
         :total="total"
         @current-change="handleCurrentChange">
       </el-pagination>
+    </div>
+    <div v-if="showScore">
+      <h1>得分/总分：{{scoreMap.score}} / {{scoreMap.totalScore}} = {{scoreMap.rate}}</h1>
     </div>
   </div>
 </template>
@@ -114,12 +114,18 @@
           finish: '',
           score: ''
         },
+        scoreMap: {
+          score: 0,
+          rate: 0,
+          totalScore: 0,
+        },
+        showScore: false,
         searchDay: '',
         tableData: [],
         dialogVisible: false,
         dialogUpdate: false,
         pageSize: 10,
-        currentPage: 1,
+        pageNum: 1,
         total: 0,
         disablePage: false,
         showIdSwitch: false,
@@ -139,9 +145,9 @@
           });
       },
       handleCurrentChange() {
-        console.log(`当前页: ${this.currentPage}`);
+        console.log(`当前页: ${this.pageNum}`);
         let postData = this.qs.stringify({
-          page: this.currentPage
+          page: this.pageNum
         });
         this.axios({
           method: 'post',
@@ -163,10 +169,21 @@
         }).catch(error => {
           console.log(error);
         });
+
+        this.axios({
+          method: 'get',
+          url: '/v1/record/task/day/' + this.searchDay + '/score'
+        }).then(response => {
+          this.scoreMap = response.data;
+          this.showScore = true;
+        }).catch(error => {
+          console.log(error);
+        });
       },
       getPages() {
         this.axios.get('/v1/record/task/history').then(response => {
           this.tableData = response.data;
+          this.showScore = false;
         }).catch(error => {
           console.log(error);
         });
@@ -213,8 +230,9 @@
     created() {
       this.axios.get('/v1/record/task/history').then(response => {
         this.tableData = response.data.data;
-        this.currentPage = response.data.pageNum;
+        this.pageNum = response.data.pageNum;
         this.total = response.data.total;
+        this.showScore = false;
       }).catch(error => {
         console.log(error);
       });

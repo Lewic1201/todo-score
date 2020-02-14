@@ -63,6 +63,9 @@
         </template>
       </el-table-column>
     </el-table>
+    <div>
+      <h1>得分/总分：{{scoreMap.score}} / {{scoreMap.totalScore}} = {{scoreMap.rate}}</h1>
+    </div>
   </div>
 </template>
 
@@ -83,6 +86,11 @@
           },
           finish: '',
           score: ''
+        },
+        scoreMap: {
+          score: '',
+          rate: '',
+          totalScore: '',
         },
         tableData: [],
         search: '',
@@ -215,67 +223,6 @@
           createTime: ''
         }
       },
-      addTask() {
-        let postData = JSON.stringify({
-          content: this.taskForm.content,
-          description: this.taskForm.description,
-          cycleTypeId: this.taskForm.cycleTypeId,
-          status: this.taskForm.status,
-          score: this.taskForm.score
-        });
-        this.axios({
-          method: 'post',
-          url: '/v1/task',
-          data: postData
-        }).then(response => {
-          this.axios.get('/v1/task').then(response => {
-            this.tableData = response.data;
-            this.currentPage = 1;
-            this.$message({
-              type: 'success',
-              message: '已添加!'
-            });
-          }).catch(error => {
-            console.log(error);
-          });
-          this.getPages();
-          this.dialogVisible = false
-          console.log(response);
-          location.reload();
-        }).catch(error => {
-          console.log(error);
-        });
-      },
-      updateTask() {
-        let postData = this.qs.stringify({
-          id: this.taskForm.id,
-          content: this.taskForm.content,
-          description: this.taskForm.description,
-          cycleTypeId: this.taskForm.cycleTypeId,
-          status: this.taskForm.status,
-          score: this.taskForm.score
-        });
-        this.axios({
-          method: 'put',
-          url: '/v1/task',
-          data: postData
-        }).then(response => {
-          this.handleCurrentChange();
-          this.cancel();
-          this.$message({
-            type: 'success',
-            message: '更新成功!'
-          });
-          console.log(response);
-          location.reload();
-        }).catch(error => {
-          this.$message({
-            type: 'success',
-            message: '更新失败!'
-          });
-          console.log(error);
-        });
-      },
       onSearch() {
         let postData = this.qs.stringify({
           userName: this.search
@@ -294,6 +241,14 @@
       getPages() {
         this.axios.get('/v1/task').then(response => {
           this.tableData = response.data;
+        }).catch(error => {
+          console.log(error);
+        });
+        this.axios({
+          method: 'get',
+          url: '/v1/record/task/today/score'
+        }).then(response => {
+          this.scoreMap = response.data;
         }).catch(error => {
           console.log(error);
         });
@@ -325,7 +280,14 @@
       }).catch(error => {
         console.log(error);
       });
-
+      this.axios({
+        method: 'get',
+        url: '/v1/record/task/today/score'
+      }).then(response => {
+        this.scoreMap = response.data;
+      }).catch(error => {
+        console.log(error);
+      });
     }
   }
 </script>
