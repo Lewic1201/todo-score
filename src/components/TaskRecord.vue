@@ -2,12 +2,22 @@
   <div>
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
-        <el-input
-          v-model="search"
-          class="search_id"
-          size="mini"
-          placeholder="选择日期查询">
-        </el-input>
+        <el-date-picker type="datetime" placeholder="选择日期" v-model="searchDay"
+                        style="width: 100%;"/>
+      </el-form-item>
+      <el-form-item>
+        <el-button
+          type="text"
+          @click="getRecordByDay()"
+          class="el-icon-search">按日期查询
+        </el-button>
+      </el-form-item>
+      <el-form-item>
+        <el-button
+          type="text"
+          @click="getPages()"
+          class="el-icon-search">查询全部
+        </el-button>
       </el-form-item>
       <el-form-item>
         <el-button
@@ -104,8 +114,8 @@
           finish: '',
           score: ''
         },
+        searchDay: '',
         tableData: [],
-        search: '',
         dialogVisible: false,
         dialogUpdate: false,
         pageSize: 10,
@@ -143,14 +153,10 @@
           console.log(error);
         });
       },
-      onSearch() {
-        let postData = this.qs.stringify({
-          userName: this.search
-        });
+      getRecordByDay() {
         this.axios({
-          method: 'post',
-          url: '/ListByName',
-          data: postData
+          method: 'get',
+          url: '/v1/record/task/day/' + this.searchDay
         }).then(response => {
           this.tableData = response.data;
           this.disablePage = true;
