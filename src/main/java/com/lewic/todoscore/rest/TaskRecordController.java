@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lewic.todoscore.common.ResponseCode;
 import com.lewic.todoscore.common.View;
 import com.lewic.todoscore.service.TaskRecordService;
+import com.lewic.todoscore.vo.ScoreInfoVo;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +48,8 @@ public class TaskRecordController {
     @ApiOperation("获取某天的得分")
     @RequestMapping(value = "/day/{day}/score", method = RequestMethod.GET)
     public String dayScore(@PathVariable(value = "day") Date day) throws Exception {
-        return taskRecordService.getDayTotalScore(day).toString();
+        ScoreInfoVo scoreInfoVo = taskRecordService.getDayTotalScore(day);
+        return mapper.writerFor(ScoreInfoVo.class).writeValueAsString(scoreInfoVo);
     }
 
     @ApiOperation("获取今天所有的任务")
@@ -60,7 +62,8 @@ public class TaskRecordController {
     @ApiOperation("获取今天的得分")
     @RequestMapping(value = "/today/score", method = RequestMethod.GET)
     public String todayScore() throws Exception {
-        return taskRecordService.getTodayTotalScore().toString();
+        ScoreInfoVo scoreInfoVo = taskRecordService.getTodayTotalScore();
+        return mapper.writerFor(ScoreInfoVo.class).writeValueAsString(scoreInfoVo);
     }
 
     @ApiOperation("获取历史得分记录（最近的分数在前）")

@@ -4,6 +4,7 @@ import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
 import com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper;
 import com.lewic.todoscore.common.Page;
+import com.lewic.todoscore.vo.ScoreInfoVo;
 import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
@@ -97,13 +98,13 @@ public class TaskRecordServiceImpl implements TaskRecordService {
     }
 
     @Override
-    public Map<String, Object> getTodayTotalScore() throws Exception {
+    public ScoreInfoVo getTodayTotalScore() throws Exception {
         return getDayTotalScore(new Date());
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Map<String, Object> getDayTotalScore(Date date) throws Exception {
+    public ScoreInfoVo getDayTotalScore(Date date) throws Exception {
         List<TaskRecord> taskRecords = listByDay(date);
         Integer score = 0;
         Integer totalScore = 0;
@@ -113,11 +114,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
                 totalScore += taskRecord.getTask().getScore();
             }
         }
-        Map<String, Object> scoreMap = new HashMap<>();
-        scoreMap.put("score", score);
-        scoreMap.put("totalScore", totalScore);
-        scoreMap.put("rate", totalScore == 0 ? 0 : score * 100 / totalScore);
-        return scoreMap;
+        return new ScoreInfoVo(score, totalScore);
     }
 
     @Override

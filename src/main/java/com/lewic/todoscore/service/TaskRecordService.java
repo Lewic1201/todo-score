@@ -1,11 +1,11 @@
 package com.lewic.todoscore.service;
 
+import com.lewic.todoscore.vo.ScoreInfoVo;
 import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 public interface TaskRecordService {
 
@@ -19,9 +19,9 @@ public interface TaskRecordService {
 
     void updateFinishStatus(Integer id, Boolean finish);
 
-    Map<String, Object> getTodayTotalScore() throws Exception;
+    ScoreInfoVo getTodayTotalScore() throws Exception;
 
-    Map<String, Object> getDayTotalScore(Date date) throws Exception;
+    ScoreInfoVo getDayTotalScore(Date date) throws Exception;
 
     TaskRecordBean listByFinishNotNull(Integer pageNum, Integer pageSize);
 }
