@@ -152,7 +152,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
     private static Map<String, Date> getDayStartAndEnd(Date date) {
         Calendar calendarStart = new GregorianCalendar();
         calendarStart.setTime(date);
-        calendarStart.set(Calendar.HOUR, 0);
+        calendarStart.set(Calendar.HOUR_OF_DAY, 0);
         calendarStart.set(Calendar.MINUTE, 0);
         calendarStart.set(Calendar.SECOND, 0);
         calendarStart.set(Calendar.MILLISECOND, 0);
