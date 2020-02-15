@@ -116,11 +116,7 @@
           method: 'patch',
           url: '/v1/record/task/finish/' + row.id + '/true'
         }).then(response => {
-          this.axios.get('/v1/record/task/today').then(response => {
-            this.tableData = response.data;
-          }).catch(error => {
-            console.log(error);
-          });
+          this.handleCurrentChange();
           this.$message({
             type: 'success',
             message: '恭喜完成!'
@@ -134,11 +130,7 @@
           method: 'patch',
           url: '/v1/record/task/finish/' + row.id + '/false'
         }).then(response => {
-          this.axios.get('/v1/record/task/today').then(response => {
-            this.tableData = response.data;
-          }).catch(error => {
-            console.log(error);
-          });
+          this.handleCurrentChange();
           this.$message({
             type: 'success',
             message: '还需要加油哦！'
@@ -196,12 +188,16 @@
         let postData = this.qs.stringify({
           page: this.currentPage
         });
-        this.axios({
-          method: 'post',
-          url: '/page',
-          data: postData
-        }).then(response => {
+        this.axios.get('/v1/record/task/today').then(response => {
           this.tableData = response.data;
+        }).catch(error => {
+          console.log(error);
+        });
+        this.axios({
+          method: 'get',
+          url: '/v1/record/task/today/score'
+        }).then(response => {
+          this.scoreMap = response.data;
         }).catch(error => {
           console.log(error);
         });
@@ -234,21 +230,6 @@
         }).then(response => {
           this.tableData = response.data;
           this.disablePage = true;
-        }).catch(error => {
-          console.log(error);
-        });
-      },
-      getPages() {
-        this.axios.get('/v1/task').then(response => {
-          this.tableData = response.data;
-        }).catch(error => {
-          console.log(error);
-        });
-        this.axios({
-          method: 'get',
-          url: '/v1/record/task/today/score'
-        }).then(response => {
-          this.scoreMap = response.data;
         }).catch(error => {
           console.log(error);
         });
