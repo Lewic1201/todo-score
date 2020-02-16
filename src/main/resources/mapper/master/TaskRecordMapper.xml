@@ -48,7 +48,7 @@
         ) t1
         LEFT JOIN `task` t2 ON t1.task_id = t2.id
         ORDER BY
-        t1.id,t2.id
+        t1.id desc, t2.id asc
     </select>
 
     <select id="getCountByFinishNotNull" resultType="java.lang.Integer">

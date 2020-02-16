@@ -82,7 +82,6 @@ public class TaskRecordController {
             @ApiParam(value = "每页条数")
             @RequestParam(required = false, value = "pageSize", defaultValue = "10")
                     Integer pageSize) {
-        // todo 按日期查询记录，并返回当日总分
         // todo finish要置空，为未完成的状态，这块查不出来
         return JSON.toJSON(taskRecordService.listByFinishNotNull(pageNum, pageSize)).toString();
     }
