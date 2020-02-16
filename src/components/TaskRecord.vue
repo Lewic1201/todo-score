@@ -83,11 +83,13 @@
       <el-pagination
         background
         :disabled="disablePage"
-        :current-page.sync="pageNum"
         small
-        layout="prev, pager, next"
+        layout="total, sizes, prev, pager, next, jumper"
+        :current-page="pageNum"
+        :total="count"
         :page-size="pageSize"
-        :total="total"
+        :page-sizes="[5, 10, 20, 50]"
+        @size-change="handleSizeChange"
         @current-change="handleCurrentChange">
       </el-pagination>
     </div>
@@ -126,7 +128,7 @@
         dialogUpdate: false,
         pageSize: 10,
         pageNum: 1,
-        total: 0,
+        count: 0,
         disablePage: false,
         showIdSwitch: false,
         showId: false,
@@ -144,20 +146,15 @@
           .catch(_ => {
           });
       },
-      handleCurrentChange() {
+      handleSizeChange(val) {
+        this.pageSize = val;
+        console.log("长度改变:" + val)
+        this.getPages()
+      },
+      handleCurrentChange(val) {
+        this.pageNum = val;
         console.log(`当前页: ${this.pageNum}`);
-        let postData = this.qs.stringify({
-          page: this.pageNum
-        });
-        this.axios({
-          method: 'post',
-          url: '/page',
-          data: postData
-        }).then(response => {
-          this.tableData = response.data;
-        }).catch(error => {
-          console.log(error);
-        });
+        this.getPages()
       },
       getRecordByDay() {
         this.axios({
@@ -181,8 +178,14 @@
         });
       },
       getPages() {
-        this.axios.get('/v1/record/task/history').then(response => {
-          this.tableData = response.data;
+        this.axios.get('/v1/record/task/history', {
+          params: {
+            pageNum: this.pageNum,
+            pageSize: this.pageSize,
+          },
+        }).then(response => {
+          this.tableData = response.data.data;
+          this.count = response.data.count;
           this.showScore = false;
         }).catch(error => {
           console.log(error);
@@ -228,10 +231,14 @@
     },
 
     created() {
-      this.axios.get('/v1/record/task/history').then(response => {
+      this.axios.get('/v1/record/task/history', {
+        params: {
+          pageNum: this.pageNum,
+          pageSize: this.pageSize,
+        },
+      }).then(response => {
         this.tableData = response.data.data;
-        this.pageNum = response.data.pageNum;
-        this.total = response.data.total;
+        this.count = response.data.count;
         this.showScore = false;
       }).catch(error => {
         console.log(error);
