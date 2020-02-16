@@ -43,7 +43,7 @@
         where 1=1
         and `finish` is not null
         <if test="page!=null">
-            limit #{page.startRow,jdbcType=INTEGER},#{page.pageSize,jdbcType=INTEGER}
+            limit #{page.pageNum,jdbcType=INTEGER},#{page.pageSize,jdbcType=INTEGER}
         </if>
         ) t1
         LEFT JOIN `task` t2 ON t1.task_id = t2.id

@@ -11,9 +11,6 @@ import java.util.List;
 public class BaseBeanList<T> {
 
     @JsonView(View.Detail.class)
-    private Integer pageNum;
-
-    @JsonView(View.Detail.class)
     private Integer count;
 
     @JsonView(View.Summary.class)
@@ -24,13 +21,11 @@ public class BaseBeanList<T> {
 
     public BaseBeanList(Page page, List<T> data) {
         this.count = page.getTotalCount();
-        this.pageNum = page.getPageNo();
         this.data = data;
     }
 
-    public BaseBeanList(Integer count, Integer pageNum, List<T> data) {
+    public BaseBeanList(Integer count, List<T> data) {
         this.count = count;
-        this.pageNum = pageNum;
         this.data = data;
     }
 }

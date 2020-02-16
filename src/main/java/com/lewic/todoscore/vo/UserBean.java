@@ -20,7 +20,7 @@ public class UserBean extends BaseBeanList<User> {
         super(page, data);
     }
 
-    public UserBean(Integer count, Integer pageNum, List<User> data) {
-        super(count, pageNum, data);
+    public UserBean(Integer count, List<User> data) {
+        super(count, data);
     }
 }
