@@ -34,7 +34,7 @@ public class Page implements Serializable{
     public Page(Integer pageSize, Integer pageNo, Integer total) {
         this.pageNo = pageNo;
         this.pageSize = pageSize;
-        this.total = total;
+        this.setTotalCount(total);
     }
 
     public int getPageNo() {

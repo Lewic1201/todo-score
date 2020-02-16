@@ -110,3 +110,829 @@
 2020-02-16 21:24:25.013 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
 2020-02-16 21:24:25.014 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2020-02-16 21:24:25.021 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-16 21:34:18.963 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 1848 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:34:19.032 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:34:19.033 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:34:19.186 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-16 21:34:19.187 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-16 21:34:19.187 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-16 21:34:21.092 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-16 21:34:21.204 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95ms. Found 4 JPA repository interfaces.
+2020-02-16 21:34:21.639 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:34:21.640 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:34:21.640 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:34:21.640 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:34:21.640 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:34:21.640 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:34:21.640 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-16 21:34:22.255 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-16 21:34:22.959 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-16 21:34:22.970 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:34:22.972 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-16 21:34:22.972 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-16 21:34:23.266 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-16 21:34:23.267 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4079 ms
+2020-02-16 21:34:23.652 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-16 21:34:23.821 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-16 21:34:24.146 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-16 21:34:24.340 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-16 21:34:24.996 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-16 21:34:25.035 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-16 21:34:26.752 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-16 21:34:26.777 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:34:26.818 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-16 21:34:28.176 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-16 21:34:28.545 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:34:28.619 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-16 21:34:28.747 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-16 21:34:28.917 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-16 21:34:28.942 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-16 21:34:28.983 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-16 21:34:29.356 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:34:29.403 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-16 21:34:29.407 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 11.256 seconds (JVM running for 16.589)
+2020-02-16 21:35:19.738 [http-nio-8989-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-16 21:35:19.738 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-16 21:35:19.762 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 23 ms
+2020-02-16 21:35:22.771 [http-nio-8989-exec-4] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-16 21:35:42.114 [Druid-ConnectionPool-Create-19256993] ERROR c.alibaba.druid.pool.DruidDataSource - create connection SQLException, url: jdbc:mysql://39.100.120.239:3306/todo_score?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,163 milliseconds ago. The last packet sent successfully to the server was 19,163 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1558)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 19,163 milliseconds ago. The last packet sent successfully to the server was 19,163 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:128)
+	at com.mysql.cj.NativeSession.sendCommand(NativeSession.java:311)
+	at com.mysql.cj.NativeSession.configureClientCharacterSet(NativeSession.java:475)
+	at com.mysql.cj.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:1316)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:967)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 6 common frames omitted
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
+	... 14 common frames omitted
+2020-02-16 21:35:42.587 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:42.608 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:42.665 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:42.668 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:42.669 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:42.707 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:42.715 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:42.715 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:42.788 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:42.789 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:42.789 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:42.851 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:46.716 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:46.716 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:46.755 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:46.755 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:46.756 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:35:46.797 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:35:49.108 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:49.109 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:49.146 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:49.147 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:49.148 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:49.195 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:49.788 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:49.788 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:49.829 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:49.829 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:49.830 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:35:49.871 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:35:50.924 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:50.925 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:50.961 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:50.961 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:50.962 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:51.007 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:51.736 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:51.736 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:51.770 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:51.771 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:51.771 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:35:51.811 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:35:52.564 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:52.564 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:52.601 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:52.602 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:52.603 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:52.649 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:53.198 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:53.198 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:53.243 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:53.243 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:53.244 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:35:53.285 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:35:53.949 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:53.949 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:53.985 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:53.986 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:53.987 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:54.031 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:54.934 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:54.935 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:54.971 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:54.971 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:54.971 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:35:55.012 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:35:55.871 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:55.872 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:55.910 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:55.910 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:55.911 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:55.954 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:57.290 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:57.291 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:57.331 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:57.332 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:57.333 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:35:57.382 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:35:58.212 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:58.212 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:58.247 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:58.248 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:58.248 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:58.288 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:35:58.885 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:58.886 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:58.923 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:58.924 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:58.925 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:35:58.968 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:35:59.702 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:35:59.702 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:35:59.740 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:35:59.740 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:35:59.741 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:35:59.780 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:36:01.859 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:36:01.860 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:36:01.898 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:36:01.898 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:36:01.898 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:36:01.938 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:36:02.605 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:36:02.605 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:36:02.641 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:36:02.642 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:36:02.642 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:36:02.681 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:36:03.144 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:36:03.144 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:36:03.178 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:36:03.178 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:36:03.179 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:36:03.223 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:36:05.085 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:36:05.086 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:36:05.121 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:36:05.122 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:36:05.123 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:36:05.571 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:36:05.572 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:36:05.578 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:36:05.648 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:36:05.649 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id ORDER BY t1.id desc, t2.id asc 
+2020-02-16 21:36:05.649 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:36:06.101 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:36:09.488 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-16 21:36:29.464 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-16 21:36:29.466 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:36:29.481 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-16 21:36:29.481 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:36:29.497 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-16 21:36:29.512 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-16 21:37:05.380 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2020-02-16 21:37:05.586 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 4048 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:37:05.587 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:37:05.588 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:37:05.719 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-16 21:37:05.719 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-16 21:37:05.720 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-16 21:37:41.053 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 14508 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:37:41.059 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:37:41.059 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:37:41.211 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-16 21:37:41.212 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-16 21:37:41.213 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-16 21:37:42.975 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-16 21:37:43.085 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96ms. Found 4 JPA repository interfaces.
+2020-02-16 21:37:43.560 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:37:43.560 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:37:43.560 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:37:43.560 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:37:43.560 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:37:43.560 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:37:43.561 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-16 21:37:43.894 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-16 21:37:44.584 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-16 21:37:44.595 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:37:44.596 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-16 21:37:44.597 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-16 21:37:44.860 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-16 21:37:44.861 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3648 ms
+2020-02-16 21:37:45.129 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-16 21:37:45.258 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-16 21:37:45.500 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-16 21:37:45.677 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-16 21:37:46.318 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-16 21:37:46.345 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-16 21:37:48.055 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-16 21:37:48.072 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:37:48.099 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-16 21:37:49.394 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-16 21:37:49.754 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:37:49.822 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-16 21:37:49.918 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-16 21:37:50.030 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-16 21:37:50.052 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-16 21:37:50.068 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-16 21:37:50.909 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:37:50.972 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-16 21:37:50.976 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 10.665 seconds (JVM running for 12.969)
+2020-02-16 21:38:10.816 [http-nio-8989-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-16 21:38:10.816 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-16 21:38:10.830 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2020-02-16 21:38:12.134 [http-nio-8989-exec-2] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-16 21:38:12.593 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:12.632 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:12.712 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:12.745 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:12.746 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:12.803 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:15.284 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:15.285 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:15.324 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:15.326 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:15.326 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:15.384 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:38:16.900 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:16.900 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:16.941 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:16.942 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:16.942 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:17.002 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:19.884 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:19.885 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:19.930 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:19.931 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:19.932 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:19.982 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:22.794 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:22.795 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:22.835 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:22.836 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:22.836 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:22.895 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:38:23.967 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:23.967 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:24.004 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:24.005 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:24.005 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:24.061 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:25.165 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:25.166 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:25.203 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:25.203 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:25.203 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:25.299 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:38:26.415 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:26.415 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:26.451 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:26.452 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:26.453 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:26.500 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:28.853 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:28.853 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:28.889 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:28.890 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:28.890 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:28.951 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:38:33.938 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:33.938 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:33.974 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:33.975 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:33.975 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:34.020 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:35.685 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:35.685 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:35.722 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:35.722 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:35.723 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:35.776 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:38:37.566 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:37.566 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:37.604 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:37.604 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:37.605 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:37.658 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:38.829 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:38.829 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:38.865 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:38.866 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:38.866 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:38.913 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:38:40.725 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:40.725 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:40.762 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:40.763 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:40.763 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:40.825 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:43.598 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:43.598 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:43.638 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:43.639 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:43.639 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:43.690 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:38:45.817 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:45.817 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:45.860 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:45.861 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:45.861 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:38:45.917 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:38:46.845 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:38:46.845 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:38:46.887 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:38:46.888 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:38:46.888 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:38:46.950 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:39:14.811 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:39:14.812 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:39:14.855 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:39:14.856 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:39:14.856 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:39:14.945 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:39:16.412 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:39:16.412 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:39:16.451 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:39:16.452 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:39:16.452 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 10(Integer)
+2020-02-16 21:39:16.500 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 9
+2020-02-16 21:39:20.075 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:39:20.076 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:39:20.115 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:39:20.116 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:39:20.116 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 5(Integer)
+2020-02-16 21:39:20.158 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:39:21.629 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:39:21.630 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:39:21.668 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:39:21.674 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:39:21.675 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 3(Integer), 5(Integer)
+2020-02-16 21:39:21.727 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:39:22.572 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:39:22.572 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:39:22.611 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:39:22.612 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:39:22.612 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 5(Integer)
+2020-02-16 21:39:22.657 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:39:23.483 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:39:23.483 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:39:23.522 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:39:23.523 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:39:23.523 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 5(Integer)
+2020-02-16 21:39:23.569 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:39:25.987 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:39:25.988 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:39:26.025 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:39:26.025 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:39:26.026 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 3(Integer), 5(Integer)
+2020-02-16 21:39:26.068 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:39:30.909 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-16 21:40:26.695 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:40:26.695 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:40:26.733 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:40:26.733 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:40:26.734 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 5(Integer)
+2020-02-16 21:40:26.782 [http-nio-8989-exec-2] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:40:40.722 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:40:40.722 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:40:40.760 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:40:40.762 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:40:40.763 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 10(Integer)
+2020-02-16 21:40:40.815 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:40:48.201 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:40:48.202 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:40:48.238 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:40:48.239 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:40:48.239 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 1(Integer), 5(Integer)
+2020-02-16 21:40:48.283 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:40:54.358 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:40:54.358 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:40:54.396 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:40:54.396 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:40:54.397 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 2(Integer), 5(Integer)
+2020-02-16 21:40:54.437 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:40:59.688 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:40:59.689 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:40:59.750 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:40:59.750 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:40:59.750 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 3(Integer), 5(Integer)
+2020-02-16 21:40:59.826 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:41:10.908 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-16 21:42:50.907 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-16 21:42:52.017 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-16 21:42:52.019 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:42:52.042 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-16 21:42:52.043 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:42:52.047 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-16 21:42:52.054 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-16 21:42:59.856 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 12160 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:42:59.861 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:42:59.862 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:42:59.960 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-16 21:42:59.962 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-16 21:42:59.963 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-16 21:43:02.301 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-16 21:43:02.433 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96ms. Found 4 JPA repository interfaces.
+2020-02-16 21:43:03.220 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:43:03.220 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:43:03.220 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:43:03.220 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:43:03.220 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:43:03.220 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:43:03.221 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-16 21:43:03.541 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-16 21:43:04.208 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-16 21:43:04.389 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:43:04.391 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-16 21:43:04.392 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-16 21:43:04.661 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-16 21:43:04.661 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4698 ms
+2020-02-16 21:43:04.927 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-16 21:43:05.058 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-16 21:43:05.305 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-16 21:43:05.490 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-16 21:43:06.098 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-16 21:43:06.143 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-16 21:43:07.904 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-16 21:43:07.918 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:43:07.944 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-16 21:43:09.212 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-16 21:43:09.602 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:43:09.671 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-16 21:43:09.763 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-16 21:43:09.878 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-16 21:43:09.916 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-16 21:43:09.932 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-16 21:43:10.269 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:43:10.330 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-16 21:43:10.334 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 11.61 seconds (JVM running for 13.963)
+2020-02-16 21:44:09.366 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-16 21:44:09.367 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:44:09.370 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:44:09.372 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-16 21:44:09.384 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-16 21:44:10.158 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 12160 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:44:10.159 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:44:10.159 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:44:11.550 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-16 21:44:11.605 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55ms. Found 4 JPA repository interfaces.
+2020-02-16 21:44:11.796 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:44:11.797 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:44:11.797 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:44:11.797 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:44:11.797 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:44:11.797 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:44:11.797 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-16 21:44:11.919 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-16 21:44:12.014 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-16 21:44:12.305 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-16 21:44:12.305 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:44:12.306 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-16 21:44:12.306 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-16 21:44:12.540 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-16 21:44:12.541 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2370 ms
+2020-02-16 21:44:12.703 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-16 21:44:12.714 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-16 21:44:13.156 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-16 21:44:13.157 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-16 21:44:14.100 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-16 21:44:14.100 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:44:14.144 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-16 21:44:14.826 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-16 21:44:15.268 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:44:15.285 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-16 21:44:15.359 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-16 21:44:15.466 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-16 21:44:15.467 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-16 21:44:15.484 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-16 21:44:15.670 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:44:15.675 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-16 21:44:15.676 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 5.662 seconds (JVM running for 79.305)
+2020-02-16 21:44:15.679 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-16 21:44:20.170 [http-nio-8989-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-16 21:44:20.171 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-16 21:44:20.183 [http-nio-8989-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-02-16 21:44:20.955 [http-nio-8989-exec-6] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-16 21:44:21.359 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:44:21.405 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:44:21.479 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:44:21.563 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:44:21.564 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:44:21.624 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:44:23.025 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:44:23.026 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:44:23.059 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:44:23.060 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:44:23.060 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:44:23.125 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:44:24.799 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:44:24.799 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:44:24.832 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:44:24.833 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:44:24.833 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:44:24.880 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:44:26.134 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:44:26.135 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:44:26.359 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:44:26.361 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:44:26.364 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:44:26.414 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:44:32.319 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:44:32.321 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:44:33.269 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:44:33.270 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:44:33.270 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:44:34.185 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:44:36.019 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:44:36.020 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:44:36.055 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:44:36.055 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:44:36.056 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:44:36.114 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:44:58.790 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:44:58.791 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:45:00.121 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:45:00.122 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:45:00.122 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:45:00.364 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:46:32.364 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-16 21:46:32.366 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1m49s107ms309µs819ns).
+2020-02-16 21:47:04.755 [Thread-9] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-16 21:47:04.757 [Thread-9] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:47:04.786 [Thread-9] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-16 21:47:04.787 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:47:04.789 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-16 21:47:04.797 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-02-16 21:47:05.860 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 12160 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:47:05.860 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:47:05.860 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:47:07.582 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-16 21:47:07.633 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50ms. Found 4 JPA repository interfaces.
+2020-02-16 21:47:07.844 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:07.844 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:07.844 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:07.844 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:07.844 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:07.844 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:07.845 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-16 21:47:07.951 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-16 21:47:08.005 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-16 21:47:08.313 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-16 21:47:08.314 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:47:08.315 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-16 21:47:08.315 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-16 21:47:08.429 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-16 21:47:08.429 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2561 ms
+2020-02-16 21:47:08.523 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-16 21:47:08.529 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2020-02-16 21:47:08.915 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2020-02-16 21:47:08.916 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-16 21:47:09.421 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-16 21:47:09.421 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:47:09.428 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-16 21:47:09.913 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-16 21:47:10.170 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:47:10.183 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-16 21:47:10.301 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-16 21:47:10.426 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-16 21:47:10.427 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-16 21:47:10.433 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-16 21:47:10.558 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:47:10.564 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-16 21:47:10.565 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 4.825 seconds (JVM running for 254.194)
+2020-02-16 21:47:10.567 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-16 21:47:13.082 [Thread-14] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-16 21:47:13.083 [Thread-14] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:47:13.085 [Thread-14] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:47:13.086 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2020-02-16 21:47:13.092 [Thread-14] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2020-02-16 21:47:13.804 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 12160 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:47:13.804 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:47:13.804 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:47:14.700 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-16 21:47:14.761 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60ms. Found 4 JPA repository interfaces.
+2020-02-16 21:47:14.998 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:14.998 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:14.998 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:14.998 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:14.998 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:14.999 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:14.999 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-16 21:47:15.119 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-16 21:47:15.206 [restartedMain] WARN  o.a.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-16 21:47:15.559 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-16 21:47:15.560 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:47:15.560 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-16 21:47:15.561 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-16 21:47:15.688 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-16 21:47:15.688 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1879 ms
+2020-02-16 21:47:15.787 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-16 21:47:15.796 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2020-02-16 21:47:16.210 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2020-02-16 21:47:16.211 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-16 21:47:16.817 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-16 21:47:16.817 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:47:16.827 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-16 21:47:17.848 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-16 21:47:18.001 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:47:18.013 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-16 21:47:18.067 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-16 21:47:18.166 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-16 21:47:18.168 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-16 21:47:18.174 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-16 21:47:18.287 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:47:18.296 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-16 21:47:18.298 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 4.61 seconds (JVM running for 261.926)
+2020-02-16 21:47:18.300 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-16 21:47:30.885 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-16 21:47:30.886 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:47:30.887 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:47:30.887 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2020-02-16 21:47:30.893 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2020-02-16 21:47:41.122 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Starting TodoScoreApplication on DESKTOP-OV0MBIP with PID 14276 (E:\lewic\code\git\todo-score\target\classes started by lewic in E:\lewic\code\git\todo-score)
+2020-02-16 21:47:41.132 [restartedMain] DEBUG c.l.todoscore.TodoScoreApplication - Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-16 21:47:41.133 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - The following profiles are active: dev
+2020-02-16 21:47:41.325 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\lewic\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/lewic/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-16 21:47:41.326 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-16 21:47:41.326 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-16 21:47:43.405 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-16 21:47:43.556 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 129ms. Found 4 JPA repository interfaces.
+2020-02-16 21:47:44.302 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'cycleTypeDao' and 'com.lewic.todoscore.dao.jpa.primary.CycleTypeDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:44.302 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:44.303 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordDao' and 'com.lewic.todoscore.dao.jpa.primary.TaskRecordDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:44.303 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'workdayDao' and 'com.lewic.todoscore.dao.jpa.primary.WorkdayDao' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:44.303 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'taskRecordMapper' and 'com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:44.303 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.lewic.todoscore.dao.mybatis.master.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-02-16 21:47:44.304 [restartedMain] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.lewic.todoscore.dao]' package. Please check your configuration.
+2020-02-16 21:47:44.863 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-16 21:47:45.727 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8989 (http)
+2020-02-16 21:47:45.741 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:47:45.742 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-16 21:47:45.743 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-16 21:47:46.068 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-16 21:47:46.068 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4742 ms
+2020-02-16 21:47:46.379 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: primaryPersistenceUnit]
+2020-02-16 21:47:46.544 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.4.9.Final}
+2020-02-16 21:47:46.862 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-16 21:47:47.156 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-16 21:47:48.226 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-16 21:47:48.294 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-02-16 21:47:50.384 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-16 21:47:50.405 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:47:50.503 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-16 21:47:52.272 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-16 21:47:52.969 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:47:53.075 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-02-16 21:47:53.244 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-02-16 21:47:53.353 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-16 21:47:53.383 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-16 21:47:53.405 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-16 21:47:53.859 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8989"]
+2020-02-16 21:47:53.914 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8989 (http) with context path ''
+2020-02-16 21:47:53.918 [restartedMain] INFO  c.l.todoscore.TodoScoreApplication - Started TodoScoreApplication in 14.008 seconds (JVM running for 19.437)
+2020-02-16 21:48:09.802 [http-nio-8989-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-16 21:48:09.802 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-16 21:48:09.818 [http-nio-8989-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2020-02-16 21:48:11.248 [http-nio-8989-exec-7] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-02-16 21:48:14.662 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:48:14.719 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:48:14.788 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:48:14.846 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:48:14.846 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:48:14.915 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:49:08.472 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s143ms598µs966ns).
+2020-02-16 21:49:14.838 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:49:14.841 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:49:15.009 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:15.010 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:49:15.011 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 10(Integer), 10(Integer)
+2020-02-16 21:49:15.063 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:34.978 [scheduling-1] INFO  c.l.t.s.ImportRecordScheduler - exec test1=====>>>>>
+2020-02-16 21:49:35.580 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:49:35.580 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:49:35.618 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:35.619 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:49:35.619 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:49:35.672 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:49:51.742 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:49:51.743 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:49:51.784 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:51.785 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:49:51.785 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 10(Integer), 10(Integer)
+2020-02-16 21:49:51.820 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:53.946 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:49:53.946 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:49:53.983 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:53.983 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:49:53.984 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:49:54.029 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:49:55.450 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:49:55.450 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:49:55.486 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:55.486 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:49:55.486 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 10(Integer), 10(Integer)
+2020-02-16 21:49:55.523 [http-nio-8989-exec-8] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:56.894 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:49:56.895 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:49:56.930 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:56.930 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:49:56.930 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:49:56.982 [http-nio-8989-exec-9] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:49:59.479 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:49:59.480 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:49:59.515 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:49:59.515 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:49:59.517 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 10(Integer), 10(Integer)
+2020-02-16 21:49:59.555 [http-nio-8989-exec-7] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:00.951 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:50:00.951 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:50:00.986 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:00.987 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:50:00.987 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 10(Integer)
+2020-02-16 21:50:01.033 [http-nio-8989-exec-3] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 10
+2020-02-16 21:50:03.450 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:50:03.450 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:50:03.490 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:03.493 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:50:03.493 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 5(Integer)
+2020-02-16 21:50:03.532 [http-nio-8989-exec-1] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:50:05.579 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:50:05.579 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:50:05.613 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:05.614 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:50:05.614 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 5(Integer), 5(Integer)
+2020-02-16 21:50:05.659 [http-nio-8989-exec-10] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:50:06.365 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:50:06.366 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:50:06.409 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:06.410 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:50:06.410 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 10(Integer), 5(Integer)
+2020-02-16 21:50:06.448 [http-nio-8989-exec-6] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:07.635 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:50:07.635 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:50:07.674 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:07.676 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:50:07.677 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 5(Integer)
+2020-02-16 21:50:07.714 [http-nio-8989-exec-4] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 5
+2020-02-16 21:50:10.339 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==>  Preparing: SELECT count(id) FROM task_record where `finish` is not null 
+2020-02-16 21:50:10.339 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - ==> Parameters: 
+2020-02-16 21:50:10.375 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.getCountByFinishNotNull - <==      Total: 1
+2020-02-16 21:50:10.377 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==>  Preparing: SELECT t1.id, t1.finish, t1.score, t1.create_time, t1.update_time, t2.id as task_id, t2.content as task_content, t2.score as task_score, t2.status as task_status, t2.description AS task_description, t2.cycle_type_id as task_cycle_type_id, t2.create_time AS task_create_time, t2.update_time AS task_update_time FROM ( SELECT * from `task_record` t0 where 1=1 and `finish` is not null ORDER BY t0.create_time desc, t0.task_id asc limit ?,? ) t1 LEFT JOIN `task` t2 ON t1.task_id = t2.id 
+2020-02-16 21:50:10.377 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - ==> Parameters: 0(Integer), 20(Integer)
+2020-02-16 21:50:10.418 [http-nio-8989-exec-5] DEBUG c.l.t.d.m.m.T.listByFinishNotNull - <==      Total: 11
+2020-02-16 21:50:17.385 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-02-16 21:50:17.388 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-16 21:50:17.478 [SpringContextShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-02-16 21:50:17.478 [SpringContextShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'primaryPersistenceUnit'
+2020-02-16 21:50:17.480 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-16 21:50:17.826 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

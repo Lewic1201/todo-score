@@ -42,13 +42,13 @@
         from `task_record` t0
         where 1=1
         and `finish` is not null
+        ORDER BY
+        t0.create_time desc, t0.task_id asc
         <if test="page!=null">
-            limit #{page.pageNo,jdbcType=INTEGER},#{page.pageSize,jdbcType=INTEGER}
+            limit #{page.startRow,jdbcType=INTEGER},#{page.pageSize,jdbcType=INTEGER}
         </if>
         ) t1
         LEFT JOIN `task` t2 ON t1.task_id = t2.id
-        ORDER BY
-        t1.id desc, t2.id asc
     </select>
 
     <select id="getCountByFinishNotNull" resultType="java.lang.Integer">
