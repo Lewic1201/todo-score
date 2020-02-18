@@ -134,3 +134,12 @@ C:\Windows\System32\drivers\etc\hosts 文件添加
 
 6. 将target目录下生成的jar包，application.yml，start.sh等文件上传至linux服务器，执行sh start.sh命令
 
+## 运行环境搭建
+
+1. 安装docker
+
+2. 启动mysql8.0,并挂载目录
+
+   ```
+   docker run -d --name mysql8.0 --privileged=true -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -v /etc/mysql:/etc/mysql  -v /opt/mysql:/var/lib/mysql -v /etc/localtime:/etc/localtime docker.io/mysql:8.0.19
+   ```
