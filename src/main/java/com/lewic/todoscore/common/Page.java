@@ -1,11 +1,14 @@
 package com.lewic.todoscore.common;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
  * 
  * @author Administrator
  */
+@Data
 public class Page implements Serializable{
 
 	private static final long serialVersionUID = 5790890024078772097L;
@@ -15,7 +18,7 @@ public class Page implements Serializable{
     //总记录数
     private int total;
     //总页数
-    private int pages;
+    private int totalPage;
     //每页多少
     private int pageSize = 10;
     //开始页码
@@ -27,18 +30,14 @@ public class Page implements Serializable{
     }
 
     public Page(Integer pageSize, Integer pageNo) {
-        this.pageNo = pageNo;
-        this.pageSize = pageSize;
+        this.setPageNo(pageNo);
+        this.setPageSize(pageSize);
     }
 
     public Page(Integer pageSize, Integer pageNo, Integer total) {
-        this.pageNo = pageNo;
-        this.pageSize = pageSize;
-        this.setTotalCount(total);
-    }
-
-    public int getPageNo() {
-        return pageNo ;
+        this.setPageNo(pageNo);
+        this.setPageSize(pageSize);
+        this.setTotal(total);
     }
 
     public void setPageNo(int pageNo) {
@@ -46,64 +45,32 @@ public class Page implements Serializable{
         this.pageNo = pageNo;
     }
 
-    public int getTotalCount() {
-        return total;
-    }
-
-    public void setTotalCount(int totalCount) {
-        if (totalCount < pageSize) {
+    public void setTotal(int total) {
+        if (total < pageSize) {
             if (pageNo  > 1) pageNo  = 1;
             startRow=0;
-            endRow=totalCount;
-			pages=1;
+            endRow=total;
+			totalPage =1;
         }else{
-            if(totalCount%pageSize==0){
-				pages=totalCount/pageSize;
+            if(total%pageSize==0){
+				totalPage =total/pageSize;
             }else{
-				pages=totalCount/pageSize+1;
+				totalPage =total/pageSize+1;
             }
-            if(pageNo >= pages){
-            	startRow=(pages-1)*pageSize;
-				pageNo = pages;
+            if(pageNo >= totalPage){
+            	startRow=(totalPage -1)*pageSize;
+				pageNo = totalPage;
             }else{
             	startRow=(pageNo -1)*pageSize;
             }
             endRow=startRow+pageSize;
         }
-        this.total = totalCount;
+        this.total = total;
     }
-
-    public int getTotalPage() {
-        return  pages;
-    }
-
-    public void setTotalPage(int totalPage) {
-        this. pages = totalPage;
-    }
-
-    public int getPageSize() {
-        if (pageSize <= 0) pageSize = 20;
-        return pageSize;
-    }
-
+    
     public void setPageSize(int pageSize) {
+        if (pageSize <= 0) pageSize = 10;
         this.pageSize = pageSize;
-    }
-
-    public int getStartRow() {
-        return startRow;
-    }
-
-    public void setStartRow(int startPage) {
-        this.startRow = startPage;
-    }
-
-    public int getEndRow() {
-        return endRow;
-    }
-
-    public void setEndPage(int endPage) {
-        this.endRow = endPage;
     }
 
 	@Override
@@ -115,7 +82,7 @@ public class Page implements Serializable{
 		result = prime * result + pageSize;
 		result = prime * result + startRow;
 		result = prime * result + total;
-		result = prime * result +  pages;
+		result = prime * result + totalPage;
 		return result;
 	}
 
@@ -138,7 +105,7 @@ public class Page implements Serializable{
 			return false;
 		if (total != other.total)
 			return false;
-		if (total != other.pages)
+		if (totalPage != other.totalPage)
 			return false;
 		return true;
 	}

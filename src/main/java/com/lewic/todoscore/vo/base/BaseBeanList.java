@@ -20,7 +20,7 @@ public class BaseBeanList<T> {
     }
 
     public BaseBeanList(Page page, List<T> data) {
-        this.count = page.getTotalCount();
+        this.count = page.getTotal();
         this.data = data;
     }
 
