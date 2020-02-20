@@ -159,7 +159,7 @@
       getRecordByDay() {
         this.axios({
           method: 'get',
-          url: '/v1/record/task/day/' + this.searchDay
+          url: '/v1/record/task/day/' + this.formatDate3(this.searchDay)
         }).then(response => {
           this.tableData = response.data;
           this.disablePage = true;
@@ -169,7 +169,7 @@
 
         this.axios({
           method: 'get',
-          url: '/v1/record/task/day/' + this.searchDay + '/score'
+          url: '/v1/record/task/day/' + this.formatDate3(this.searchDay) + '/score'
         }).then(response => {
           this.scoreMap = response.data;
           this.showScore = true;
@@ -193,7 +193,20 @@
       },
       refreshData() {
         location.reload();
-      }
+      },
+      formatDate3: function (value) {// 时间戳转换日期格式方法
+        if (value == null) {
+          return '';
+        } else {
+          let date = new Date(value);
+          let y = date.getFullYear();// 年
+          let MM = date.getMonth() + 1;// 月
+          MM = MM < 10 ? ('0' + MM) : MM;
+          let d = date.getDate();// 日
+          d = d < 10 ? ('0' + d) : d;
+          return y + MM + d;
+        }
+      },
     },
 
     filters: {
