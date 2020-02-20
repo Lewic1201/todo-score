@@ -29,4 +29,8 @@ public class Constants {
      */
     public final static String DATE_DEFAULT_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 
+    public final static String DAY_DEFAULT_FORMAT = "yyyy-MM-dd";
+
+    public final static String DAY_REST_FORMAT = "yyyyMMdd";
+
 }

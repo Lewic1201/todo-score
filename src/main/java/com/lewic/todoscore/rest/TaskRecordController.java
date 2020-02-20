@@ -4,6 +4,7 @@ package com.lewic.todoscore.rest;
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lewic.todoscore.common.Constants;
 import com.lewic.todoscore.common.ResponseCode;
 import com.lewic.todoscore.common.View;
 import com.lewic.todoscore.service.TaskRecordService;
@@ -11,6 +12,7 @@ import com.lewic.todoscore.vo.ScoreInfoVo;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,13 +43,15 @@ public class TaskRecordController {
     @ApiOperation("获取某天所有的任务")
     @RequestMapping(value = "/day/{day}", method = RequestMethod.GET)
     @JsonView(View.Summary.class)
-    public String day(@PathVariable(value = "day") Date day) throws Exception {
+    public String day(@PathVariable(value = "day") @DateTimeFormat(pattern = Constants.DAY_REST_FORMAT)  Date day)
+            throws Exception {
         return mapper.writerWithView(View.Summary.class).writeValueAsString(taskRecordService.listByDay(day));
     }
 
     @ApiOperation("获取某天的得分")
     @RequestMapping(value = "/day/{day}/score", method = RequestMethod.GET)
-    public String dayScore(@PathVariable(value = "day") Date day) throws Exception {
+    public String dayScore(@PathVariable(value = "day") @DateTimeFormat(pattern = Constants.DAY_REST_FORMAT) Date day)
+            throws Exception {
         ScoreInfoVo scoreInfoVo = taskRecordService.getDayTotalScore(day);
         return mapper.writerFor(ScoreInfoVo.class).writeValueAsString(scoreInfoVo);
     }

@@ -86,27 +86,34 @@ C:\Windows\System32\drivers\etc\hosts 文件添加
    ```
    npm install express -g     # -g是全局安装的意思
    ```
+
+6. 设置可以运行脚本
+    ```
+    get-ExecutionPolicy #显示Restricted（表示状态是禁止的）
+    set-ExecutionPolicy #RemoteSigned
+    get-ExecutionPolicy #显示RemoteSigned
+    ```
    
-6. 使用淘宝npm镜像源下载，cnpm和npm用法相同，不过cnpm更适用国内
+7. 使用淘宝npm镜像源下载，cnpm和npm用法相同，不过cnpm更适用国内
    ```
    npm install -g cnpm --registry=https://registry.npm.taobao.org
    cnpm install vue-cli -g
    ```
    
-7. 创建vue项目（创建名字为‘vue_demo’的文件夹）
+8. 创建vue项目（创建名字为‘vue_demo’的文件夹）
 
    ```
    vue init webpack vue_demo
    ```
 
-8. 手动下载项目的依赖包
+9. 手动下载项目的依赖包
 
    ```
    cd vue_demo
    cnpm install
    ```
 
-9. 运行程序并访问http://localhost:8080
+10. 运行程序并访问http://localhost:8080
    ```
    npm run dev
    ```
