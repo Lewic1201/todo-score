@@ -1,10 +1,12 @@
 #!/bin/bash
 #这里可替换为你自己的执行程序，其他代码无需更改
 APP_NAME=todo-score-0.0.1-SNAPSHOT.jar
+#程序debug端口,和程序运行端口不能冲突
+APP_DEBUG_PORT=8080
 cd `dirname $0`
 #使用说明，用来提示输入参数
 usage(){
-    echo "Usage: sh main.sh [start|stop|restart|status]"
+    echo "Usage: sh main.sh [start|stop|restart|status|debug]"
     exit 1
 }
 #检查程序是否在运行
@@ -57,6 +59,18 @@ restart(){
   start
 }
 
+#远程debug启动
+debug(){
+  is_exist
+  if [ $? -eq "0" ]; then
+    echo "${APP_NAME} is already running. pid=${pid} ."
+  else
+    nohup java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=$APP_DEBUG_PORT -jar $APP_NAME > /dev/null 2>&1 &
+    echo "${APP_NAME} is debug success"
+    echo "netstat -anptu | grep ${APP_DEBUG_PORT}"
+  fi
+}
+
 #根据输入参数，选择执行对应方法，不输入则执行使用说明
 case "$1" in
   "start")
@@ -70,6 +84,9 @@ case "$1" in
     ;;
   "restart")
     restart
+    ;;
+  "debug")
+    debug
     ;;
   *)
     usage
