@@ -142,7 +142,6 @@ public class TaskServiceImpl implements TaskService {
         } else {
             throw new Exception("task id is not found");
         }
-        ;
     }
 
     private void taskDtoToTask(TaskDto taskDto, Task task) throws Exception {

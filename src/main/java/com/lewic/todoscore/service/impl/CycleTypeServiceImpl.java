@@ -2,12 +2,12 @@ package com.lewic.todoscore.service.impl;
 
 import com.lewic.todoscore.common.Enums;
 import com.lewic.todoscore.dao.jpa.primary.CycleTypeDao;
-import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.WorkdayDao;
 import com.lewic.todoscore.entity.jpa.primary.CycleType;
 import com.lewic.todoscore.entity.jpa.primary.Workday;
 import com.lewic.todoscore.service.CycleTypeService;
 import com.lewic.todoscore.utils.CronUtil;
+import com.lewic.todoscore.utils.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -82,8 +82,15 @@ public class CycleTypeServiceImpl implements CycleTypeService {
         }
     }
 
-    // 通过工作日过滤
+    /**
+     * 通过工作日过滤
+     * @param cycleType 循环方式
+     * @param date 指定日期
+     * @return true:指定日期满足; false:指定日期不满足
+     * @throws Exception 异常
+     */
     private Boolean filterByWorkday(CycleType cycleType, Date date) throws Exception {
+        Date dateStart = DateUtil.getDayStart(date);
         Boolean result = null;
         List<Workday> workdays = workdayDao.findAll();
         if (workdays.isEmpty()) {
@@ -97,22 +104,23 @@ public class CycleTypeServiceImpl implements CycleTypeService {
         } else if (Enums.WorkdayStatus.SKIP_HOLIDAY.getCode().equals(workdayStatus)) {
             // 跳过节假日时，先判断特殊的workday里是否包含,包含则取workday的isWorkday值，不包含则判断是否为周六周日
             for (Workday workday : workdays) {
-                if (workday.getDay().equals(date)) {
+                if (workday.getDay().equals(dateStart)) {
                     result = workday.getIsWorkday();
                 }
             }
-            if (result != null) {
-                result = CronUtil.isWeekend(date);
+            if (result == null) {
+                result = !CronUtil.isWeekend(date);
             }
         } else if (Enums.WorkdayStatus.SKIP_WORKDAY.getCode().equals(workdayStatus)) {
-            // 跳过工作日时，先判断特殊的workday里是否包含,包含则取workday的isWorkday相反值，不包含则判断是否为周六周日
+            // 跳过工作日时，先判断特殊的workday里是否包含,包含则取workday的isWorkday相反值
             for (Workday workday : workdays) {
-                if (workday.getDay().equals(date)) {
+                if (workday.getDay().equals(dateStart)) {
                     result = !workday.getIsWorkday();
                 }
             }
-            if (result != null) {
-                result = !CronUtil.isWeekend(date);
+            // dateStart不在workday列表,则如果为周六周日也满足
+            if (result == null) {
+                result = CronUtil.isWeekend(date);
             }
         }
         log.debug("today is satisfied workday condition: {}", result);
