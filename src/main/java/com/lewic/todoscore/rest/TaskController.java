@@ -3,6 +3,7 @@ package com.lewic.todoscore.rest;
 
 import com.alibaba.fastjson.JSON;
 import com.lewic.todoscore.common.ResponseCode;
+import com.lewic.todoscore.dto.TaskDto;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.rest.base.BaseRestFul;
 import com.lewic.todoscore.service.TaskService;
@@ -23,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("/v1/task")
-public class TaskController implements BaseRestFul<Task> {
+public class TaskController implements BaseRestFul<TaskDto> {
 
     private final TaskService taskService;
 
@@ -55,16 +56,16 @@ public class TaskController implements BaseRestFul<Task> {
     @Override
     @ApiOperation("新增任务")
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public String create(@ApiParam(value = "任务") @RequestBody Task task) {
+    public String create(@ApiParam(value = "任务") @RequestBody TaskDto taskDto) throws Exception {
         // todo 新增任务如果满足今天的条件，需要在taskRecord中新增记录
-        taskService.insertOne(task);
+        taskService.insertOne(taskDto);
         return ResponseCode.SUCCESS.getValue();
     }
 
     @Override
     @ApiOperation("修改任务")
     @RequestMapping(value = "", method = RequestMethod.PUT)
-    public String edit(Task obj) throws Exception {
+    public String edit(TaskDto obj) throws Exception {
 
         taskService.updateOne(obj);
         return ResponseCode.SUCCESS.getValue();

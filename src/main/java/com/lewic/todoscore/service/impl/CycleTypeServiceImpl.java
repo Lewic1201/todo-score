@@ -71,7 +71,8 @@ public class CycleTypeServiceImpl implements CycleTypeService {
     }
 
     // 通过循环类型指定的规则过滤
-    private Boolean filterByCronAndWorkday(CycleType cycleType, Date date) throws Exception {
+    @Override
+    public Boolean filterByCronAndWorkday(CycleType cycleType, Date date) throws Exception {
         if (CronUtil.checkCronWithTime(cycleType.getCronExpression(), date) && filterByWorkday(cycleType, date)) {
             log.debug("{} is satisfied today,cycleTypeId is {}", cycleType.getCronExpression(), cycleType.getId());
             return true;

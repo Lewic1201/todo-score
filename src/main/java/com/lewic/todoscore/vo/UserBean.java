@@ -1,7 +1,7 @@
-package com.lewic.todoscore.dto;
+package com.lewic.todoscore.vo;
 
 import com.lewic.todoscore.common.Page;
-import com.lewic.todoscore.dto.base.BaseBeanList;
+import com.lewic.todoscore.vo.base.BaseBeanList;
 import com.lewic.todoscore.entity.mybatis.vo.User;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public class UserBean extends BaseBeanList<User> {
         super(page, data);
     }
 
-    public UserBean(Integer count, Integer pageNum, List<User> data) {
-        super(count, pageNum, data);
+    public UserBean(Integer count, List<User> data) {
+        super(count, data);
     }
 }

@@ -4,7 +4,8 @@ import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
 import com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper;
 import com.lewic.todoscore.common.Page;
-import com.lewic.todoscore.dto.TaskRecordBean;
+import com.lewic.todoscore.vo.ScoreInfoVo;
+import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
 import com.lewic.todoscore.entity.mybatis.vo.TaskRecordI;
@@ -17,7 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -48,21 +51,21 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     @Override
     public List<TaskRecord> listByToday() {
-        Date today = new Date();
+        return listByDay(new Date());
+    }
 
-        // 获取当天起始时间和结束时间
-        Calendar calendarStart = new GregorianCalendar();
-        calendarStart.setTime(today);
-        calendarStart.set(Calendar.HOUR, -12);
-        calendarStart.set(Calendar.MINUTE, 0);
-        calendarStart.set(Calendar.SECOND, 0);
-        Date dateStart = calendarStart.getTime();
-        Calendar calendarEnd = new GregorianCalendar();
-        calendarEnd.setTime(dateStart);
-        calendarEnd.add(Calendar.HOUR, 24);
-        Date dateEnd = calendarEnd.getTime();
-
-        return taskRecordDao.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(dateStart, dateEnd);
+    @Override
+    public List<TaskRecord> listByDay(Date day) {
+        try {
+            Map<String, Date> map = getDayStartAndEnd(day);
+            log.debug("time stamp range:{} -> {}", map.get("dateStart").getTime(),
+                    map.get("dateEnd").getTime());
+            return taskRecordDao.findAllByCreateTimeGreaterThanEqualAndCreateTimeLessThan(
+                    map.get("dateStart"), map.get("dateEnd"));
+        } catch (Exception e) {
+            log.error("get task record failed!!");
+            return null;
+        }
     }
 
     @Override
@@ -83,27 +86,35 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 //            if(task.getStatus().equals(0)){
 //                continue;
 //            }
-            if(task.getDeleted()){
+            if (task.getDeleted()) {
                 continue;
             }
             TaskRecord taskRecord = new TaskRecord();
             taskRecord.setTask(task);
             taskRecord.setScore(0);
+            taskRecord.setFinish(false);
             taskRecordDao.save(taskRecord);
         }
     }
 
     @Override
+    public ScoreInfoVo getTodayTotalScore() throws Exception {
+        return getDayTotalScore(new Date());
+    }
+
+    @Override
     @Transactional(readOnly = true)
-    public Integer getTodayTotalScore() {
-        List<TaskRecord> taskRecords = listByToday();
+    public ScoreInfoVo getDayTotalScore(Date date) throws Exception {
+        List<TaskRecord> taskRecords = listByDay(date);
+        Integer score = 0;
         Integer totalScore = 0;
         for (TaskRecord taskRecord : taskRecords) {
             if (taskRecord.getScore() != null) {
-                totalScore += taskRecord.getScore();
+                score += taskRecord.getScore();
+                totalScore += taskRecord.getTask().getScore();
             }
         }
-        return totalScore;
+        return new ScoreInfoVo(score, totalScore);
     }
 
     @Override
@@ -132,4 +143,34 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         }
         taskRecordDao.save(taskRecord);
     }
+
+
+    // 获取当天起始时间和结束时间
+    private static Map<String, Date> getDayStartAndEnd(Date date) {
+        Calendar calendarStart = new GregorianCalendar();
+        calendarStart.setTime(date);
+        calendarStart.set(Calendar.HOUR_OF_DAY, 0);
+        calendarStart.set(Calendar.MINUTE, 0);
+        calendarStart.set(Calendar.SECOND, 0);
+        calendarStart.set(Calendar.MILLISECOND, 0);
+        Date dateStart = calendarStart.getTime();
+        Calendar calendarEnd = new GregorianCalendar();
+        calendarEnd.setTime(dateStart);
+        calendarEnd.add(Calendar.HOUR, 24);
+        Date dateEnd = calendarEnd.getTime();
+        Map<String, Date> day = new HashMap<>();
+        day.put("dateStart", dateStart);
+        day.put("dateEnd", dateEnd);
+        return day;
+    }
+
+
+    public static void main(String[] args) {
+        Date today = new Date();
+
+        Map<String, Date> map = getDayStartAndEnd(today);
+        System.out.println(map.get("dateStart").getTime());
+        System.out.println(map.get("dateEnd").getTime());
+    }
+
 }

@@ -9,11 +9,11 @@ import java.util.List;
 
 public interface BaseRestFul<T> {
 
-    public String list();
+    public String list() throws Exception;
 
     public String show(Integer id) throws Exception;
 
-    public String create(T obj);
+    public String create(T obj) throws Exception;
 
     public String edit(T obj) throws Exception;
 

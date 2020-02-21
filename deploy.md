@@ -86,27 +86,34 @@ C:\Windows\System32\drivers\etc\hosts 文件添加
    ```
    npm install express -g     # -g是全局安装的意思
    ```
+
+6. 设置可以运行脚本
+    ```
+    get-ExecutionPolicy #显示Restricted（表示状态是禁止的）
+    set-ExecutionPolicy #RemoteSigned
+    get-ExecutionPolicy #显示RemoteSigned
+    ```
    
-6. 使用淘宝npm镜像源下载，cnpm和npm用法相同，不过cnpm更适用国内
+7. 使用淘宝npm镜像源下载，cnpm和npm用法相同，不过cnpm更适用国内
    ```
    npm install -g cnpm --registry=https://registry.npm.taobao.org
    cnpm install vue-cli -g
    ```
    
-7. 创建vue项目（创建名字为‘vue_demo’的文件夹）
+8. 创建vue项目（创建名字为‘vue_demo’的文件夹）
 
    ```
    vue init webpack vue_demo
    ```
 
-8. 手动下载项目的依赖包
+9. 手动下载项目的依赖包
 
    ```
    cd vue_demo
    cnpm install
    ```
 
-9. 运行程序并访问http://localhost:8080
+10. 运行程序并访问http://localhost:8080
    ```
    npm run dev
    ```
@@ -123,7 +130,10 @@ C:\Windows\System32\drivers\etc\hosts 文件添加
   >  1. 如果部署到Nginx, 映射到你Nginx的域名为 example.com 并且Nginx访问的根目录为文件夹A的话, 编译后的文件将会被部署到文件夹A路径下;  
   >  2. 如果采用SpringBoot的话, 默认静态文件根路径为src/main/resource/static, 那么就需要将编译后的文件放在static下.  
 
-3. 切换到Vue工程根目录,执行打包命令：npm run build
+3. 切换到Vue工程根目录,执行打包命令：  
+   ```
+   npm run build
+   ```
 
 4. 打开生成的dist文件夹，将里里面文件及目录拷贝至springboot工程中resource/static/文件夹下
 
@@ -131,3 +141,12 @@ C:\Windows\System32\drivers\etc\hosts 文件添加
 
 6. 将target目录下生成的jar包，application.yml，start.sh等文件上传至linux服务器，执行sh start.sh命令
 
+## 运行环境搭建
+
+1. 安装docker
+
+2. 启动mysql8.0,并挂载目录
+
+   ```
+   docker run -d --name mysql8.0 --privileged=true -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -v /etc/mysql:/etc/mysql  -v /opt/mysql:/var/lib/mysql -v /etc/localtime:/etc/localtime docker.io/mysql:8.0.19
+   ```
