@@ -3,8 +3,8 @@
 APP_NAME=todo-score-0.0.1-SNAPSHOT.jar
 cd `dirname $0`
 #使用说明，用来提示输入参数
-usage() {
-    echo "Usage: sh 执行脚本.sh [start|stop|restart|status]"
+usage(){
+    echo "Usage: sh main.sh [start|stop|restart|status]"
     exit 1
 }
 #检查程序是否在运行

@@ -1,1 +1,0 @@
-nohop java -jar todo-score-0.0.1-SNAPSHOT.jar &
