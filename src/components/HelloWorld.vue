@@ -1,6 +1,6 @@
 <template>
-<!--    <div>-->
-<!--    </div>-->
+  <!--    <div>-->
+  <!--    </div>-->
 
   <div class="hello">
     <img src="../assets/logo.png">
@@ -28,82 +28,175 @@
         </router-link>
       </li>
     </ul>
-    <h2>Essential Links</h2>
+    <h2>Html Template</h2>
     <ul>
       <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
+        <a href="../../static/html/pointer/index.html" target="_blank">
+          pointer
         </a>
       </li>
       <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
+        <a href="../../static/html/404/index.html" target="_blank">
+          404
         </a>
       </li>
       <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
+        <a href="../../static/html/input/index.html" target="_blank">
+          input
         </a>
       </li>
       <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
+        <a href="../../static/html/textillate/index.html" target="_blank">
+          textillate
         </a>
       </li>
-      <br>
       <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
+        <a href="../../static/html/numberProgress/index.html" target="_blank">
+          number progress
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/msgBoard/index.html" target="_blank">
+          message board
+        </a>
+      </li>
+      <br/>
+      <li>
+        <a href="../../static/html/clock/index.html" target="_blank">
+          clock
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/clock2/index.html" target="_blank">
+          clock2
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/photo1/index.html" target="_blank">
+          photo1
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/photo2/index.html" target="_blank">
+          photo2
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/photo3/index.html" target="_blank">
+          photo3
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/login1/index.html" target="_blank">
+          login1
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/login2/index.html" target="_blank">
+          login2
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/login3/default/index.html" target="_blank">
+          login3
         </a>
       </li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2>H5 Game</h2>
+    <ul>
+      <li>
+        <a href="../../static/html/game1/index.html" target="_blank">
+          六边形下降
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/game2/index.html" target="_blank">
+          像素小鸟
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/game3/index.html" target="_blank">
+          扫雷
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/game4/index.html" target="_blank">
+          五子棋
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/game5/index.html" target="_blank">
+          贪吃蛇
+        </a>
+      </li>
+    </ul>
+    <h2>Interesting</h2>
+    <ul>
+      <li>
+        <a href="../../static/html/lines/index.html" target="_blank">
+          lines
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/num/index.html" target="_blank">
+          num
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/keyboard/index.html" target="_blank">
+          keyboard
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/ballPool/index.html" target="_blank">
+          ball pool
+        </a>
+      </li>
+      <br/>
+      <li>
+        <a href="../../static/html/love1/index.html" target="_blank">
+          l1
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/love2/index.html" target="_blank">
+          l2
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/love3/index.html" target="_blank">
+          l3
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/love4/index.html" target="_blank">
+          l4
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/love5/index.html" target="_blank">
+          l5
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/love6/index.html" target="_blank">
+          l6
+        </a>
+      </li>
+      <li>
+        <a href="../../static/html/love7/index.html" target="_blank">
+          l7
+        </a>
+      </li>
+    </ul>
+    <h2>code</h2>
     <ul>
       <li>
         <a
-          href="http://router.vuejs.org/"
+          href="https://github.com/Lewic1201"
           target="_blank"
         >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
+          my github
         </a>
       </li>
     </ul>
