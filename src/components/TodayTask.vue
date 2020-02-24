@@ -34,9 +34,15 @@
         </template>
       </el-table-column>
       <el-table-column
-        label="任务内容">
+        label="清单内容">
         <template slot-scope="scope">
           <span>{{ scope.row.task.content }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column
+        label="描述">
+        <template slot-scope="scope">
+          <span>{{ scope.row.task.description }}</span>
         </template>
       </el-table-column>
       <el-table-column

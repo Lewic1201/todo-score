@@ -30,7 +30,7 @@
         <el-button
           type="text"
           @click="getPages()"
-          class="el-icon-search">获取全部任务
+          class="el-icon-search">获取全部
         </el-button>
       </el-form-item>
       <el-form-item>
