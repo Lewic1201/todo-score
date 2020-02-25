@@ -192,11 +192,13 @@
     <h2>code</h2>
     <ul>
       <li>
-        <a
-          href="https://github.com/Lewic1201"
-          target="_blank"
-        >
-          my github
+        <a href="https://github.com/Lewic1201" target="_blank">
+          github
+        </a>
+      </li>
+      <li>
+        <a href="https://www.cnblogs.com/lewic/" target="_blank">
+          blog
         </a>
       </li>
     </ul>
