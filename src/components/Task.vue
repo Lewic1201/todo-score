@@ -325,7 +325,7 @@
             url: '/v1/task/' + row.id
           }).then(response => {
             this.axios.get('/v1/task/').then(response => {
-              this.tableData = response.data;
+              this.tableData = response.data.data;
             }).catch(error => {
               console.log(error);
             });
@@ -364,7 +364,7 @@
           url: '/v1/task',
           data: postData
         }).then(response => {
-          this.tableData = response.data;
+          this.tableData = response.data.data;
         }).catch(error => {
           console.log(error);
         });
@@ -398,7 +398,7 @@
           data: postData
         }).then(response => {
           this.axios.get('/v1/task').then(response => {
-            this.tableData = response.data;
+            this.tableData = response.data.data;
             this.currentPage = 1;
             this.$message({
               type: 'success',
@@ -452,7 +452,7 @@
           url: '/ListByName',
           data: postData
         }).then(response => {
-          this.tableData = response.data;
+          this.tableData = response.data.data;
           this.disablePage = true;
         }).catch(error => {
           console.log(error);
@@ -460,7 +460,7 @@
       },
       getPages() {
         this.axios.get('/v1/task').then(response => {
-          this.tableData = response.data;
+          this.tableData = response.data.data;
         }).catch(error => {
           console.log(error);
         });
@@ -476,13 +476,13 @@
       //       // console.log(JSON.parse(JSON.stringify(response.data))['tableData'])
       //   });*/
       //   this.axios.post('/v1/task').then(response => {
-      //     this.tableData = response.data;
+      //     this.tableData = response.data.data;
       //   }).catch(error => {
       //     console.log(error);
       //   });
       //
       //   // this.axios.post('/rows').then(response => {
-      //   //   this.total = response.data;
+      //   //   this.total = response.data.data;
       //   // }).catch(error => {
       //   //   console.log(error);
       //   // });
@@ -530,20 +530,20 @@
                // console.log(JSON.parse(JSON.stringify(response.data))['tableData'])
            });*/
       this.axios.get('/v1/task').then(response => {
-        this.tableData = response.data;
+        this.tableData = response.data.data;
       }).catch(error => {
         console.log(error);
       });
 
       this.axios.get('/v1/cycleType').then(response => {
-        this.cycleTypeList = response.data;
+        this.cycleTypeList = response.data.data;
       }).catch(error => {
         console.log(error);
       });
 
       // this.axios.get('/v1/task/'+row.id).then(response =>
       // {
-      //   this.total = response.data;
+      //   this.total = response.data.data;
       // }).catch(error =>
       // {
       //   console.log(error);

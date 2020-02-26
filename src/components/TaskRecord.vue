@@ -170,7 +170,7 @@
           method: 'get',
           url: '/v1/record/task/day/' + this.formatDate3(this.searchDay)
         }).then(response => {
-          this.tableData = response.data;
+          this.tableData = response.data.data;
           this.disablePage = true;
         }).catch(error => {
           console.log(error);
@@ -180,7 +180,7 @@
           method: 'get',
           url: '/v1/record/task/day/' + this.formatDate3(this.searchDay) + '/score'
         }).then(response => {
-          this.scoreMap = response.data;
+          this.scoreMap = response.data.data;
           this.showScore = true;
         }).catch(error => {
           console.log(error);
@@ -193,8 +193,8 @@
             pageSize: this.pageSize,
           },
         }).then(response => {
-          this.tableData = response.data.data;
-          this.count = response.data.count;
+          this.tableData = response.data.data.data;
+          this.count = response.data.data.count;
           this.showScore = false;
         }).catch(error => {
           console.log(error);
@@ -259,8 +259,8 @@
           pageSize: this.pageSize,
         },
       }).then(response => {
-        this.tableData = response.data.data;
-        this.count = response.data.count;
+        this.tableData = response.data.data.data;
+        this.count = response.data.data.count;
         this.showScore = false;
       }).catch(error => {
         console.log(error);

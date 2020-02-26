@@ -252,7 +252,7 @@
           url: '/v1/cycleType',
           data: postData
         }).then(response => {
-          this.tableData = response.data;
+          this.tableData = response.data.data;
         }).catch(error => {
           console.log(error);
         });
@@ -287,7 +287,7 @@
           data: postData
         }).then(response => {
           this.axios.get('/v1/cycleType').then(response => {
-            this.tableData = response.data;
+            this.tableData = response.data.data;
             this.currentPage = 1;
             this.$message({
               type: 'success',
@@ -296,7 +296,7 @@
           }).catch(error => {
             console.log(error);
           });
-          this.dialogVisible = false
+          this.dialogVisible = false;
           console.log(response);
         }).catch(error => {
           console.log(error);
@@ -304,7 +304,8 @@
       },
       getPages() {
         this.axios.get('/v1/cycleType').then(response => {
-          this.tableData = response.data;
+          console.log(response.data.toString());
+          this.tableData = response.data.data;
         }).catch(error => {
           console.log(error);
         });
@@ -349,7 +350,7 @@
 
     created() {
       this.axios.get('/v1/cycleType').then(response => {
-        this.tableData = response.data;
+        this.tableData = response.data.data;
       }).catch(error => {
         console.log(error);
       });

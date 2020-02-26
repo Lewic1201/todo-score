@@ -160,7 +160,7 @@
             url: '/v1/task/' + row.id
           }).then(response => {
             this.axios.delete('/v1/task/' + row.id).then(response => {
-              this.tableData = response.data;
+              this.tableData = response.data.data;
             }).catch(error => {
               console.log(error);
             });
@@ -195,7 +195,7 @@
           page: this.currentPage
         });
         this.axios.get('/v1/record/task/today').then(response => {
-          this.tableData = response.data;
+          this.tableData = response.data.data;
         }).catch(error => {
           console.log(error);
         });
@@ -203,7 +203,7 @@
           method: 'get',
           url: '/v1/record/task/today/score'
         }).then(response => {
-          this.scoreMap = response.data;
+          this.scoreMap = response.data.data;
         }).catch(error => {
           console.log(error);
         });
@@ -234,7 +234,7 @@
           url: '/ListByName',
           data: postData
         }).then(response => {
-          this.tableData = response.data;
+          this.tableData = response.data.data;
           this.disablePage = true;
         }).catch(error => {
           console.log(error);
@@ -263,7 +263,7 @@
 
     created() {
       this.axios.get('/v1/record/task/today').then(response => {
-        this.tableData = response.data;
+        this.tableData = response.data.data;
       }).catch(error => {
         console.log(error);
       });
@@ -271,7 +271,7 @@
         method: 'get',
         url: '/v1/record/task/today/score'
       }).then(response => {
-        this.scoreMap = response.data;
+        this.scoreMap = response.data.data;
       }).catch(error => {
         console.log(error);
       });
