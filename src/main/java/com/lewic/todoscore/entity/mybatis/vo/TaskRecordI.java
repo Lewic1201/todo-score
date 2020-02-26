@@ -31,11 +31,23 @@ public class TaskRecordI implements Serializable {
     private TaskI task;
 
     @JsonView(View.Summary.class)
-    @ApiModelProperty(value = "是否完成", name = "status", example = "1")
+    @ApiModelProperty(value = "清单内容", name = "content", example = "1")
+    private String content;
+
+    @JsonView(View.Summary.class)
+    @ApiModelProperty(value = "清单描述", name = "description", example = "1")
+    private String description;
+
+    @JsonView(View.Summary.class)
+    @ApiModelProperty(value = "分值", name = "scoreValue", example = "10")
+    private Integer scoreValue;
+
+    @JsonView(View.Summary.class)
+    @ApiModelProperty(value = "是否完成", name = "finish", example = "0")
     private Boolean finish;
 
     @JsonView(View.Detail.class)
-    @ApiModelProperty(value = "得分", name = "cycleType", example = "1")
+    @ApiModelProperty(value = "得分", name = "score", example = "0")
     private Integer score;
 
     @JsonView(View.Detail.class)

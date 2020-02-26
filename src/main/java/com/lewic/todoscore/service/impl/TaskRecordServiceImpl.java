@@ -5,6 +5,7 @@ import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
 import com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper;
 import com.lewic.todoscore.common.Page;
 import com.lewic.todoscore.utils.DateUtil;
+import com.lewic.todoscore.utils.ToUtil;
 import com.lewic.todoscore.vo.ScoreInfoVo;
 import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.Task;
@@ -77,7 +78,6 @@ public class TaskRecordServiceImpl implements TaskRecordService {
     public void insertToday() throws Exception {
         Integer[] todayCycleTypeIds = cycleTypeService.listCycleTypeIdByToday();
         // todo 可以更改为只查询出id
-        // todo 批量更新需要优化
         List<Task> todayTasks = taskDao.findByCycleTypeIdIn(todayCycleTypeIds);
         for (Task task : todayTasks) {
             // todo 可以修改查找方法，不需要continue过滤
@@ -87,10 +87,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
             if (task.getDeleted()) {
                 continue;
             }
-            TaskRecord taskRecord = new TaskRecord();
-            taskRecord.setTask(task);
-            taskRecord.setScore(0);
-            taskRecord.setFinish(false);
+            TaskRecord taskRecord = ToUtil.taskToTaskRecord(task);
             taskRecordDao.save(taskRecord);
         }
     }
@@ -109,7 +106,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
         for (TaskRecord taskRecord : taskRecords) {
             if (taskRecord.getScore() != null) {
                 score += taskRecord.getScore();
-                totalScore += taskRecord.getTask().getScore();
+                totalScore += taskRecord.getScoreValue();
             }
         }
         return new ScoreInfoVo(score, totalScore);

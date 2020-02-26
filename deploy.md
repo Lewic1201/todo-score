@@ -49,6 +49,8 @@
 </settings>
 ```
 
+## springboot热部署配置
+[点此查看](https://www.jianshu.com/p/e40d111c7bfc?utm_source=oschina-app)
 
 
 ## Github访问host配置

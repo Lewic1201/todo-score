@@ -8,6 +8,7 @@ import com.lewic.todoscore.entity.jpa.primary.CycleType;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
 import com.lewic.todoscore.service.TaskService;
+import com.lewic.todoscore.utils.ToUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,12 +49,9 @@ public class TaskServiceImpl implements TaskService {
         taskDao.save(task);
 
         // 校验今天是否可用
-        Boolean todayEnable = cycleTypeService.filterByCronAndWorkday(task.getCycleType(), new Date());
-        if (todayEnable) {
-            TaskRecord taskRecord = new TaskRecord();
-            taskRecord.setTask(task);
-            taskRecord.setScore(0);
-            taskRecord.setFinish(false);
+        boolean recordUpdateFlag = cycleTypeService.filterByCronAndWorkday(task.getCycleType(), new Date());
+        if (recordUpdateFlag) {
+            TaskRecord taskRecord = ToUtil.taskToTaskRecord(task);
             taskRecordDao.save(taskRecord);
         }
 
@@ -124,10 +122,7 @@ public class TaskServiceImpl implements TaskService {
         taskDao.save(task);
 
         if (recordUpdateFlag) {
-            TaskRecord taskRecordNew = new TaskRecord();
-            taskRecordNew.setTask(task);
-            taskRecordNew.setScore(0);
-            taskRecordNew.setFinish(false);
+            TaskRecord taskRecordNew = ToUtil.taskToTaskRecord(task);
             taskRecordDao.save(taskRecordNew);
         }
     }

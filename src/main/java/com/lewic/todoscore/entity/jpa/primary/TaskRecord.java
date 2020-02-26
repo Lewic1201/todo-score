@@ -45,6 +45,18 @@ public class TaskRecord implements Serializable {
     @JsonView(View.Summary.class)
     private Task task;
 
+    @Column(name = "content")
+    @JsonView(View.Summary.class)
+    private String content;
+
+    @Column(name = "description")
+    @JsonView(View.Summary.class)
+    private String description;
+
+    @Column(name = "score_value")
+    @JsonView(View.Summary.class)
+    private Integer scoreValue;
+
     @Column(name = "finish")
     @JsonView(View.Summary.class)
     private Boolean finish;

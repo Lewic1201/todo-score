@@ -87,7 +87,7 @@ public class TaskRecordController {
             @RequestParam(required = false, value = "pageSize", defaultValue = "10")
                     Integer pageSize) {
         // todo finish要置空，为未完成的状态，这块查不出来
-        return JSON.toJSON(taskRecordService.listByFinishNotNull(pageNum, pageSize)).toString();
+        return JSON.toJSONString(taskRecordService.listByFinishNotNull(pageNum, pageSize));
     }
 
     @ApiOperation("完成后标记")

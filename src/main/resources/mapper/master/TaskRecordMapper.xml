@@ -5,6 +5,9 @@
 
     <resultMap id="TaskRecordI" type="com.lewic.todoscore.entity.mybatis.vo.TaskRecordI">
         <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="score_value" jdbcType="INTEGER" property="scoreValue"/>
         <result column="finish" jdbcType="INTEGER" property="finish"/>
         <result column="score" jdbcType="INTEGER" property="score"/>
         <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
@@ -24,6 +27,9 @@
     <select id="listByFinishNotNull" resultMap="TaskRecordI">
         SELECT
         t1.id,
+        t1.content,
+        t1.description,
+        t1.score_value,
         t1.finish,
         t1.score,
         t1.create_time,
