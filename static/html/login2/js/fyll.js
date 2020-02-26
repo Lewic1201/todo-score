@@ -1,10 +1,4 @@
-/****************************************************************
- *																*		
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-****************************************************************/
+
 /**
  * Fyll.js
  * Distributed under MIT license.
@@ -51,7 +45,7 @@
 		// after. Also responsible for pausing inbetween.
 		readQueue: function() {
 			var fyll = window.fyll;
-			
+
 			// Is queue empty? If so, run "complete" callback.
 			if(!fyll.queue.length) {
 				if(typeof fyll.config.complete === 'function') {
@@ -79,7 +73,7 @@
 							pauseAfter = fyll.config.actionDelay;
 						}
 						setTimeout(fyll.readQueue, pauseAfter);
-					
+
 					// This was the last one, no need to pause
 					} else {
 						fyll.readQueue();
@@ -96,7 +90,7 @@
 		// Parses full query into small instructions
 		parseQuery: function(instr) {
 			var then = instr.split('then');
-			
+
 			for(var i=0; i < then.length; ++i) {
 				then[i] = this.helpers.betterTrim(then[i]);
 			}

@@ -1,11 +1,4 @@
-/****************************************************************
- *																*		
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-****************************************************************/
-root { 
+root {
     display: block;
 }
 
@@ -22,14 +15,14 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
-     
+
 input, input:before, input:after {
     -webkit-user-select: initial;
     -khtml-user-select: initial;
     -moz-user-select: initial;
     -ms-user-select: initial;
     user-select: initial;
-} 
+}
 
 ::selection { background: transparent;color:inherit; }
 ::-moz-selection { background: transparent;color:inherit; }
@@ -49,7 +42,7 @@ canvas{
 .ani_hack{
     -webkit-perspective: 1000;
     -webkit-backface-visibility: hidden;
-    
+
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;

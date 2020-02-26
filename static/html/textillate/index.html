@@ -11,7 +11,7 @@
     <div class="decal"></div>
 		<div class="jumbotron">
 			<div class="container">
-  		  <h1 class="glow in tlt">GOOGLE</h1>
+  		  <h1 class="glow in tlt">SHMILY</h1>
   		  <p class="tlt" data-in-effect="bounceInDown">
   		  	A simple plugin for CSS3 text animations.
   		  </p>
@@ -84,12 +84,12 @@
       , $viewport = $('.playground .viewport');
 
     var getFormData = function () {
-      var data = { 
-        loop: true, 
-        in: { callback: log('in callback called.') }, 
+      var data = {
+        loop: true,
+        in: { callback: log('in callback called.') },
         out: { callback: log('out callback called.') }
       };
-      
+
       $form.find('[data-key="effect"]').each(function () {
         var $this = $(this)
           , key = $this.data('key')
@@ -120,10 +120,10 @@
         type = '[data-type="out"]';
       } else if (/In/.test(value)) {
         type = '[data-type="in"]';
-      } 
+      }
 
       if (type) {
-        $form.find('[data-key="effect"]' + type).append(option);        
+        $form.find('[data-key="effect"]' + type).append(option);
       }
     });
 
@@ -133,7 +133,7 @@
     $('.jumbotron h1')
       .fitText(0.6)
       .textillate({ in: { effect: 'flipInY' }});
-    
+
     $('.jumbotron p')
       .fitText(3.2, { maxFontSize: 18 })
       .textillate({ initialDelay: 1000, in: { delay: 3, shuffle: true } });
@@ -153,7 +153,7 @@
       .on('outAnimationBegin.tlt', log('outAnimationBegin.tlt triggered.'))
       .on('outAnimationEnd.tlt', log('outAnimationEnd.tlt triggered.'))
       .on('end.tlt', log('end.tlt'));
-    
+
     $form.on('change', function () {
       var obj = getFormData();
       $tlt.textillate(obj);

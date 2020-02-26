@@ -1,10 +1,4 @@
-﻿/****************************************************************
- *																*		
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-****************************************************************/
+﻿
 $(document).ready(function() {
 		var canvas = document.getElementById("c");
 		var ctx = canvas.getContext("2d");
@@ -15,7 +9,7 @@ $(document).ready(function() {
 			n:100,
 			c:false,    //  颜色  如果是false 则是随机渐变颜色
 			bc:'#000',   //  背景颜色
-			r:0.9, 
+			r:0.9,
 			o:0.05,
 			a:1,
 			s:20,
@@ -31,7 +25,7 @@ $(document).ready(function() {
 		}else{
 			color = Math.random()*360;
 		}
-		
+
 		$(window).resize(function(){
 			re();
 		});
@@ -554,7 +548,7 @@ $(document).ready(function() {
 				window.cancelAnimationFrame = window[vendors[xx] + 'CancelAnimationFrame'] ||
 											  window[vendors[xx] + 'CancelRequestAnimationFrame'];
 			}
-		
+
 			if (!window.requestAnimationFrame) {
 				window.requestAnimationFrame = function(callback, element) {
 					var currTime = new Date().getTime();

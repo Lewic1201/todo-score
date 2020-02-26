@@ -2,16 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>jQuery+Css3制作网站登录表单验证带弹出层提示验证表单 - 代码库</title>	
-    <link rel="stylesheet" type="text/css" href="style/css/dmaku.css" />  
+	<title>jQuery+Css3制作网站登录表单验证带弹出层提示验证表单 - 代码库</title>
+    <link rel="stylesheet" type="text/css" href="style/css/dmaku.css" />
 </head>
-<!--/************************************************************
- *																*
- * 						      代码库							*
- *                        www.dmaku.com							*
- *       		  努力创建完善、持续更新插件以及模板			*
- * 																*
-**************************************************************-->
+
 <body>
 
  	<div class="content">
@@ -59,7 +53,7 @@
 				show_loading();
 				var myReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; //邮件正则
 				if($('.email').val() == ''){
-					show_err_msg('邮箱还没填呢！');	
+					show_err_msg('邮箱还没填呢！');
 					$('.email').focus();
 				}else if(!myReg.test($('.email').val())){
 					show_err_msg('您的邮箱格式错咯！');
@@ -69,10 +63,10 @@
 					$('.password').focus();
 				}else{
 					//ajax提交表单，#login_form为表单的ID。 如：$('#login_form').ajaxSubmit(function(data) { ... });
-					show_msg('登录成功咯！  正在为您跳转...','/');	
+					show_msg('登录成功咯！  正在为您跳转...','/');
 				}
 			});
 		});
-    </script> 
+    </script>
 </body>
 </html>
