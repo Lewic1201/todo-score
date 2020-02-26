@@ -1,7 +1,7 @@
 package com.lewic.todoscore.dao.mybatis.master;
 
 import com.lewic.todoscore.common.Page;
-import com.lewic.todoscore.entity.mybatis.vo.TaskRecordI;
+import com.lewic.todoscore.entity.mybatis.master.TaskRecordI;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

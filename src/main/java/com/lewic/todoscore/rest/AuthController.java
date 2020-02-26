@@ -1,6 +1,6 @@
 package com.lewic.todoscore.rest;
 
-import com.lewic.todoscore.entity.mybatis.vo.User;
+import com.lewic.todoscore.entity.mybatis.master.User;
 import com.lewic.todoscore.service.impl.AuthServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

@@ -12,7 +12,7 @@ import com.lewic.todoscore.vo.ScoreInfoVo;
 import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
-import com.lewic.todoscore.entity.mybatis.vo.TaskRecordI;
+import com.lewic.todoscore.entity.mybatis.master.TaskRecordI;
 import com.lewic.todoscore.service.TaskRecordService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

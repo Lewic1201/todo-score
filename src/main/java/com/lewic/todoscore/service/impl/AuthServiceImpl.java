@@ -3,7 +3,7 @@ package com.lewic.todoscore.service.impl;
 import com.lewic.todoscore.common.Enums.RoleType;
 import com.lewic.todoscore.common.Enums.AccountStatus;
 import com.lewic.todoscore.dao.mybatis.master.UserMapper;
-import com.lewic.todoscore.entity.mybatis.vo.User;
+import com.lewic.todoscore.entity.mybatis.master.User;
 import com.lewic.todoscore.service.AuthService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

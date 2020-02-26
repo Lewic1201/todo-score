@@ -2,7 +2,7 @@ package com.lewic.todoscore.vo;
 
 import com.lewic.todoscore.common.Page;
 import com.lewic.todoscore.vo.base.BaseBeanList;
-import com.lewic.todoscore.entity.mybatis.vo.User;
+import com.lewic.todoscore.entity.mybatis.master.User;
 
 import java.util.List;
 

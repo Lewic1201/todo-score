@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper">
 
-    <resultMap id="TaskRecordI" type="com.lewic.todoscore.entity.mybatis.vo.TaskRecordI">
+    <resultMap id="TaskRecordI" type="com.lewic.todoscore.entity.mybatis.master.TaskRecordI">
         <result column="id" jdbcType="INTEGER" property="id"/>
         <result column="content" jdbcType="VARCHAR" property="content"/>
         <result column="description" jdbcType="VARCHAR" property="description"/>
@@ -12,7 +12,7 @@
         <result column="score" jdbcType="INTEGER" property="score"/>
         <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
         <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
-        <association property="task" javaType="com.lewic.todoscore.entity.mybatis.vo.TaskI">
+        <association property="task" javaType="com.lewic.todoscore.entity.mybatis.master.TaskI">
             <id column="task_id" property="id"/>
             <result column="task_content" property="content"/>
             <result column="task_score" property="score"/>
