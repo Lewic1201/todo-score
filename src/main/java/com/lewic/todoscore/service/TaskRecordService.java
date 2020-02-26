@@ -1,5 +1,6 @@
 package com.lewic.todoscore.service;
 
+import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.vo.ScoreInfoVo;
 import com.lewic.todoscore.vo.TaskRecordBean;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
@@ -17,7 +18,7 @@ public interface TaskRecordService {
 
     void insertToday() throws Exception;
 
-    void updateFinishStatus(Integer id, Boolean finish);
+    void updateFinishStatus(Integer id, Boolean finish) throws ClientException;
 
     ScoreInfoVo getTodayTotalScore() throws Exception;
 

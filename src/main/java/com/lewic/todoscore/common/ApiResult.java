@@ -9,9 +9,9 @@ import lombok.Setter;
 @SuppressWarnings("rawtypes")
 public class ApiResult<T> {
 
-    private int code = ResultEnum.SUCCESS.getCode();
+    private int code = ResponseCode.SUCCESS.getCode();
 
-    private String message = ResultEnum.SUCCESS.getMessage();
+    private String message = ResponseCode.SUCCESS.getMessage();
 
     private T data;
 
@@ -25,10 +25,10 @@ public class ApiResult<T> {
     }
 
     public static <T> ApiResult<T> success(T data) {
-        return ApiResult.success(data, ResultEnum.SUCCESS);
+        return ApiResult.success(data, ResponseCode.SUCCESS);
     }
 
-    public static <T> ApiResult<T> success(T data, ResultEnum result) {
+    public static <T> ApiResult<T> success(T data, ResponseCode result) {
         ApiResult<T> apiResult = new ApiResult<>();
         apiResult.setData(data);
         apiResult.setCode(result.getCode());
@@ -44,10 +44,10 @@ public class ApiResult<T> {
     }
 
     public static <T> ApiResult<T> fail(T data) {
-        return ApiResult.fail(data, ResultEnum.FAIL);
+        return ApiResult.fail(data, ResponseCode.FAIL);
     }
 
-    public static <T> ApiResult<T> fail(T data, ResultEnum result) {
+    public static <T> ApiResult<T> fail(T data, ResponseCode result) {
         ApiResult<T> apiResult = new ApiResult<>();
         apiResult.setData(data);
         apiResult.setCode(result.getCode());

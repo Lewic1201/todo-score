@@ -39,14 +39,14 @@ public class CycleTypeController {
             @ApiParam(value = "主题任务") @RequestBody CycleType cycleType
     ) {
         cycleTypeService.insertOne(cycleType);
-        return ResponseCode.SUCCESS.getValue();
+        return ResponseCode.SUCCESS.getMessage();
     }
 
     @ApiOperation("删除循环方式")
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String deleteCycleType(@PathVariable(value = "id") Integer id) {
         cycleTypeService.deleteOne(id);
-        return ResponseCode.SUCCESS.getValue();
+        return ResponseCode.SUCCESS.getMessage();
     }
 
 }

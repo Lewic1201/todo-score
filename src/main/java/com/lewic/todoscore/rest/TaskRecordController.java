@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lewic.todoscore.common.Constants;
 import com.lewic.todoscore.common.ResponseCode;
 import com.lewic.todoscore.common.View;
+import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.service.TaskRecordService;
 import com.lewic.todoscore.vo.ScoreInfoVo;
 import io.swagger.annotations.ApiOperation;
@@ -74,7 +75,7 @@ public class TaskRecordController {
     @RequestMapping(value = "/history/score", method = RequestMethod.GET)
     public String historyScore() {
         // todo 获取历史得分；排序
-        return ResponseCode.SUCCESS.getValue();
+        return ResponseCode.SUCCESS.getMessage();
     }
 
     @ApiOperation("获取历史记录")
@@ -92,9 +93,10 @@ public class TaskRecordController {
 
     @ApiOperation("完成后标记")
     @RequestMapping(value = "/finish/{id}/{finish}", method = RequestMethod.PATCH)
-    public String edit(@PathVariable(value = "id") Integer id, @PathVariable(value = "finish") Boolean finish) {
+    public String edit(@PathVariable(value = "id") Integer id, @PathVariable(value = "finish") Boolean finish)
+            throws ClientException {
         taskRecordService.updateFinishStatus(id, finish);
-        return ResponseCode.SUCCESS.getValue();
+        return ResponseCode.SUCCESS.getMessage();
     }
 
 }

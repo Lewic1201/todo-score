@@ -1,5 +1,6 @@
 package com.lewic.todoscore.service.impl;
 
+import com.lewic.todoscore.common.ResponseCode;
 import com.lewic.todoscore.dao.jpa.primary.CycleTypeDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
@@ -7,6 +8,7 @@ import com.lewic.todoscore.dto.TaskDto;
 import com.lewic.todoscore.entity.jpa.primary.CycleType;
 import com.lewic.todoscore.entity.jpa.primary.Task;
 import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
+import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.service.TaskService;
 import com.lewic.todoscore.utils.ToUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -66,8 +68,7 @@ public class TaskServiceImpl implements TaskService {
     public Task showOne(Integer id) throws Exception {
         Task task = taskDao.findByIdAndDeletedFalse(id);
         if (task == null || task.getId() == null) {
-            log.error("task not found");
-            throw new Exception("task id is not found");
+            throw new ClientException(ResponseCode.RESULT_EMPTY, "task id is not found");
         }
         return task;
     }
@@ -76,19 +77,16 @@ public class TaskServiceImpl implements TaskService {
     public void updateOne(TaskDto taskDto) throws Exception {
 
         if (taskDto.getId() == null) {
-            log.error("task id is null");
-            throw new Exception("task id is not found");
+            throw new ClientException(ResponseCode.PARAMETER_ERROR, "task id is null");
         }
 
         Optional<Task> taskOptional = taskDao.findById(taskDto.getId());
         if (!taskOptional.isPresent()) {
-            log.error("task not found");
-            throw new Exception("task id is not found");
+            throw new ClientException(ResponseCode.RESULT_EMPTY, "task id is not found");
         }
         Task task = taskOptional.get();
         if (task.getDeleted()) {
-            log.warn("deleted don't set");
-            throw new Exception("deleted don't set");
+            throw new ClientException(ResponseCode.PARAMETER_ERROR, "deleted task don't set");
         }
 
         // 如果循环方式改变需要更新当天的taskRecord记录
@@ -98,7 +96,7 @@ public class TaskServiceImpl implements TaskService {
             CycleType cycleTypeOld = task.getCycleType();
             CycleType cycleTypeNew = cycleTypeDao.getOne(taskDto.getCycleTypeId());
             if (cycleTypeNew == null) {
-                throw new Exception("cycleType find is null");
+                throw new ClientException(ResponseCode.RESULT_EMPTY, "cycleType is not found");
             }
             Boolean todayEnableOld = cycleTypeService.filterByCronAndWorkday(cycleTypeOld, today);
             Boolean todayEnableNew = cycleTypeService.filterByCronAndWorkday(cycleTypeNew, today);
@@ -135,7 +133,7 @@ public class TaskServiceImpl implements TaskService {
             task.setDeleted(true);
             taskDao.save(task);
         } else {
-            throw new Exception("task id is not found");
+            throw new ClientException(ResponseCode.RESULT_EMPTY, "task id  is not found");
         }
     }
 
@@ -146,7 +144,7 @@ public class TaskServiceImpl implements TaskService {
         task.setScore(taskDto.getScore());
         CycleType cycleType = cycleTypeDao.getOne(taskDto.getCycleTypeId());
         if (cycleType == null) {
-            throw new Exception("cycleType find is null");
+            throw new ClientException(ResponseCode.RESULT_EMPTY, "cycleType is not found");
         }
         task.setCycleType(cycleType);
     }

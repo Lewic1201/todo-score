@@ -1,30 +1,117 @@
 package com.lewic.todoscore.common;
 
+import lombok.Getter;
+
 /**
  * @author lewic
  * @since 2020/1/5 15:56
  */
-
+@Getter
 public enum ResponseCode {
 
-    SUCCESS(0,"SUCCESS"),
-    ERROR(1,"ERROR"),
-    NEED_LOGIN(10,"NEED_LOGIN"),
-    ILLEGAL_ARGUMENT(2,"ILLEGAL_ARGUMENT");
+    /**
+     * 响应成功
+     */
+    SUCCESS(200, "成功"),
 
-    private final int code;
-    private final String value;
+    /**
+     * 服务器已接受请求，但尚未处理 .已提交，用于异步操作，但暂时无返回结果
+     */ //	TODO
+    RECEIVED(202, "成功"),
 
-    ResponseCode(int code,String value){
+    /**
+     * 参数出错
+     */ //	TODO
+    PARAMETER_ERROR(400, "参数出错"),
+    /**
+     * 请求参数缺失
+     */
+    PARAM_MISS(400, "请求参数缺失"),
+
+    /**
+     * 认证问题
+     */ //	TODO
+    AUTHENTICATION_ERROR(401, "认证出错"),
+
+    /**
+     * 方法不存在问题
+     */ //	TODO
+    resource_nonexistent(404, "资源不存在"),
+
+    /**
+     * 内部失败
+     */
+    FAIL(500, "系统出错"),
+
+
+    /**
+     * 系统未知错误
+     */
+    UNKNOW_ERROR(-1, "未知错误"),
+
+
+    //-----------------------------------------//
+
+
+    /**
+     * 登录用户名或密码错误
+     */
+    USER_INFO_ERROR(1001, "登录用户名或密码错误"),
+
+    /**
+     * 用户名已存在
+     */
+    USER_NAME_EXISTS(1002, "用户名已存在"),
+
+    /**
+     * 查询结果为空
+     */
+    RESULT_EMPTY(1011, "查询结果为空"),
+
+    /**
+     * 数据插入失败
+     */
+    INSERT_ERROR(1012, "数据插入失败"),
+
+    /**
+     * 更新数据异常
+     */
+    UPDATE_ERROR(1013, "更新数据异常"),
+
+    /**
+     * 系统数据校验出错
+     */
+    PARAM_CHECK_ERROR(1014, "数据插入失败"),
+
+    /**
+     * 不满足分派条件
+     */
+    NO_SUFFICIENT_ASSIGN(1021, "不满足分派条件，请检查分配目录、用户和数量是否正确"),
+
+    /**
+     * 无效的字符
+     */
+    INVALIDATE_CHARACTER(1022, "路径中存在无效的字符"),
+
+    /**
+     * 任务中缺少需要识别的图片
+     */
+    NO_IMAGE_PATH(1031, "任务中缺少需要识别的图片,请选择图片进行识别"),
+
+    /**
+     * 任务中缺少需要识别的图片
+     */
+    NO_DEFECT_TYPE(1032, "任务中缺少需要识别的缺陷类型,请选择需要识别的缺陷类型"),
+
+
+    ;
+
+    private final Integer code;
+    private final String message;
+
+    ResponseCode(Integer code, String message) {
         this.code = code;
-        this.value = value;
+        this.message = message;
     }
 
-    public int getCode(){
-        return code;
-    }
-
-    public String getValue(){
-        return value;
-    }
 }

@@ -1,9 +1,11 @@
 package com.lewic.todoscore.service.impl;
 
+import com.lewic.todoscore.common.ResponseCode;
 import com.lewic.todoscore.dao.jpa.primary.TaskDao;
 import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
 import com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper;
 import com.lewic.todoscore.common.Page;
+import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.utils.DateUtil;
 import com.lewic.todoscore.utils.ToUtil;
 import com.lewic.todoscore.vo.ScoreInfoVo;
@@ -122,7 +124,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     @Override
     @Transactional
-    public void updateFinishStatus(Integer id, Boolean finish) {
+    public void updateFinishStatus(Integer id, Boolean finish) throws ClientException {
         Optional<TaskRecord> optionalTaskRecord = taskRecordDao.findById(id);
         TaskRecord taskRecord;
         if (optionalTaskRecord.isPresent()) {
@@ -134,7 +136,7 @@ public class TaskRecordServiceImpl implements TaskRecordService {
                 taskRecord.setScore(0);
             }
         } else {
-            throw new RuntimeException("get this taskRecord info failed!!");
+            throw new ClientException(ResponseCode.UPDATE_ERROR, "get this taskRecord info failed!!");
         }
         taskRecordDao.save(taskRecord);
     }
