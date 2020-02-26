@@ -8,6 +8,11 @@ spring:
       enabled: true
       additional-paths: src/main/java
   datasource:
+    hikari:
+      minimum-idle: 3
+      maximum-pool-size: 10
+      max-lifetime: 30000
+      connection-test-query: SELECT 1
     primary:
       jdbc-url: jdbc:mysql://39.100.120.239:3306/todo_score?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
       username: root

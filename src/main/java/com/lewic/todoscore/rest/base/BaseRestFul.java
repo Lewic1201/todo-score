@@ -1,5 +1,8 @@
 package com.lewic.todoscore.rest.base;
 
+import com.lewic.todoscore.common.ApiResult;
+import com.lewic.todoscore.entity.jpa.primary.Task;
+
 import java.util.List;
 
 /**
@@ -9,13 +12,13 @@ import java.util.List;
 
 public interface BaseRestFul<T> {
 
-    public String list() throws Exception;
+    public ApiResult<List<Task>> list() throws Exception;
 
-    public String show(Integer id) throws Exception;
+    public ApiResult<Task> show(Integer id) throws Exception;
 
-    public String create(T obj) throws Exception;
+    public ApiResult create(T obj) throws Exception;
 
-    public String edit(T obj) throws Exception;
+    public ApiResult edit(T obj) throws Exception;
 
-    public String delete(Integer id) throws Exception;
+    public ApiResult delete(Integer id) throws Exception;
 }

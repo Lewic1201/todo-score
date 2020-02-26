@@ -2,7 +2,7 @@ package com.lewic.todoscore.rest;
 
 
 import com.alibaba.fastjson.JSON;
-import com.lewic.todoscore.common.ResponseCode;
+import com.lewic.todoscore.common.ApiResult;
 import com.lewic.todoscore.entity.jpa.primary.CycleType;
 import com.lewic.todoscore.service.impl.CycleTypeServiceImpl;
 import io.swagger.annotations.ApiOperation;
@@ -28,25 +28,24 @@ public class CycleTypeController {
 
     @ApiOperation("获取循环方式列表")
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String listCycleType(
-    ) {
-        return JSON.toJSON(cycleTypeService.listCycleType()).toString();
+    public ApiResult listCycleType() {
+        return ApiResult.success(cycleTypeService.listCycleType());
     }
 
     @ApiOperation("新增循环方式")
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public String insertCycleType(
+    public ApiResult insertCycleType(
             @ApiParam(value = "主题任务") @RequestBody CycleType cycleType
     ) {
         cycleTypeService.insertOne(cycleType);
-        return ResponseCode.SUCCESS.getMessage();
+        return ApiResult.success();
     }
 
     @ApiOperation("删除循环方式")
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String deleteCycleType(@PathVariable(value = "id") Integer id) {
+    public ApiResult deleteCycleType(@PathVariable(value = "id") Integer id) {
         cycleTypeService.deleteOne(id);
-        return ResponseCode.SUCCESS.getMessage();
+        return ApiResult.success();
     }
 
 }

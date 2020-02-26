@@ -9,7 +9,7 @@ import lombok.Setter;
 @SuppressWarnings("rawtypes")
 public class ApiResult<T> {
 
-    private int code = ResponseCode.SUCCESS.getCode();
+    private Integer code = ResponseCode.SUCCESS.getCode();
 
     private String message = ResponseCode.SUCCESS.getMessage();
 
@@ -28,6 +28,10 @@ public class ApiResult<T> {
         return ApiResult.success(data, ResponseCode.SUCCESS);
     }
 
+    public static <T> ApiResult<T> success(ResponseCode result) {
+        return ApiResult.success(null, result);
+    }
+
     public static <T> ApiResult<T> success(T data, ResponseCode result) {
         ApiResult<T> apiResult = new ApiResult<>();
         apiResult.setData(data);
@@ -39,19 +43,19 @@ public class ApiResult<T> {
     /**
      * 失败时的静态方法
      */
-    public static <T> ApiResult<T> fail() {
-        return ApiResult.fail(null);
+    public static <T> ApiResult<T> error() {
+        return ApiResult.error(ResponseCode.INTERNAL_FAIL);
     }
 
-    public static <T> ApiResult<T> fail(T data) {
-        return ApiResult.fail(data, ResponseCode.FAIL);
+    public static <T> ApiResult<T> error(ResponseCode result) {
+        return ApiResult.error(result.getCode(), result.getMessage());
     }
 
-    public static <T> ApiResult<T> fail(T data, ResponseCode result) {
+    public static <T> ApiResult<T> error(Integer errorCode, String errorMessage) {
         ApiResult<T> apiResult = new ApiResult<>();
-        apiResult.setData(data);
-        apiResult.setCode(result.getCode());
-        apiResult.setMessage(result.getMessage());
+        apiResult.setData(null);
+        apiResult.setCode(errorCode);
+        apiResult.setMessage(errorMessage);
         apiResult.setSuccess(false);
         return apiResult;
     }

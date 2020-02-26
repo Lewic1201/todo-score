@@ -62,6 +62,7 @@ public class CycleTypeServiceImpl implements CycleTypeService {
 
     @Override
     public void insertOne(CycleType cycleType) {
+        cycleType.setId(null);
         cycleTypeDao.save(cycleType);
     }
 

@@ -21,22 +21,20 @@ public class ClientException extends Exception implements Serializable {
     private String errorMessage;
 
     public ClientException() {
-        super(ResponseCode.UNKNOW_ERROR.getMessage());
-        this.errorCode = ResponseCode.UNKNOW_ERROR.getCode();
-        this.errorMessage = ResponseCode.UNKNOW_ERROR.getMessage();
-        log.error(ResponseCode.UNKNOW_ERROR.getMessage());
+        this(ResponseCode.UNKNOWN_ERROR);
     }
 
     public ClientException(ResponseCode responseCode) {
-        super(responseCode.getMessage());
-        this.errorCode = responseCode.getCode();
-        this.errorMessage = responseCode.getMessage();
-        log.error(responseCode.getMessage());
+        this(responseCode.getCode(), responseCode.getMessage());
     }
 
     public ClientException(ResponseCode responseCode, String errorMessage) {
-        super(errorMessage);
-        this.errorCode = responseCode.getCode();
+        this(responseCode.getCode(), errorMessage);
+    }
+
+    public ClientException(Integer errorCode, String errorMessage, Throwable cause) {
+        super(errorMessage, cause);
+        this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         log.error(errorMessage);
     }
@@ -46,6 +44,12 @@ public class ClientException extends Exception implements Serializable {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         log.error(errorMessage);
+    }
+
+    // 参考https://blog.csdn.net/yangkai_hudong/article/details/18409007
+    @Override
+    public Throwable fillInStackTrace() {
+        return this;
     }
 
 }

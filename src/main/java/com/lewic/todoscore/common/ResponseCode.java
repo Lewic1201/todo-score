@@ -41,13 +41,13 @@ public enum ResponseCode {
     /**
      * 内部失败
      */
-    FAIL(500, "系统出错"),
+    INTERNAL_FAIL(500, "系统出错"),
 
 
     /**
      * 系统未知错误
      */
-    UNKNOW_ERROR(-1, "未知错误"),
+    UNKNOWN_ERROR(-1, "未知错误"),
 
 
     //-----------------------------------------//
@@ -103,7 +103,10 @@ public enum ResponseCode {
      */
     NO_DEFECT_TYPE(1032, "任务中缺少需要识别的缺陷类型,请选择需要识别的缺陷类型"),
 
-
+    /**
+     * 当前请求方法不支持
+     */
+    REQUEST_METHOD_SUPPORT_ERROR(40001,"当前请求方法不支持");
     ;
 
     private final Integer code;
