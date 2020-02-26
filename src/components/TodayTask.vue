@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="float: left">{{ currentTime | formatDate2}} 任务列表</h1>
+    <h1 style="float: left">{{ currentTime | formatDate2}} 清单列表</h1>
     <br>
     <el-form :inline="true" class="demo-form-inline" style="float: right">
       <el-form-item>

@@ -49,19 +49,19 @@
       <el-table-column
         label="清单内容">
         <template slot-scope="scope">
-          <span>{{ scope.row.task.content }}</span>
+          <span>{{ scope.row.content }}</span>
         </template>
       </el-table-column>
       <el-table-column
         label="描述">
         <template slot-scope="scope">
-          <span>{{ scope.row.task.description }}</span>
+          <span>{{ scope.row.description }}</span>
         </template>
       </el-table-column>
       <el-table-column
         label="分值">
         <template slot-scope="scope">
-          <span>{{ scope.row.task.score}}</span>
+          <span>{{ scope.row.scoreValue}}</span>
         </template>
       </el-table-column>
       <el-table-column
@@ -111,6 +111,9 @@
       return {
         taskRecordForm: {
           id: '',
+          content: '',
+          description: '',
+          scoreValue: '',
           task: {
             id: '',
             content: '',

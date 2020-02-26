@@ -59,7 +59,7 @@
         </template>
       </el-table-column>
       <el-table-column
-        label="任务内容">
+        label="清单内容">
         <template slot-scope="scope">
           <span>{{ scope.row.content }}</span>
         </template>
@@ -136,9 +136,9 @@
       </el-table-column>
     </el-table>
 
-    <el-form :model="taskForm" :rules="rules" ref="taskForm" label-width="70px" class="demo-taskForm" size="medium">
+    <el-form :model="taskForm" :rules="rules" ref="taskForm" label-width="100px" class="demo-taskForm" size="medium">
       <el-dialog
-        title="添加新任务"
+        title="添加新清单"
         :append-to-body='true'
         :visible.sync="dialogVisible"
         width="80%"
@@ -181,7 +181,7 @@
       </el-dialog>
     </el-form>
 
-    <el-form :model="taskForm" :rules="rules" ref="taskForm" label-width="70px" class="demo-taskForm" size="medium">
+    <el-form :model="taskForm" :rules="rules" ref="taskForm" label-width="100px" class="demo-taskForm" size="medium">
       <el-dialog
         title="编辑"
         :append-to-body='true'
@@ -274,7 +274,7 @@
         },
         rules: {
           content: [
-            {required: true, message: '请输入任务内容', trigger: 'blur'},
+            {required: true, message: '请输入清单内容', trigger: 'blur'},
             {min: 1, max: 20, message: '长度在 1 到 20 个字符', trigger: 'blur'}
           ],
           cycleTypeId: [
