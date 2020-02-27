@@ -52,12 +52,12 @@
       </li>
       <li>
         <a href="../../static/html/numberProgress/index.html" target="_blank">
-          number progress
+          number-progress
         </a>
       </li>
       <li>
         <a href="../../static/html/msgBoard/index.html" target="_blank">
-          message board
+          message-board
         </a>
       </li>
       <br/>
@@ -149,7 +149,7 @@
       </li>
       <li>
         <a href="../../static/html/ballPool/index.html" target="_blank">
-          ball pool
+          ball-pool
         </a>
       </li>
       <br/>

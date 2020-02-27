@@ -73,7 +73,7 @@
       <el-table-column
         label="删除"
         fixed="right"
-        width="200">
+        width="100">
         <template slot-scope="scope">
           <el-button
             size="mini"

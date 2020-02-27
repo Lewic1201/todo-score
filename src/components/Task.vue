@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-form :inline="true" class="demo-form-inline">
+    <el-form :inline="true" class="demo-form-inline" style="float: right">
       <router-link to="/" active-class="router-active">
         <el-link>导航栏</el-link>
       </router-link>

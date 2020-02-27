@@ -4,16 +4,16 @@
     <br>
     <el-form :inline="true" class="demo-form-inline" style="float: right">
       <el-form-item>
+        <router-link to="/" active-class="router-active">
+          导航栏
+        </router-link>
+      </el-form-item>
+      <el-form-item>
         <el-button
           class="el-icon-refresh"
           type="text"
           @click="refreshData">刷新
         </el-button>
-      </el-form-item>
-      <el-form-item>
-        <router-link to="/" active-class="router-active">
-          导航栏
-        </router-link>
       </el-form-item>
     </el-form>
     <br><br><br><br>

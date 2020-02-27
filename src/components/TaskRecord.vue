@@ -1,5 +1,19 @@
 <template>
   <div>
+    <el-form :inline="true" class="demo-form-inline" style="float: right">
+      <el-form-item>
+        <router-link to="/" active-class="router-active">
+          导航栏
+        </router-link>
+      </el-form-item>
+      <el-form-item>
+        <el-button
+          class="el-icon-refresh"
+          type="text"
+          @click="refreshData">刷新
+        </el-button>
+      </el-form-item>
+    </el-form>
     <el-form :inline="true" class="demo-form-inline">
       <el-form-item>
         <el-date-picker
@@ -15,18 +29,6 @@
           @click="getPages()"
           class="el-icon-search">查询全部
         </el-button>
-      </el-form-item>
-      <el-form-item>
-        <el-button
-          class="el-icon-refresh"
-          type="text"
-          @click="refreshData">刷新
-        </el-button>
-      </el-form-item>
-      <el-form-item>
-        <router-link to="/" active-class="router-active">
-          导航栏
-        </router-link>
       </el-form-item>
     </el-form>
     <br>
