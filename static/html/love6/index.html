@@ -38,7 +38,7 @@ canvas {
 </head>
 <body>
 <div class = "control" style = "position:absolute">
-    <input type = "text" value = "sc.chinaz.com" id = "t">
+    <input type = "text" value = "lewic lewic lewic" id = "t">
     <button onclick = "changeText(t.value)">
       change
     </button>
@@ -87,7 +87,7 @@ class Particle{
   constructor(pos,target,vel,color,radius){
     this.pos = pos;
     this.target = target;
-    this.vel = vel; 
+    this.vel = vel;
     this.color = color;
     this.radius = radius;
     var arr = [-1,1];
@@ -164,9 +164,9 @@ function draw(){
  for(i = 0;i < particles.length;++i){
    particles[i].update();
    particles[i].draw();
- } 
+ }
 }
-changeText("sc.chinaz.com");
+changeText("lewic lewic lewic");
 setInterval(draw,1);
 </script>
 
