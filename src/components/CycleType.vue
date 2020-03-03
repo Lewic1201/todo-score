@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1 style="float: left">循环方式列表</h1>
+    <br>
     <el-form :inline="true" class="demo-form-inline" style="float: right">
       <el-link href="https://www.cnblogs.com/yanghj010/p/10875151.html">cron表达式帮助</el-link>
       <router-link to="/" active-class="router-active">
@@ -12,16 +13,17 @@
         @click="refreshData">刷新
       </el-button>
     </el-form>
-    <br><br><br><br><br>
-    <el-switch v-model="showIdSwitch" active-value="true" inactive-value="false"
-               active-text="显示ID" inactive-text="隐藏ID"
-               style="height:50px;float: left" @change="changeShowId">
-    </el-switch>
+    <br>
     <el-button
       class="el-icon-circle-plus-outline"
       type="text"
       @click="dialogVisible = true">添加
     </el-button>
+    <br><br><br>
+    <el-switch v-model="showIdSwitch" active-value="true" inactive-value="false"
+               active-text="显示ID" inactive-text="隐藏ID"
+               style="height:50px;float: left" @change="changeShowId">
+    </el-switch>
     <el-table
       :data="tableData"
       highlight-current-row
