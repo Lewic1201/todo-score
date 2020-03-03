@@ -181,28 +181,28 @@
       </el-dialog>
     </el-form>
 
-    <el-form :model="taskForm" :rules="rules" ref="taskForm" label-width="100px" class="demo-taskForm" size="medium">
+    <el-form :model="taskFormView" :rules="rules" ref="taskForm" label-width="100px" class="demo-taskForm" size="medium">
       <el-dialog
         title="编辑"
         :append-to-body='true'
         :visible.sync="dialogUpdate"
         width="60%"
         :before-close="handleClose">
-        <el-input type="hidden" v-model="taskForm.id"/>
+        <el-input type="hidden" v-model="taskFormView.id"/>
         <el-form-item label="内容" prop="content">
-          <el-input v-model="taskForm.content"/>
+          <el-input v-model="taskFormView.content"/>
         </el-form-item>
         <el-form-item label="描述" prop="description">
-          <el-input v-model="taskForm.description"/>
+          <el-input v-model="taskFormView.description"/>
         </el-form-item>
         <el-form-item label="状态" prop="status">
-          <el-input v-model="taskForm.status"/>
+          <el-input v-model="taskFormView.status"/>
         </el-form-item>
         <el-form-item label="分值" prop="score">
-          <el-input v-model="taskForm.score"/>
+          <el-input v-model="taskFormView.score"/>
         </el-form-item>
         <el-form-item label="循环方式" prop="cycleTypeId">
-          <el-select v-model="taskForm.cycleTypeId">
+          <el-select v-model="taskFormView.cycleType.id" placeholder="请选择" >
             <el-option
               v-for="(cycleType, index) in cycleTypeList"
               :key="index"
@@ -211,11 +211,11 @@
           </el-select>
         </el-form-item>
         <el-form-item label="开始时间" prop="userDate">
-          <el-date-picker type="datetime" placeholder="选择日期" v-model="taskForm.startTime"
+          <el-date-picker type="datetime" placeholder="选择日期" v-model="taskFormView.startTime"
                           style="width: 100%;"/>
         </el-form-item>
         <el-form-item label="结束时间" prop="userDate">
-          <el-date-picker type="datetime" placeholder="选择日期" v-model="taskForm.endTime"
+          <el-date-picker type="datetime" placeholder="选择日期" v-model="taskFormView.endTime"
                           style="width: 100%;"/>
         </el-form-item>
 
@@ -265,7 +265,7 @@
             workdayStatus: 0,
             description: '',
             updateTime: '',
-            id: 1
+            id: 0
           },
           status: '',
           score: '',
@@ -311,7 +311,7 @@
       },
       handleEdit(index, row) {
         this.dialogUpdate = true;
-        this.taskForm = Object.assign({}, row); //这句是关键！！！
+        this.taskFormView = Object.assign({}, row); //这句是关键！！！
       },
       handleDelete(index, row) {
         console.log(index, row);
@@ -416,12 +416,12 @@
       },
       updateTask() {
         let postData = this.qs.stringify({
-          id: this.taskForm.id,
-          content: this.taskForm.content,
-          description: this.taskForm.description,
-          cycleTypeId: this.taskForm.cycleTypeId,
-          status: this.taskForm.status,
-          score: this.taskForm.score
+          id: this.taskFormView.id,
+          content: this.taskFormView.content,
+          description: this.taskFormView.description,
+          cycleTypeId: this.taskFormView.cycleType.id,
+          status: this.taskFormView.status,
+          score: this.taskFormView.score
         });
         this.axios({
           method: 'put',
