@@ -1,7 +1,12 @@
 HELP.md
 target/
+
+### web static ###
+src/main/resources/static/**
+
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**
+!**/src/main/resources/mapper/**
+!**/src/main/resources/*
 !**/src/test/**
 
 ### STS ###
@@ -31,5 +36,3 @@ build/
 .vscode/
 logs/todo-score*.log
 
-### web ###
-/static/
