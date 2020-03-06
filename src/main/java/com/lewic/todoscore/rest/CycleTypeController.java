@@ -1,7 +1,6 @@
 package com.lewic.todoscore.rest;
 
 
-import com.alibaba.fastjson.JSON;
 import com.lewic.todoscore.common.ApiResult;
 import com.lewic.todoscore.entity.jpa.primary.CycleType;
 import com.lewic.todoscore.service.impl.CycleTypeServiceImpl;

@@ -2,7 +2,7 @@ server:
   port: 8989
 spring:
   profiles:
-    active: dev
+    active: config
   devtools:
     restart:
       enabled: true
