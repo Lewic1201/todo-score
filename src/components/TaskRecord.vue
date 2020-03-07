@@ -89,6 +89,7 @@
     <br>
     <div class="pages">
       <el-pagination
+        v-if="showPage"
         background
         :disabled="disablePage"
         small
@@ -143,6 +144,7 @@
         disablePage: false,
         showIdSwitch: false,
         showId: false,
+        showPage: true,
       }
     },
     methods: {
@@ -173,7 +175,7 @@
           url: '/v1/record/task/day/' + this.formatDate3(this.searchDay)
         }).then(response => {
           this.tableData = response.data.data;
-          this.disablePage = true;
+          this.showPage = false;
         }).catch(error => {
           console.log(error);
         });
@@ -197,6 +199,7 @@
         }).then(response => {
           this.tableData = response.data.data.data;
           this.count = response.data.data.count;
+          this.showPage = true;
           this.showScore = false;
         }).catch(error => {
           console.log(error);
