@@ -1,10 +1,7 @@
-package com.lewic.todoscore.dao.jpa.primary;
+package com.lewic.todoscore.dao;
 
-import com.lewic.todoscore.entity.jpa.primary.Workday;
+import com.lewic.todoscore.entity.Workday;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * @author lewic

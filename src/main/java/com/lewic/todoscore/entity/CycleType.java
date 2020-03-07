@@ -1,4 +1,4 @@
-package com.lewic.todoscore.entity.jpa.primary;
+package com.lewic.todoscore.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lewic.todoscore.common.View;
@@ -19,48 +19,49 @@ import java.util.Date;
 
 /**
  * @author lewic
- * @since 2020/3/3 22:06
+ * @since 2020/1/18 17:41
  */
+
 @Data
 @Entity
-@Table(name = "user")
+@Table(name = "cycle_type")
 @EntityListeners(AuditingEntityListener.class)
-public class User implements Serializable {
+public class CycleType implements Serializable {
 
-    private static final long serialVersionUID = 1810054537374059509L;
+    private static final long serialVersionUID = -6961502514950128221L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonView(View.Summary.class)
     private Integer id;
 
-    @Column(name = "username")
-    @JsonView(View.Summary.class)
-    private String username;
+    @Column(name = "description")
+    private String description;
 
-    @Column(name = "password")
-    @JsonView(View.Summary.class)
-    private String password;
+    @Column(name = "start_time")
+    private Date startTime;
 
-    @Column(name = "role")
-    @JsonView(View.Summary.class)
-    private String role;
+    //todo 次数应该加在任务上面
+    @Column(name = "times")
+    private Integer times;
 
-    @Column(name = "status")
-    @JsonView(View.NoShow.class)
-    private Integer status;
+    @Column(name = "end_time")
+    private Date endTime;
+
+    @Column(name = "workday_status")
+    private Integer workdayStatus;
+
+    @Column(name = "cron_expression")
+    private String cronExpression;
+
+    // todo 添加是否自定义参数
 
     @CreatedDate
     @Column(name = "create_time")
-    @JsonView(View.NoShow.class)
+    @JsonView(View.Detail.class)
     private Date createTime;
 
     @LastModifiedDate
     @Column(name = "update_time")
-    @JsonView(View.NoShow.class)
+    @JsonView(View.Detail.class)
     private Date updateTime;
-
-    @Column(name = "delete_time")
-    @JsonView(View.NoShow.class)
-    private Date deleteTime;
 }

@@ -1,7 +1,7 @@
 package com.lewic.todoscore.service;
 
 import com.lewic.todoscore.dto.TaskDto;
-import com.lewic.todoscore.entity.jpa.primary.Task;
+import com.lewic.todoscore.entity.Task;
 
 import java.util.List;
 

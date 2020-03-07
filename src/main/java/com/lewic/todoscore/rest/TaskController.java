@@ -4,7 +4,7 @@ package com.lewic.todoscore.rest;
 import com.lewic.todoscore.common.ApiResult;
 import com.lewic.todoscore.common.ResponseCode;
 import com.lewic.todoscore.dto.TaskDto;
-import com.lewic.todoscore.entity.jpa.primary.Task;
+import com.lewic.todoscore.entity.Task;
 import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.rest.base.BaseRestFul;
 import com.lewic.todoscore.service.TaskService;

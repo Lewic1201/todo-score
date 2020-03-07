@@ -1,11 +1,15 @@
 package com.lewic.todoscore.rest;
 
-import com.lewic.todoscore.entity.mybatis.master.User;
+import com.lewic.todoscore.entity.User;
 import com.lewic.todoscore.service.impl.AuthServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
@@ -32,9 +36,9 @@ public class AuthController {
         return authServiceImpl.login(username, password).toString();
     }
 
-    @ApiOperation("新建账号")
-    @RequestMapping(value = "/user", method = RequestMethod.POST)
-    public void insertUser(@ApiParam(value = "账户信息") @RequestBody User user) {
+    @ApiOperation("注册")
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public void register(@ApiParam(value = "用户信息") @RequestBody User user) {
         authServiceImpl.register(user);
     }
 

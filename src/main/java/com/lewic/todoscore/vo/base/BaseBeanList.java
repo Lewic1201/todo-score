@@ -2,8 +2,8 @@ package com.lewic.todoscore.vo.base;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lewic.todoscore.common.View;
-import com.lewic.todoscore.common.Page;
 import lombok.Data;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class BaseBeanList<T> {
     }
 
     public BaseBeanList(Page page, List<T> data) {
-        this.count = page.getTotal();
+        this.count = (int) page.getTotalElements();
         this.data = data;
     }
 

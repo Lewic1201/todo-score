@@ -1,21 +1,22 @@
 package com.lewic.todoscore.service.impl;
 
 import com.lewic.todoscore.common.ResponseCode;
-import com.lewic.todoscore.dao.jpa.primary.TaskDao;
-import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
-import com.lewic.todoscore.dao.mybatis.master.TaskRecordMapper;
-import com.lewic.todoscore.common.Page;
+import com.lewic.todoscore.dao.TaskDao;
+import com.lewic.todoscore.dao.TaskRecordDao;
 import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.utils.DateUtil;
 import com.lewic.todoscore.utils.ToUtil;
 import com.lewic.todoscore.vo.ScoreInfoVo;
 import com.lewic.todoscore.vo.TaskRecordBean;
-import com.lewic.todoscore.entity.jpa.primary.Task;
-import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
-import com.lewic.todoscore.entity.mybatis.master.TaskRecordI;
+import com.lewic.todoscore.entity.Task;
+import com.lewic.todoscore.entity.TaskRecord;
 import com.lewic.todoscore.service.TaskRecordService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,15 +39,12 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     private final CycleTypeServiceImpl cycleTypeService;
 
-    private final TaskRecordMapper taskRecordMapper;
-
     // todo taskRecordMapper报错
     @Autowired
-    public TaskRecordServiceImpl(TaskRecordDao taskRecordDao, TaskDao taskDao, CycleTypeServiceImpl cycleTypeService, TaskRecordMapper taskRecordMapper) {
+    public TaskRecordServiceImpl(TaskRecordDao taskRecordDao, TaskDao taskDao, CycleTypeServiceImpl cycleTypeService) {
         this.taskRecordDao = taskRecordDao;
         this.taskDao = taskDao;
         this.cycleTypeService = cycleTypeService;
-        this.taskRecordMapper = taskRecordMapper;
     }
 
 
@@ -116,10 +114,11 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     @Override
     public TaskRecordBean listByFinishNotNull(Integer pageNum, Integer pageSize) {
-        Integer total = taskRecordMapper.getCountByFinishNotNull();
-        Page page = new Page(pageSize, pageNum, total);
-        List<TaskRecordI> taskRecordIS = taskRecordMapper.listByFinishNotNull(page);
-        return new TaskRecordBean(page, taskRecordIS);
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(pageNum, pageSize, sort);
+        Page<TaskRecord> taskRecordsPage = taskRecordDao.findByFinishNotNull(pageable);
+
+        return new TaskRecordBean(taskRecordsPage.getTotalElements(), taskRecordsPage.getContent());
     }
 
     @Override

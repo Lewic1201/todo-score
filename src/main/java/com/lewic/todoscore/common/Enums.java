@@ -29,7 +29,6 @@ public class Enums {
         }
     }
 
-
     /**
      * 账户状态
      */
@@ -60,28 +59,25 @@ public class Enums {
         /**
          * 不设置
          */
-        NOT_SET(0,"NOT_SET"),
+        NOT_SET(0, "NOT_SET"),
 
         /**
          * 跳过节假日
          */
-        SKIP_HOLIDAY(1,"SKIP_HOLIDAY"),
+        SKIP_HOLIDAY(1, "SKIP_HOLIDAY"),
 
         /**
          * 跳过工作日
          */
-        SKIP_WORKDAY(2,"SKIP_WORKDAY");
+        SKIP_WORKDAY(2, "SKIP_WORKDAY");
 
         private Integer code;
         private String value;
 
-        WorkdayStatus(Integer code,String value) {
+        WorkdayStatus(Integer code, String value) {
             this.code = code;
             this.value = value;
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(WorkdayStatus.NOT_SET.code);
-    }
 }

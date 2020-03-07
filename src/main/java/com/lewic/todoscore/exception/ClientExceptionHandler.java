@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 public class ClientExceptionHandler {
 
-
     /**
      * 处理自定义的业务异常
      *
@@ -33,7 +32,6 @@ public class ClientExceptionHandler {
         log.error("发生业务异常！原因是：{}", e.getErrorMessage());
         return ApiResult.error(e.getErrorCode(), e.getErrorMessage());
     }
-
 
     /**
      * 处理空指针的异常
@@ -67,6 +65,5 @@ public class ClientExceptionHandler {
         log.error("未知异常！原因是:", e);
         return ApiResult.error(ResponseCode.INTERNAL_FAIL);
     }
-
 
 }

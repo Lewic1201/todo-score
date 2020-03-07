@@ -2,7 +2,7 @@ package com.lewic.todoscore.rest;
 
 
 import com.lewic.todoscore.common.ApiResult;
-import com.lewic.todoscore.entity.jpa.primary.CycleType;
+import com.lewic.todoscore.entity.CycleType;
 import com.lewic.todoscore.service.impl.CycleTypeServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

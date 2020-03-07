@@ -15,9 +15,11 @@ import java.io.Serializable;
 @Setter
 @Slf4j
 public class ClientException extends Exception implements Serializable {
+
     private static final long serialVersionUID = -8043138751367341663L;
 
     private Integer errorCode;
+
     private String errorMessage;
 
     public ClientException() {

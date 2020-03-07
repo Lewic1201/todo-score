@@ -1,4 +1,4 @@
-package com.lewic.todoscore.entity.mybatis.master;
+package com.lewic.todoscore.vo;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lewic.todoscore.common.View;
@@ -16,7 +16,7 @@ import java.util.Date;
  **/
 @Data
 @ApiModel(description = "任务记录")
-public class TaskRecordI implements Serializable {
+public class TaskRecordVo implements Serializable {
 
     private static final long serialVersionUID = 4359709211352401087L;
 
@@ -28,7 +28,7 @@ public class TaskRecordI implements Serializable {
     private String taskId;
 
     @JsonView(View.Summary.class)
-    private TaskI task;
+    private TaskVo task;
 
     @JsonView(View.Summary.class)
     @ApiModelProperty(value = "清单内容", name = "content", example = "1")

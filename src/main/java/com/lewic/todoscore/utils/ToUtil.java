@@ -1,7 +1,7 @@
 package com.lewic.todoscore.utils;
 
-import com.lewic.todoscore.entity.jpa.primary.Task;
-import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
+import com.lewic.todoscore.entity.Task;
+import com.lewic.todoscore.entity.TaskRecord;
 
 /**
  * @author lewic

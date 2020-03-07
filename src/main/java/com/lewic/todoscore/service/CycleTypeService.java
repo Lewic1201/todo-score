@@ -1,6 +1,6 @@
 package com.lewic.todoscore.service;
 
-import com.lewic.todoscore.entity.jpa.primary.CycleType;
+import com.lewic.todoscore.entity.CycleType;
 
 import java.util.Date;
 import java.util.List;

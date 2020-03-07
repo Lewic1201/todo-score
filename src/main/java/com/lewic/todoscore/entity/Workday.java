@@ -1,4 +1,4 @@
-package com.lewic.todoscore.entity.jpa.primary;
+package com.lewic.todoscore.entity;
 
 import lombok.Data;
 

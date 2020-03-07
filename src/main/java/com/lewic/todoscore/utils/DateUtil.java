@@ -12,6 +12,7 @@ import java.util.Map;
  */
 
 public class DateUtil {
+
     // 获取所给日期当天起始时间和第二天起始时间
     public static Map<String, Date> getDayStartAndEnd(Date date) {
         Date dateStart = DateUtil.getDayStart(date);
@@ -24,7 +25,6 @@ public class DateUtil {
         day.put("dateEnd", dateEnd);
         return day;
     }
-
 
     // 获取所给日期当天起始时间和结束时间
     public static Date getDayStart(Date date) {
@@ -47,7 +47,6 @@ public class DateUtil {
         calendarEnd.set(Calendar.MILLISECOND, 999);
         return calendarEnd.getTime();
     }
-
 
     public static void main(String[] args) {
         Date today = new Date();

@@ -1,13 +1,13 @@
 package com.lewic.todoscore.service.impl;
 
 import com.lewic.todoscore.common.ResponseCode;
-import com.lewic.todoscore.dao.jpa.primary.CycleTypeDao;
-import com.lewic.todoscore.dao.jpa.primary.TaskDao;
-import com.lewic.todoscore.dao.jpa.primary.TaskRecordDao;
+import com.lewic.todoscore.dao.CycleTypeDao;
+import com.lewic.todoscore.dao.TaskDao;
+import com.lewic.todoscore.dao.TaskRecordDao;
 import com.lewic.todoscore.dto.TaskDto;
-import com.lewic.todoscore.entity.jpa.primary.CycleType;
-import com.lewic.todoscore.entity.jpa.primary.Task;
-import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
+import com.lewic.todoscore.entity.CycleType;
+import com.lewic.todoscore.entity.Task;
+import com.lewic.todoscore.entity.TaskRecord;
 import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.service.TaskService;
 import com.lewic.todoscore.utils.ToUtil;

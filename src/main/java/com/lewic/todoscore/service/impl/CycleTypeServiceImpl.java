@@ -1,10 +1,10 @@
 package com.lewic.todoscore.service.impl;
 
 import com.lewic.todoscore.common.Enums;
-import com.lewic.todoscore.dao.jpa.primary.CycleTypeDao;
-import com.lewic.todoscore.dao.jpa.primary.WorkdayDao;
-import com.lewic.todoscore.entity.jpa.primary.CycleType;
-import com.lewic.todoscore.entity.jpa.primary.Workday;
+import com.lewic.todoscore.dao.CycleTypeDao;
+import com.lewic.todoscore.dao.WorkdayDao;
+import com.lewic.todoscore.entity.CycleType;
+import com.lewic.todoscore.entity.Workday;
 import com.lewic.todoscore.service.CycleTypeService;
 import com.lewic.todoscore.utils.CronUtil;
 import com.lewic.todoscore.utils.DateUtil;

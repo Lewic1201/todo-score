@@ -16,12 +16,12 @@ public enum ResponseCode {
 
     /**
      * 服务器已接受请求，但尚未处理 .已提交，用于异步操作，但暂时无返回结果
-     */ //	TODO
+     */
     RECEIVED(202, "成功"),
 
     /**
      * 参数出错
-     */ //	TODO
+     */
     PARAMETER_ERROR(400, "参数出错"),
     /**
      * 请求参数缺失
@@ -30,19 +30,18 @@ public enum ResponseCode {
 
     /**
      * 认证问题
-     */ //	TODO
+     */
     AUTHENTICATION_ERROR(401, "认证出错"),
 
     /**
      * 方法不存在问题
-     */ //	TODO
+     */
     resource_nonexistent(404, "资源不存在"),
 
     /**
      * 内部失败
      */
     INTERNAL_FAIL(500, "系统出错"),
-
 
     /**
      * 系统未知错误

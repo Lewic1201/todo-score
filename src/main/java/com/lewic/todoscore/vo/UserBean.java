@@ -1,8 +1,8 @@
 package com.lewic.todoscore.vo;
 
-import com.lewic.todoscore.common.Page;
+import com.lewic.todoscore.entity.User;
 import com.lewic.todoscore.vo.base.BaseBeanList;
-import com.lewic.todoscore.entity.mybatis.master.User;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 

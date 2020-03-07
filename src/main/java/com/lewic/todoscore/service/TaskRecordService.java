@@ -3,7 +3,7 @@ package com.lewic.todoscore.service;
 import com.lewic.todoscore.exception.ClientException;
 import com.lewic.todoscore.vo.ScoreInfoVo;
 import com.lewic.todoscore.vo.TaskRecordBean;
-import com.lewic.todoscore.entity.jpa.primary.TaskRecord;
+import com.lewic.todoscore.entity.TaskRecord;
 
 import java.util.Date;
 import java.util.List;

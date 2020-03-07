@@ -8,25 +8,21 @@ spring:
       enabled: true
       additional-paths: src/main/java
   datasource:
+    # 连接池
     hikari:
       minimum-idle: 3
       maximum-pool-size: 10
       max-lifetime: 30000
       connection-test-query: SELECT 1
-    primary:
-      jdbc-url: jdbc:mysql://39.100.120.239:3306/todo_score?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-      username: root
-      password: root
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      type: com.alibaba.druid.pool.DruidDataSource
-    master:
-      jdbc-url: jdbc:mysql://39.100.120.239:3306/todo_score?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-      username: root
-      password: root
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://39.100.120.239:3306/todo_score?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
   jpa:
     hibernate:
+      # 自动生成表结构
       ddl-auto: update
       naming:
         physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy

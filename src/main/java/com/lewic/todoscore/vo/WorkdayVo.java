@@ -1,4 +1,4 @@
-package com.lewic.todoscore.entity.mybatis.master;
+package com.lewic.todoscore.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -15,7 +15,7 @@ import java.util.Date;
  */
 @Data
 @ApiModel
-public class Workday implements Serializable {
+public class WorkdayVo implements Serializable {
 
     @ApiModelProperty(value = "编号", name = "id", example = "1")
     private Integer id;

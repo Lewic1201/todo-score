@@ -37,7 +37,6 @@ public class CronUtil {
         return result;
     }
 
-
     /**
      * 校验所给时间是否满足cron表达式
      *
@@ -61,19 +60,6 @@ public class CronUtil {
     public static Boolean checkCronWithToday(String cron) throws ParseException, ClientException {
         return checkCronWithTime(cron, new Date());
     }
-
-//    public static String isWeekend(String bDate) throws ParseException {
-//        DateFormat format1 = new SimpleDateFormat("yyyy/MM/dd");
-//        Date bdate = format1.parse(bDate);
-//        Calendar cal = Calendar.getInstance();
-//        cal.setTime(bdate);
-//        if(cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY){
-//            return "OK";
-//        } else{
-//            return "NO";
-//        }
-//
-//    }
 
     public static Boolean todayIsWeekend() {
         Date today = new Date();

@@ -1,10 +1,9 @@
 package com.lewic.todoscore.service;
 
-import com.lewic.todoscore.dao.mybatis.master.UserMapper;
-import com.lewic.todoscore.dao.jpa.primary.TaskDao;
-import com.lewic.todoscore.common.Page;
-import com.lewic.todoscore.entity.mybatis.master.User;
-import com.lewic.todoscore.entity.jpa.primary.Task;
+import com.lewic.todoscore.dao.TaskDao;
+import com.lewic.todoscore.dao.UserDao;
+import com.lewic.todoscore.entity.Task;
+import com.lewic.todoscore.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -25,7 +24,7 @@ import java.util.List;
 public class UserServiceTest {
 
     @Autowired
-    private UserMapper userMapper;
+    private UserDao userDao;
 
     @Autowired
     private TaskDao taskDao;
@@ -37,7 +36,6 @@ public class UserServiceTest {
     @AfterAll
     static void afterClass(){
     }
-
 
     @BeforeEach
     void beforeTest(){
@@ -55,16 +53,15 @@ public class UserServiceTest {
         user.setId(10000);
         user.setUsername("zhang3");
         user.setPassword("123456");
-//        userDao.save(user);
-        userMapper.insert(user);
-        List<User> users = userMapper.list(new Page(10,10));
+        userDao.save(user);
+        List<User> users = userDao.findAll();
         log.info(users.toString());
     }
 
     @Test
     void taskTest() throws Exception {
         Task task = new Task();
-        task.setContent("早睡");
+        task.setContent("早睡1111111111111");
         task.setScore(10);
         task.setStatus(1);
         task.setDescription("好好休息");

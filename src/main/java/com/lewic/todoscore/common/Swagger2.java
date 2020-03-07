@@ -12,7 +12,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 @Configuration
 public class Swagger2 {
 
-
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -27,10 +26,9 @@ public class Swagger2 {
         return new ApiInfoBuilder()
                 .title("任务打卡")
                 .description("测试服务RESTFUL")
-                .termsOfServiceUrl("http://blog.csdn.net/saytime")
+                .termsOfServiceUrl("https://blog.csdn.net/weixin_43290368")
                 .version("1.0")
                 .build();
-
 
 //        return new ApiInfo(appName, appDesc, appVersion, termsOfServiceUrl,
 //                new Contact(contactName, contactUrl, contactEmail),

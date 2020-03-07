@@ -1,9 +1,8 @@
-package com.lewic.todoscore.entity.jpa.primary;
+package com.lewic.todoscore.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lewic.todoscore.common.View;
 import lombok.Data;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -19,42 +18,60 @@ import java.util.Date;
 
 /**
  * @author lewic
- * @since 2020/3/3 22:02
+ * @since 2020/3/3 22:06
  */
-
 @Data
 @Entity
-@Table(name = "tag")
+@Table(name = "user_info")
 @EntityListeners(AuditingEntityListener.class)
-public class Tag implements Serializable {
+public class UserInfo implements Serializable {
 
-    private static final long serialVersionUID = -8430176620365775272L;
+    private static final long serialVersionUID = -7995074991254041815L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonView(View.Summary.class)
     private Integer id;
 
-    @Column(name = "user")
+    @Column(name = "user_id")
     @JsonView(View.Summary.class)
-    private String user;
+    private String userId;
 
-    @Column(name = "name")
+    @Column(name = "nickname")
     @JsonView(View.Summary.class)
-    private String name;
+    private String nickname;
 
-    @Column(name = "description")
+    @Column(name = "sex")
     @JsonView(View.Summary.class)
-    private String description;
+    private String sex;
 
-    @CreatedDate
-    @Column(name = "create_time")
-    @JsonView(View.Detail.class)
-    private Date createTime;
+    @Column(name = "head_portrait")
+    @JsonView(View.Summary.class)
+    private String headPortrait;
+
+    @Column(name = "signature")
+    @JsonView(View.Summary.class)
+    private String signature;
+
+    @Column(name = "birthday")
+    @JsonView(View.Summary.class)
+    private Date birthday;
+
+    @Column(name = "address")
+    @JsonView(View.Summary.class)
+    private String address;
+
+    @Column(name = "email")
+    @JsonView(View.Summary.class)
+    private String email;
+
+    @Column(name = "mobile")
+    @JsonView(View.Summary.class)
+    private String mobile;
 
     @LastModifiedDate
     @Column(name = "update_time")
     @JsonView(View.Detail.class)
     private Date updateTime;
-
 }
+

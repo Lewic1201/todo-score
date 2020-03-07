@@ -1,10 +1,8 @@
-package com.lewic.todoscore.dao.jpa.primary;
+package com.lewic.todoscore.dao;
 
-import com.lewic.todoscore.entity.jpa.primary.Task;
+import com.lewic.todoscore.entity.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 

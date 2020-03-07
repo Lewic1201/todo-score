@@ -1,7 +1,7 @@
 package com.lewic.todoscore.rest.base;
 
 import com.lewic.todoscore.common.ApiResult;
-import com.lewic.todoscore.entity.jpa.primary.Task;
+import com.lewic.todoscore.entity.Task;
 
 import java.util.List;
 

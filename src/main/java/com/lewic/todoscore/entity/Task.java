@@ -1,4 +1,4 @@
-package com.lewic.todoscore.entity.jpa.primary;
+package com.lewic.todoscore.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lewic.todoscore.common.View;
@@ -52,7 +52,6 @@ public class Task implements Serializable {
     @Column(name = "description")
     @JsonView(View.Summary.class)
     private String description;
-
 
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH}, optional = false)
     @JoinColumn(name = "cycle_type_id")
