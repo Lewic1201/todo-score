@@ -23,6 +23,7 @@ public enum ResponseCode {
      * 参数出错
      */
     PARAMETER_ERROR(400, "参数出错"),
+
     /**
      * 请求参数缺失
      */
@@ -60,7 +61,12 @@ public enum ResponseCode {
     /**
      * 用户名已存在
      */
-    USER_NAME_EXISTS(1002, "用户名已存在"),
+    USER_EXISTS(1002, "用户名已存在"),
+
+    /**
+     * 用户名不存在
+     */
+    USER_NO_EXISTS(1003, "用户名不存在"),
 
     /**
      * 查询结果为空
@@ -76,6 +82,11 @@ public enum ResponseCode {
      * 更新数据异常
      */
     UPDATE_ERROR(1013, "更新数据异常"),
+
+    /**
+     * 更新数据异常
+     */
+    SELECT_ERROR(1015, "获取后台数据异常"),
 
     /**
      * 系统数据校验出错

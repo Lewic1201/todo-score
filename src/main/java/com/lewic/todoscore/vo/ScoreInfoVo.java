@@ -4,8 +4,11 @@ import lombok.Data;
 
 @Data
 public class ScoreInfoVo {
+
     private Integer score;
+
     private Integer totalScore;
+
     private String rate;
 
     public ScoreInfoVo() {

@@ -35,15 +35,15 @@ public class UserInfo implements Serializable {
 
     @Column(name = "user_id")
     @JsonView(View.Summary.class)
-    private String userId;
+    private Integer userId;
 
     @Column(name = "nickname")
     @JsonView(View.Summary.class)
     private String nickname;
 
-    @Column(name = "sex")
+    @Column(name = "sex", length = 1)
     @JsonView(View.Summary.class)
-    private String sex;
+    private Integer sex;
 
     @Column(name = "head_portrait")
     @JsonView(View.Summary.class)

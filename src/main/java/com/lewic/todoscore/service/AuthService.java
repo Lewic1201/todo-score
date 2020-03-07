@@ -1,11 +1,14 @@
 package com.lewic.todoscore.service;
 
 
-import com.lewic.todoscore.entity.User;
+import com.lewic.todoscore.dto.LoginReq;
+import com.lewic.todoscore.dto.RegisterReq;
+import com.lewic.todoscore.vo.LoginVo;
 
 public interface AuthService {
 
-    Boolean login(String username, String password);
+    LoginVo login(LoginReq loginReq) throws Exception;
 
-    void register(User user);
+    void register(RegisterReq registerReq) throws Exception;
+
 }

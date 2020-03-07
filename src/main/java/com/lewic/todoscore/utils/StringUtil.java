@@ -19,4 +19,16 @@ public class StringUtil {
         }
         return true;
     }
+
+    public static boolean isEmpty(String str) {
+        if (str == null) {
+            return true;
+        } else {
+            return str.isEmpty();
+        }
+    }
+
+    public static boolean isNotEmpty(String str) {
+        return !StringUtil.isEmpty(str);
+    }
 }

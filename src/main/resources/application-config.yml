@@ -3,4 +3,4 @@
 sys:
   switch:
     # 是否需要登录
-    login: false
+    login: true

@@ -55,4 +55,30 @@ public class Constants {
         Constants.LOGIN_SWITCH = loginSwitch;
         log.debug("reading config param, LOGIN_SWITCH: " + loginSwitch);
     }
+
+    /**
+     * 默认ContentType;HTTP请求头
+     */
+    public static final String DEFAULT_CONTENT_TYPE = "application/json;charset=utf-8";
+
+    /**
+     * 默认字符编码;HTTP请求头
+     */
+    public static final String DEFAULT_ENCODING = "UTF-8";
+
+    /**
+     * token过期时间
+     */
+    public static final long TOKEN_EXPIRE_TIME = 15 * 60 * 1000;
+
+    /**
+     * jwt签发者
+     */
+    public static final String JWT_ISSUER = "auth0";
+
+    /**
+     * jwt携带参数key
+     */
+    public static final String JWT_USERNAME = "username";
+
 }
