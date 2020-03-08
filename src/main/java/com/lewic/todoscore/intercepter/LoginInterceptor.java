@@ -60,6 +60,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 验证失败处理
         response.setCharacterEncoding(Constants.DEFAULT_ENCODING);
         response.setContentType(Constants.DEFAULT_CONTENT_TYPE);
+        response.setStatus(ResponseCode.AUTHENTICATION_ERROR.getCode());
         try {
             ApiResult res = ApiResult.error(ResponseCode.AUTHENTICATION_ERROR);
             response.getWriter().append(JSON.toJSONString(res));
