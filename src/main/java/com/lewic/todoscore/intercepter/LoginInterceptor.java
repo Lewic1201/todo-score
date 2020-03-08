@@ -10,12 +10,10 @@ import com.lewic.todoscore.utils.TokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.lang.reflect.Method;
 
 /**
  * @author lewic
@@ -46,7 +44,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        String token = request.getHeader("X-TOKEN");
+        String token = request.getHeader("token");
         if (token != null) {
             // todo 处理删除用户
             User user = userDao.findByUsername(TokenUtil.getJwtUsername(token));

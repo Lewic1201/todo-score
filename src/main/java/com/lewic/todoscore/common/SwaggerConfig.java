@@ -24,8 +24,8 @@ public class SwaggerConfig {
     public Docket createRestApi() {
         ParameterBuilder tokenParam = new ParameterBuilder();
         List<Parameter> params = new ArrayList<>();
-        //header中的X-TOKEN参数非必填，传空也可以
-        tokenParam.name("X-TOKEN").description("token")
+        //header中的token参数非必填，传空也可以
+        tokenParam.name("token").description("Auth token")
                 .modelRef(new ModelRef("string")).parameterType("header")
                 .required(false).build();
         //添加公共参数
