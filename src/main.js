@@ -3,16 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import elementUI from 'element-ui'
+import axios from './interceptor/http'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
 
+import elementUI from 'element-ui'
+import qs from 'qs';
+
 Vue.use(elementUI);
 
-import axios from 'axios'
 Vue.prototype.axios = axios;
 
-import qs from 'qs';
 Vue.prototype.qs = qs;
 
 Vue.config.productionTip = false;
