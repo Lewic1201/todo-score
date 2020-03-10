@@ -25,8 +25,10 @@ public class ImportRecordScheduler {
      */
     @Scheduled(cron = Constants.CRON_EVERY_DAY)
     public void importRecord() throws Exception {
-        taskRecordService.insertToday();
-        System.out.println(Thread.currentThread().getName() + "=====>>>>>使用cron  {}" + (System.currentTimeMillis() / 1000));
+        if (Constants.IMPORT_RECORD_SWITCH) {
+            taskRecordService.insertToday();
+            log.info(Thread.currentThread().getName() + "=====>>>>>使用cron  {}" + (System.currentTimeMillis() / 1000));
+        }
     }
 
     /**
@@ -40,7 +42,11 @@ public class ImportRecordScheduler {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        log.info("exec test1=====>>>>>");
+        if (Constants.TEST_SWITCH) {
+            log.debug("exec test1=====>>>>>");
+        } else {
+            log.debug("close exec test1=====>>>>>");
+        }
     }
 
 }

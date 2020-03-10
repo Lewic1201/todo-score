@@ -1,6 +1,9 @@
-
-
 sys:
   switch:
     # 是否需要登录
     login: true
+
+    # 定时任务
+    scheduler:
+      importRecord: false
+      test: false

@@ -52,9 +52,33 @@ public class Constants {
 
     @Value("${sys.switch.login}")
     void setLoginSwitch(boolean loginSwitch) {
-        Constants.LOGIN_SWITCH = loginSwitch;
+        LOGIN_SWITCH = loginSwitch;
         log.debug("reading config param, LOGIN_SWITCH: " + loginSwitch);
     }
+
+    /**
+     * 每天导入记录定时任务开关
+     */
+    public static boolean IMPORT_RECORD_SWITCH = true;
+
+    @Value("${sys.switch.scheduler.importRecord}")
+    void setImportRecordSwitch(boolean importRecordSwitch) {
+        IMPORT_RECORD_SWITCH = importRecordSwitch;
+        log.debug("reading config param, IMPORT_RECORD_SWITCH: " + importRecordSwitch);
+    }
+
+
+    /**
+     * 每天导入记录定时任务开关
+     */
+    public static boolean TEST_SWITCH = true;
+
+    @Value("${sys.switch.scheduler.test}")
+    void setTestSwitch(boolean testSwitch) {
+        TEST_SWITCH = testSwitch;
+        log.debug("reading config param, TEST_SWITCH: " + testSwitch);
+    }
+
 
     /**
      * 默认ContentType;HTTP请求头
