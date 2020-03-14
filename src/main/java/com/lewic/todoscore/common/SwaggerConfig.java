@@ -1,5 +1,7 @@
 package com.lewic.todoscore.common;
 
+import com.lewic.todoscore.entity.User;
+import com.lewic.todoscore.utils.TokenUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -24,10 +26,15 @@ public class SwaggerConfig {
     public Docket createRestApi() {
         ParameterBuilder tokenParam = new ParameterBuilder();
         List<Parameter> params = new ArrayList<>();
+        // 添加默认的token
+        User user = new User();
+        user.setId(28);
+        user.setUsername("wang");
+        user.setPassword("123");
         //header中的token参数非必填，传空也可以
-        tokenParam.name("token").description("Auth token")
+        tokenParam.name(Constants.TOKEN).description("Auth token")
                 .modelRef(new ModelRef("string")).parameterType("header")
-                .required(false).build();
+                .required(false).defaultValue(TokenUtil.sign(user)).build();
         //添加公共参数
         params.add(tokenParam.build());
         return new Docket(DocumentationType.SWAGGER_2)

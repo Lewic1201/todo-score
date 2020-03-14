@@ -114,10 +114,14 @@ public enum ResponseCode {
     NO_DEFECT_TYPE(1032, "任务中缺少需要识别的缺陷类型,请选择需要识别的缺陷类型"),
 
     /**
+     * 添加请求跟踪记录出错
+     */
+    NO_REQ_TRACE(1033, "获取请求信息出错"),
+
+    /**
      * 当前请求方法不支持
      */
-    REQUEST_METHOD_SUPPORT_ERROR(40001,"当前请求方法不支持");
-    ;
+    REQUEST_METHOD_SUPPORT_ERROR(40001, "当前请求方法不支持");
 
     private final Integer code;
     private final String message;

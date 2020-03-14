@@ -91,7 +91,12 @@ public class Constants {
     public static final String DEFAULT_ENCODING = "UTF-8";
 
     /**
-     * token过期时间
+     * token
+     */
+    public static final String TOKEN = "token";
+
+    /**
+     * token过期时间 15分钟
      */
     public static final long TOKEN_EXPIRE_TIME = 15 * 60 * 1000;
 

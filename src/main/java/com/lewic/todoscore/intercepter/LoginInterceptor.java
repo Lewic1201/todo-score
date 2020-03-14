@@ -44,7 +44,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        String token = request.getHeader("token");
+        String token = request.getHeader(Constants.TOKEN);
         if (token != null) {
             // todo 处理删除用户
             User user = userDao.findByUsername(TokenUtil.getJwtUsername(token));
