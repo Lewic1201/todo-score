@@ -100,7 +100,8 @@
           <el-input v-model="cycleTypeForm.description"/>
         </el-form-item>
         <el-form-item label="表达式" prop="cronExpression">
-          <el-tooltip class="item" effect="light" content="Top Center 提示文字" placement="top">
+          <el-tooltip class="item" effect="light" placement="top">
+            <div v-html="ToBreak(cronHelp)" slot="content"></div>
             <el-input v-model="cycleTypeForm.cronExpression"/>
           </el-tooltip>
         </el-form-item>
@@ -192,6 +193,19 @@
             value: 2
           }
         ],
+        cronHelp: "常用参数:\n" +
+          "* : 表示匹配该域的任意值,任意时间都会触发<br>\n" +
+          "? : 只能用在DayofMonth和DayofWeek两个域<br>\n" +
+          "/ : 表示起始时间开始触发，然后每隔固定时间触发一次<br>\n" +
+          ", : 表示列出枚举值<br>\n" +
+          "(注: 1-7 指星期日-星期六)<br>\n" +
+          "例如(通常时分秒为0):<br>\n" +
+          "秒|分|时|日|月|星期|年<br>\n" +
+          " x| x| x| x| x|  x| x<br>\n" +
+          " 0  0  0  1  2   ?  *   每年2月1日凌晨<br>\n" +
+          " 0  0  0 1-4 * 2-6      每月1-4日凌晨<br>\n" +
+          " 0  0  0  ?  * 3,5      周二和周四凌晨<br>\n" +
+          " 0  0  0 1/3 *   ?      每三天凌晨",
         tableData: [],
         search: '',
         dialogVisible: false,
@@ -315,6 +329,10 @@
       refreshData() {
         location.reload();
       },
+      // 将 \n 换为 <br/>标签
+      ToBreak (val) {
+        return val.replace('\n', '<br/>')
+      }
     },
 
     filters: {
@@ -364,5 +382,10 @@
     margin: 0px;
     padding: 0px;
     text-align: right;
+  }
+  .oneLine {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 </style>
