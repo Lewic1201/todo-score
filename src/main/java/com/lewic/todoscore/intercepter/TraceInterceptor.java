@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 记录请求日志
+ *
  * @author lewic
  * @since 2020/3/7 16:32
  */
@@ -33,9 +34,17 @@ public class TraceInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         try {
+            String reqPath = request.getServletPath();
+            // 如果是静态资源,不需要记录，防止记录冗余
+            for (String suffix : Constants.STATIC_RESOURCE_SUFFIX_ARRAY) {
+                if (reqPath != null && reqPath.endsWith(suffix)) {
+                    return true;
+                }
+            }
+
             AccessTrace accessTrace = new AccessTrace();
             accessTrace.setReqMethod(request.getMethod());
-            accessTrace.setReqPath(request.getServletPath());
+            accessTrace.setReqPath(reqPath);
             String token = request.getHeader(Constants.TOKEN);
             if (token != null) {
                 String username = TokenUtil.getJwtUsername(token);

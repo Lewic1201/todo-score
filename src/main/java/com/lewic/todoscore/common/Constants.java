@@ -110,4 +110,10 @@ public class Constants {
      */
     public static final String JWT_USERNAME = "username";
 
+    /**
+     * 静态资源后缀
+     */
+    // todo 可以优化为正则校验
+    public static final String[] STATIC_RESOURCE_SUFFIX_ARRAY = {".jsp", ".js", ".css", ".png", ".ico"};
+
 }
