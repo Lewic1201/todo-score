@@ -39,7 +39,6 @@ public class TaskRecordServiceImpl implements TaskRecordService {
 
     private final CycleTypeServiceImpl cycleTypeService;
 
-    // todo taskRecordMapper报错
     @Autowired
     public TaskRecordServiceImpl(TaskRecordDao taskRecordDao, TaskDao taskDao, CycleTypeServiceImpl cycleTypeService) {
         this.taskRecordDao = taskRecordDao;

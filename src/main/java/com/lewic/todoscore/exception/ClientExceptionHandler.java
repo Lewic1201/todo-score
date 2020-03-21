@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 异常处理类
- * todo 返回值可能需要统一改成json格式
  *
  * @author lewic
  * @since 2020/2/26 20:47
