@@ -1,5 +1,6 @@
 package com.lewic.todoscore.service.impl;
 
+import com.lewic.todoscore.common.Constants;
 import com.lewic.todoscore.common.Enums;
 import com.lewic.todoscore.dao.CycleTypeDao;
 import com.lewic.todoscore.dao.WorkdayDao;
@@ -8,8 +9,11 @@ import com.lewic.todoscore.entity.Workday;
 import com.lewic.todoscore.service.CycleTypeService;
 import com.lewic.todoscore.utils.CronUtil;
 import com.lewic.todoscore.utils.DateUtil;
+import com.lewic.todoscore.utils.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -28,10 +32,13 @@ public class CycleTypeServiceImpl implements CycleTypeService {
 
     private final WorkdayDao workdayDao;
 
+    private final RedisUtil redisUtil;
+
     @Autowired
-    public CycleTypeServiceImpl(CycleTypeDao cycleTypeDao, WorkdayDao workdayDao) {
+    public CycleTypeServiceImpl(CycleTypeDao cycleTypeDao, WorkdayDao workdayDao, RedisUtil redisUtil) {
         this.cycleTypeDao = cycleTypeDao;
         this.workdayDao = workdayDao;
+        this.redisUtil = redisUtil;
     }
 
     @Override
@@ -56,19 +63,39 @@ public class CycleTypeServiceImpl implements CycleTypeService {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public List<CycleType> listCycleType() {
-        return cycleTypeDao.findAll();
+        // TODO 添加缓存,id假设为0,用户id需要补上
+        int id = 0;
+        String key = "user_" + id;
+        if (redisUtil.hasKey(key)) {
+            return (List<CycleType>) redisUtil.get(key);
+        }
+
+        List<CycleType> cycleTypes = cycleTypeDao.findAll();
+        // 写入缓存, todo 可以考虑异步写入
+        redisUtil.lSet(key, cycleTypes, Constants.DEFAULT_CACHE_TMOUT_TIME);
+        return cycleTypes;
+
     }
 
     @Override
     public void insertOne(CycleType cycleType) {
         cycleType.setId(null);
         cycleTypeDao.save(cycleType);
+
+        // 插入后需更新缓存
+        int id = 0;
+        String key = "user_" + id;
+        redisUtil.lSet(key, cycleType, Constants.DEFAULT_CACHE_TMOUT_TIME);
     }
 
     @Override
     public void deleteOne(Integer id) {
         cycleTypeDao.deleteById(id);
+        int userId = 0;
+        String key = "user_" + userId;
+        redisUtil.del(key);
     }
 
     // 通过循环类型指定的规则过滤
@@ -85,8 +112,9 @@ public class CycleTypeServiceImpl implements CycleTypeService {
 
     /**
      * 通过工作日过滤
+     *
      * @param cycleType 循环方式
-     * @param date 指定日期
+     * @param date      指定日期
      * @return true:指定日期满足; false:指定日期不满足
      * @throws Exception 异常
      */

@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author lewic
  * @since 2020/1/6 22:16
@@ -115,5 +117,15 @@ public class Constants {
      */
     // todo 可以优化为正则校验
     public static final String[] STATIC_RESOURCE_SUFFIX_ARRAY = {".jsp", ".js", ".css", ".png", ".ico"};
+
+    /**
+     * 缓存默认超时时间
+     */
+    public static final int DEFAULT_CACHE_TMOUT_TIME = 3600;
+
+    /**
+     * 缓存默认超时时间单位
+     */
+    public static final TimeUnit DEFAULT_CACHE_TMOUT_TIME_UNIT = TimeUnit.SECONDS;
 
 }

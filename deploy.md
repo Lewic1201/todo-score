@@ -152,3 +152,29 @@ C:\Windows\System32\drivers\etc\hosts 文件添加
    ```
    docker run -d --name mysql8.0 --privileged=true -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -v /etc/mysql:/etc/mysql  -v /opt/mysql:/var/lib/mysql -v /etc/localtime:/etc/localtime docker.io/mysql:8.0.19
    ```
+
+3. 启动redis,并挂载目录（[点击查看详情](https://blog.csdn.net/huangbaokang/article/details/102793085)）
+   ```
+   docker pull redis
+   mkdir -p /root/redis/myRedis/conf
+   mkdir -p /root/redis/myRedis/data
+   cd /root/redis/myRedis/conf
+   wget http://download.redis.io/redis-stable/redis.conf
+   
+   cd /root/redis/myRedis
+   docker run -p 6379:6379 --name lewic_redis -v /root/redis/myRedis/conf/redis.conf:/etc/redis/redis.conf -v /root/redis/myRedis/data:/data -d redis redis-server /etc/redis/redis.conf --appendonly yes --requirepass "123456"
+
+   ```
+   更改redis.conf文件,可以查看docker日志,因为有些配置不需要会报错,注掉后重启
+   ```
+   sed -i 's/^bind 127.0.0.1$/# bind 127.0.0.1/g' redis.conf
+   sed -i 's/^protected-mode yes$/protected-mode no/g' redis.conf
+   ...
+   ...
+   ...
+   # 查看启动日志
+   docker logs lewic_redis
+   docker restart lewic_redis
+   
+   ```
+   
